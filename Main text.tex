@@ -1,0 +1,539 @@
+%%
+%% This is file `sample-sigconf-authordraft.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% samples.dtx  (with options: `all,proceedings,bibtex,authordraft')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% Any modified versions of this file must be renamed
+%% with new filenames distinct from sample-sigconf-authordraft.tex.
+%% 
+%% For distribution of the original source see the terms
+%% for copying and modification in the file samples.dtx.
+%% 
+%% This generated file may be distributed as long as the
+%% original source files, as listed above, are part of the
+%% same distribution. (The sources need not necessarily be
+%% in the same archive or directory.)
+%%
+%%
+%% Commands for TeXCount
+%TC:macro \cite [option:text,text]
+%TC:macro \citep [option:text,text]
+%TC:macro \citet [option:text,text]
+%TC:envir table 0 1
+%TC:envir table* 0 1
+%TC:envir tabular [ignore] word
+%TC:envir displaymath 0 word
+%TC:envir math 0 word
+%TC:envir comment 0 0
+%%
+%% The first command in your LaTeX source must be the \documentclass
+%% command.
+%%
+%% For submission and review of your manuscript please change the
+%% command to \documentclass[manuscript, screen, review]{acmart}.
+%%
+%% When submitting camera ready or to TAPS, please change the command
+%% to \documentclass[sigconf]{acmart} or whichever template is required
+%% for your publication.
+%%
+%%
+\documentclass[sigconf,authordraft]{acmart}
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    Bib\TeX}}}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+
+
+
+
+
+
+\setcopyright{acmlicensed}
+\copyrightyear{2018}
+\acmYear{2018}
+\acmDOI{XXXXXXX.XXXXXXX}
+%% These commands are for a PROCEEDINGS abstract or paper.
+\acmConference[SIGGRAPH  '2026]{SIGGRAPH 2026}{July 19--23,
+  2026}{Los Angeles}
+%%
+%%  Uncomment \acmBooktitle if the title of the proceedings is different
+%%  from ``Proceedings of ...''!
+%%
+%%\acmBooktitle{Woodstock '18: ACM Symposium on Neural Gaze Detection,
+%%  June 03--05, 2018, Woodstock, NY}
+\acmISBN{978-1-4503-XXXX-X/2018/06}
+
+
+%%
+%% Submission ID.
+%% Use this when submitting an article to a sponsored event. You'll
+%% receive a unique submission ID from the organizers
+%% of the event, and this ID should be used as the parameter to this command.
+%%\acmSubmissionID{123-A56-BU3}
+
+%%
+%% For managing citations, it is recommended to use bibliography
+%% files in BibTeX format.
+%%
+%% You can then either use BibTeX with the ACM-Reference-Format style,
+%% or BibLaTeX with the acmnumeric or acmauthoryear sytles, that include
+%% support for advanced citation of software artefact from the
+%% biblatex-software package, also separately available on CTAN.
+%%
+%% Look at the sample-*-biblatex.tex files for templates showcasing
+%% the biblatex styles.
+%%
+
+%%
+%% The majority of ACM publications use numbered citations and
+%% references.  The command \citestyle{authoryear} switches to the
+%% "author year" style.
+%%
+%% If you are preparing content for an event
+%% sponsored by ACM SIGGRAPH, you must use the "author year" style of
+%% citations and references.
+%% Uncommenting
+%% the next command will enable that style.
+\citestyle{acmauthoryear}
+
+
+%%
+%% end of the preamble, start of the body of the document source.
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{xcolor}
+
+\usepackage{placeins}
+
+\pgfplotsset{compat=1.18}
+\pgfplotsset{
+  every axis/.append style={
+    font=\footnotesize,
+    title style={font=\footnotesize},
+    label style={font=\footnotesize},
+    tick label style={font=\footnotesize},
+  }
+}
+
+\usepgfplotslibrary{groupplots}
+
+
+\begin{document}
+
+%%
+%% The "title" command has an optional parameter,
+%% allowing the author to define a "short title" to be used in page headers.
+\title[Physiological Legibility in Multiplayer Games]%
+{Physiological Legibility in Multiplayer Games:\\
+An STS Perspective on Visualizing Biosignals for Cooperative Play}
+
+\author{%
+Roman Jahandideh\\
+Simon Fraser University\\
+{\small Option Chosen: Option 1 -- Research, Creation or Speculative Design Proposal and Literature Review Essay}\\
+{\small Instructor: Dr.\ Gabriela Aceves-Sep\'ulveda}
+}
+
+\renewcommand{\shortauthors}{Jahandideh}
+
+
+
+%%
+%% By default, the full list of authors will be used in the page
+%% headers. Often, this list is too long, and will overlap
+%% other information printed in the page headers. This command allows
+%% the author to define a more concise list
+%% of authors' names for this purpose.
+\renewcommand{\shortauthors}{IAT803 G100 Science, Technology & Culture}
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
+\begin{abstract}
+This paper presents Physiological Legibility, a research-creation and speculative design project that explores how shared physiological sensing can reshape coordination in multiplayer digital games. The project investigates how heart rate (HR) and heart rate variability (HRV) data collected from Apple Watch devices can be translated into a multiplayer user interface that makes teammates’ physiological conditions partially visible during cooperative play. Rather than displaying biosignals as numbers or explicit emotional labels, the proposed system classifies HR and HRV into a small set of interface states and maps them onto visual changes in each player’s avatar icon. Players can interpret physiological signals as ambient coordination cues during moments of uncertainty, poor synchronisation, or collaborative breakdown since these states are communicated through subtle cues as pulsating auras, altering ring density, and variations in icon stability.
+The project deviates from interface designs that primarily employ physiological data to control difficulty, maximise performance, or deduce emotional truth. Rather, it views biosignals as signals contained in interaction that are context-dependent and socially interpretable. In terms of methodology, the study develops a novel interface concept for cooperative play by combining research-creation, speculative design, literature assessment, and system design. Physiological Legibility, which proposes a multiplayer UI system that emphasises ambiguity, coordination, and interpretive accountability, advances research on biometric interfaces, game design, and human-computer interaction by redefining physiological data as a negotiable social cue rather than a transparent representation of inner state.
+\end{abstract}
+
+%%
+%% The code below is generated by the tool at http://dl.acm.org/ccs.cfm.
+%% Please copy and paste the code instead of the example below.
+%%
+\begin{CCSXML}
+<ccs2012>
+ <concept>
+  <concept_id>10003120.10003121.10003129</concept_id>
+  <concept_desc>Human-centered computing~Interaction design theory, concepts and paradigms</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10003120.10003121.10003124</concept_id>
+  <concept_desc>Human-centered computing~Empirical studies in interaction design</concept_desc>
+  <concept_significance>300</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10003120.10003123</concept_id>
+  <concept_desc>Human-centered computing~Interaction paradigms</concept_desc>
+  <concept_significance>300</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10003120.10003138</concept_id>
+  <concept_desc>Human-centered computing~Ubiquitous and mobile computing systems and tools</concept_desc>
+  <concept_significance>300</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10010405.10010455.10010459</concept_id>
+  <concept_desc>Applied computing~Computer games</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Human-centered computing~Interaction design theory, concepts and paradigms}
+\ccsdesc[300]{Human-centered computing~Empirical studies in interaction design}
+\ccsdesc[300]{Human-centered computing~Interaction paradigms}
+\ccsdesc[300]{Human-centered computing~Ubiquitous and mobile computing systems and tools}
+\ccsdesc[500]{Applied computing~Computer games}
+
+\keywords{Physiological Computing, Biofeedback Interfaces, Multiplayer Game Design, Human–Computer Interaction, Wearable Sensing, Heart Rate Variability, Physiological Visualization, Cooperative Gameplay}
+
+%% A "teaser" image appears between the author and affiliation
+%% information and the body of the document, and typically spans the
+%% page.
+\begin{teaserfigure}
+  \includegraphics[width=\textwidth]{new interface.png}
+  \caption{The BioTerrarium prototype visualizes players’ physiological signals through dynamic halos around avatar icons. HR and HRV are communicated as ambient visual cues supporting coordination during cooperative play.}
+  \label{fig:teaser}
+\end{teaserfigure}
+
+%% remove fake received dates
+% \received{20 February 2007}
+% \received[revised]{12 March 2009}
+% \received[accepted]{5 June 2009}
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+
+\section{Introduction}
+Coordination, timing, and player interpretation are critical components of multiplayer digital games. Through shared environmental signals, speech, and movement, teammates constantly deduce one another's intents throughout cooperative gaming. However, a lot of characteristics of the player experience are not visible while playing, especially the physiological variables associated with engagement, tension, and cognitive load. Recent developments in wearable sensor technology allow consumer gadgets, such as smartwatches, to record physiological data like heart rate (HR) and heart rate variability (HRV) in real time. These advancements create new opportunities for incorporating physiological data into game interfaces and interactive systems.
+Physiological sensing has often been investigated in the domains of affective computing and biofeedback gaming within human–computer interaction and game studies. Early research presented physiological signals as quantifiable, computationally detectable, and interpretable markers of emotional states \cite{picard_affective_1997}. Later studies used biosignals in games to control difficulty, improve immersion, or simulate player experience. For example, \cite{mandryk_fuzzy_2007} demonstrated correlations between physiological responses and player experience, while \cite{nacke_biofeedback_2011} explored the use of physiological signals as direct and indirect control mechanisms in biofeedback game design. In order to maximise gameplay participation, these methods usually treat physiological data as diagnostic signals that disclose interior emotional states.
+
+Recent research has extended physiological sensing to social and multiplayer settings. Research has shown that cooperation, participation, and shared attention during group activities are associated with physiological synchrony among individuals. While \cite{dikker_brain--brain_2017} indicates that brain synchrony might reflect group interaction dynamics, \cite{muller_intra-_2013} shows that physiological rhythms synchronise during collaborative musical improvisation. \cite{slovak_understanding_2012} investigated heart rate signal sharing systems in HCI research to promote social awareness and empathy. These initiatives recognise the social aspect of physiological data, but they frequently make the assumption that biosignals clearly reflect interior states that are understandable to others.
+
+This paper adopts an alternative methodology. This work investigates how biosignals serve as socially understood signals in multiplayer interaction, as opposed to treating physiological data as objective markers of emotion. Physiological measurement is viewed as a component of a socio-technical system that influences how bodies are viewed and understood, rather than as a neutral representation, according to viewpoints from Science and Technology Studies (STS). Researchers have demonstrated that rather than just documenting occurrences, measurement techniques and classifications actively contribute to their production \cite{nelson_meeting_1996}.
+By incorporating specific presumptions and categories into technical infrastructures, classification systems also organise social meaning and behaviour \cite{bowker_sorting_2008}. In a similar vein, \cite{haraway_situated_1988} challenges the notion of universal objectivity in scientific knowledge by highlighting how all types of observation are situated and incomplete. According to these viewpoints, social relationships, interpretation, and accountability will surely change when physiological data is made public via interactive systems.
+
+This study presents Physiological Legibility, a hypothetical multiplayer interface design that visualises players' physiological signals during cooperative gameplay to investigate these concerns. Players in the suggested system wear Apple Watches, which record heart rate and heart rate variability in real time. The system categorises physiological data into a limited range of interface states that are represented by subtle visual changes in each player's avatar icon, rather than displaying these signals as numerical dashboards or overt emotional cues. During games, players must cooperatively interpret an ambient representation of their colleagues' physiological circumstances created by these alterations, which include pulsing auras, changing ring density, and differences in visual stability.
+
+This is the research question that the project poses: 
+
+How can a multiplayer interface that facilitates coordination be created using physiological data gathered from wearable devices without restricting biosignals to predetermined emotional categories?
+
+
+In terms of methodology, the project uses a research-creation approach that incorporates system design, literature study, and speculative design. In addition to outlining comparative gameplay research that looks at how players collaborate with and without shared physiological visualisation, the article discusses the conceptual development of the interface and explains the design reasoning behind the icon system.
+
+This study makes three contributions to the fields of science and technology studies, game design, and human-computer interaction research. It first suggests a hypothetical multiplayer interface that incorporates wearable physiological sensors into cooperative gaming. Second, instead of framing physiological data as objective emotional evaluations, it reframes them as socially interpretable signals. Thirdly, it looks at how players in digital settings are redistributing interpretation, accountability, and cooperation as a result of biometric interface design.
+
+\section{Literature Review}
+\subsection{Physiological Sensing and the Emergence of Affective Interaction}
+Physiological sensing has grown in importance in human-computer interaction research during the last thirty years, especially in the fields of emotional computing and physiological user modelling. The now well-known idea that physiological signals, such as heart rate, electrodermal activity, breathing, and associated physiological processes, could function as computationally interpretable markers of human emotional states was first proposed in early work in affective computing. Such signals could be integrated into interactive systems that can identify and react to human affective circumstances, according to Picard's seminal account of affective computing \cite{picard_affective_1997}. In this concept, physiological signals were positioned as quantifiable proxies that might be used to make otherwise internal affective states computationally readable.
+This idea was expanded upon in later studies to include interactive media and digital gaming. \cite{mandryk_fuzzy_2007} created a physiological model that combines several physiological measures into a fuzzy inference framework to continually estimate emotional experience during games. In a similar vein, \cite{chanel_short-term_2009} investigated the categorisation of emotional states using peripheral physiological markers, proving that short-term affect detection during interactive activities is feasible. Physiological signals were generally seen in such work as diagnostic traces that might be used to deduce the player's experiencing condition and then integrated into system evaluation or adaptation.
+These methods evolved into a more comprehensive research tradition focused on biofeedback game interaction within game studies and HCI. Biofeedback systems incorporate physiological inputs into gaming as implicit impacts on system behaviour or as explicit control mechanisms. In their investigation of implicit and explicit biofeedback in first-person shooter settings, \cite{silberman_toward_2010} showed that physiological cues could influence gaming dynamics without the need for conscious player involvement. Subsequently,  \cite{nacke_biofeedback_2011} made a distinction between two types of physiological control: indirect physiological control, in which the game environment or difficulty characteristics are gently modulated, and direct physiological control, in which physiological signals function as explicit input channels.
+The persistence of this paradigm in interactive entertainment is confirmed by current surveys of physiological involvement. Heart rate and heart rate variability are among the physiological indications that are most commonly used in affect-driven gaming systems, according to reviews of biofeedback gaming systems \cite{navarro_biofeedback_2021}. In a similar vein, more comprehensive reviews of affective gaming studies note that physiological sensing is most frequently used to gauge player arousal, control difficulty, or customise gaming experiences \cite{robinson_lets_2020}. While this kind of study has made significant progress in the technical integration of physiological sensing into interactive systems, it has also tended to presume that physiological signals offer relatively transparent access to the player's emotional state.
+
+
+\subsection{Shared Physiological Interfaces and Social Biofeedback}
+In tandem with these advancements, a corpus of study has investigated the interpersonal aspects of physiological sensing by looking at the potential sharing of physiological signals between people during mediated interaction. Social biofeedback research examines how the visibility of biological signals can influence interpersonal awareness, empathy, and coordination, while traditional biofeedback systems mainly concentrate on individual self-regulation or system adaptation. 
+\cite{slovak_understanding_2012} investigated the sharing of heart-rate signals between participants during co-present interaction in one of the first studies to clearly conceptualise physiological sharing as an interpersonal event. The concept of a "physiosocial space," which describes how physiological visualisation may serve as a communicative medium via which physiological processes become socially interpretable, was proposed by their study.
+In this context, physiological signals cease to function solely as internal measurements and instead become elements of interpersonal interaction.
+Measurable alignment of physiological rhythms may accompany coordinated action across individuals, according to research on physiological synchrony. During collaborative musical improvisation, \cite{muller_intra-_2013} showed that participants' physiological processes synchronised, suggesting that physiological coupling may develop alongside coordinated action. Similar brain synchrony was noted by \cite{dikker_brain--brain_2017} among participants in actual group interactions, indicating that quantifiable patterns of physiological alignment may be a sign of collective participation. These results have prompted academics to see physiological signals as relational phenomena rooted in social interaction as well as individual markers.
+The visualisation and sharing of physiological data in mediated environments has been the subject of more recent research in human-computer interaction. According to \cite{gan_human-computer_2022}comprehensive review of social biofeedback systems, shared physiological interfaces often seek to improve participants' social awareness, empathy, or cooperative involvement \cite{moge_shared_2022}. In these systems, physiological signals serve more as relationship cues that mediate awareness of the physical states of others than as diagnostic data.
+
+These possibilities are further demonstrated by experimental systems created in immersive environments. By making physiological rhythms visible in shared places, shared biofeedback visualisations in virtual reality have been demonstrated to enhance perceived social presence and interpersonal connection \cite{jarvela_augmented_2021}. According to \cite{hirsch_my_2023}, the visualisation of asynchronous cardiac activity amongst players in multiplayer virtual environments has also been linked to enhanced perceptions of social connectivity and co-presence. Physiological transparency may also affect empathy and supportive reactions in social settings, according to related research on shared stress displays\cite{jiang_intimasea_2023}.
+When considered collectively, these studies suggest that physiological signals can serve as relational media in digitally mediated contexts, allowing people to interact with one another. However, a large portion of this research is still focused on interpersonal connection, empathy, or emotional awareness, leaving the potential contribution of physiological visibility to coordination and accountability in online gaming environments largely unexplored.
+Measurement, Classification, and the Politics of Physiological Data
+Scholarship in Science and Technology Studies offers a critical lens through which the epistemological and political implications of such systems may be examined, whereas research in affective computing and social biofeedback has mostly concentrated on the experiential and technical aspects of physiological interfaces. 
+A particularly pertinent place to start is with \cite {nelson_meeting_1996} description of measurement devices. According to \cite {nelson_meeting_1996}, measurement techniques contribute to the creation of the phenomena they measure rather than just revealing pre-existing characteristics of the environment. According to this viewpoint, physiological sensing technologies are not neutral tools that merely capture physical states. How physiological signals are seen, deciphered, and visualised actively contributes to their significance as occurrences.
+
+\cite{bowker_sorting_2008}analysis of classification systems contains ideas that are closely related. By integrating standards and categories into technical systems, \cite{bowker_sorting_2008} shows how categorisation infrastructures are essential for structuring social knowledge and practice. After they are put into place, these classifications are accepted as essential elements of the infrastructure. This realisation emphasises the importance of the classificatory processes that convert physiological signals into categories, indicators, or interface states when applied to physiological interfaces. 
+Claims of objectivity in measurement methods are further complicated by Haraway's \cite{haraway_situated_1988}concept of situated knowledges. According to \cite{haraway_situated_1988}, rather than coming from disembodied vantage points of universal objectivity, all knowledge claims originate from specific positions and embodied views.
+This viewpoint emphasises the contextual and interpretive aspect of physiological signals in the context of physiological sensing: depending on the circumstances in which they emerge, identical physiological patterns may correlate to numerous experience states. 
+This study is further enhanced by Winner's seminal claim that technology artefacts may have political characteristics. According to \cite{winner_artifacts_1980}, technical systems frequently represent specific power and authority structures by organising the distribution of duties, information, and actions within social systems. When physiological signals become visible in interactive systems, participant accountability, perception, and coordination patterns may be influenced by the circumstances surrounding that visibility and the interpretations it prompts.
+Related work in media infrastructure studies reinforces the importance of examining the socio-technical arrangements through which knowledge becomes stabilized. Parks and \cite{parks_signal_2015} emphasize that infrastructures are not merely background technical systems but material and organizational formations that structure communication practices and forms of knowledge production. \cite{andersen_indigenous_2016} similarly demonstrates that quantitative measurement systems, including statistical frameworks, are historically and culturally situated rather than purely objective instruments. Together, these perspectives suggest that physiological interfaces should be understood not only as sensing technologies but also as infrastructures that organize how bodily knowledge becomes socially legible.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{ Embodied Interaction and Research-Creation}
+The theories of situated action and embodied interaction in human-computer interaction research inform the current work's methodological approach. According to \cite {suchman_plans_1987}, contextual action analysis, human behaviour is not entirely dictated by pre-existing plans or representations, but rather develops dynamically within particular settings. In a similar vein, \cite {dourish_where_2004} defines embodied interaction as a method of engagement in which placed bodily movement within interactive contexts gives rise to meaning. 
+Research-creation has become a popular method in design research that combines scholarly inquiry with creative work. According to \cite {amos_kyriaki_2015}, research-creation is a type of inquiry where the creation of artefacts serves as a tool for theoretical investigation.
+Through speculative and posthuman design frameworks that aim to reevaluate the interactions between people, technologies, and environments, \cite {wakkary_things_2021}expands on this viewpoint. These methods offer a methodological foundation for considering designed artefacts as tools for investigating technological mediation issues rather than just as technological fixes.
+\begin{table*}[!t]
+  \caption{Summary of related work in physiological sensing, social biofeedback, and STS perspectives relevant to multiplayer physiological interfaces.}
+  \label{tab:relatedwork}
+  \centering
+  \normalsize
+  \renewcommand{\arraystretch}{0.97}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}p{3.3cm} p{3.1cm} p{3.1cm} p{4.4cm}@{}}
+    \toprule
+    \textbf{Study/System (Year)} &
+    \textbf{Feedback Type} &
+    \textbf{Interaction Style} &
+    \textbf{Limitation / Relevance} \\
+    \midrule
+
+    Picard (1997) &
+    Physiological affect detection &
+    Affective computing framework &
+    Treats physiological signals as indicators of emotional states \\
+
+    Mandryk \& Atkins (2007) &
+    HR, physiological signals &
+    Fuzzy inference emotional modelling &
+    Focus on emotion detection rather than social interpretation \\
+
+    Nacke et al. (2011) &
+    Biofeedback signals &
+    Direct and indirect physiological control in games &
+    Physiological data used primarily for gameplay control \\
+
+    Slov\'ak et al. (2012) &
+    Shared heart rate signals &
+    Physiosocial awareness interface &
+    Focus on empathy and awareness rather than gameplay coordination \\
+
+    M\"uller et al. (2013) &
+    Physiological synchrony &
+    Collaborative musical improvisation &
+    Demonstrates synchrony but not game interaction \\
+
+    Dikker et al. (2017) &
+    Brain synchrony &
+    Group interaction analysis &
+    Observes synchrony but does not design interactive systems \\
+
+    Moge, Wang, \& Cho (2022) &
+    Shared physiological interfaces &
+    Social biofeedback systems review &
+    Emphasizes empathy and awareness over coordination in games \\
+
+    \textbf{Physiological Legibility (This Work)} &
+    HR, HRV visualization &
+    Multiplayer avatar icon biofeedback &
+    Interpretable physiological cues for cooperative gameplay \\
+
+    \bottomrule
+  \end{tabular}
+\end{table*}
+\subsection{Positioning the Present Work}
+Thus, the current study shows that physiological sensing has established itself as a part of digital game research and interactive system design. Previous research has investigated shared biofeedback interfaces that promote empathy and interpersonal awareness, adaptive gameplay systems, and the utilisation of physiological signals for emotion recognition. Simultaneously, research in Science and Technology Studies has highlighted how infrastructure structures, classification schemes, and measurement technology actively influence how physical events are made socially understandable.
+The potential use of physiological sensing as an ambient interpretative resource in cooperative multiplayer gaming is yet largely unexplored, especially in scenarios involving uncertainty, failure, or coordination breakdown. The current work treats physiological visibility as a condition that reorganises how participants understand one another inside interactive contexts, as opposed to interpreting physiological signals as diagnostic indications of emotional state.
+As a result, the research suggests a multiplayer interface where wearable heart rate and heart rate variability data are converted into modest visual changes in player avatar icons. The suggested design portrays physiological signals as ambiguous visual cues that must be evaluated within the developing dynamics of cooperative play, in contrast to systems that explicitly classify or name emotional states. By doing this, the study places physiological sensing into larger STS discussions about measurement, classification, and technological mediation while also expanding on previous research on physiological interaction and social biofeedback.
+\section{Methodology}
+\noindent
+\subsection{Research Methodological Orientation}
+The research technique used in this study is positioned within the intersections of science and technology studies, game studies, and human–computer interaction. Research creation approaches allow theoretical problems to be investigated through material and creative practice by positioning the design and production of artefacts as essential components of scholarly inquiry. Research creation frameworks view constructed things and systems as places where knowledge may be created and explored, as opposed to treating artefacts as secondary results of research.
+According to \cite {amos_kyriaki_2015}, research creation is a methodological paradigm where scholarly analysis and artistic output work together as mutually constitutive forms of knowledge formation. According to this approach, the creation of artefacts allows academics to investigate theoretical issues via design, experimentation, and reflection procedures. Using this methodological approach, the current study explores the potential translation of physiological sensing technologies into multiplayer interface components that influence players' perceptions and interpretations of one another during cooperative gaming.
+Scholarship in Science and Technology Studies, which highlights that technological systems contribute to the creation of knowledge rather than serving as impartial tools of observation, further informs this study approach. According to \cite {nelson_meeting_1996}, measurement tools do more than just expose pre-existing characteristics of the world; they also contribute to the constitution of the phenomena they measure. In a similar vein, \cite {bowker_sorting_2008} show how classification systems integrated into technology infrastructures arrange the ways in which information becomes relevant and useful in social contexts. According to these viewpoints, physiological sensing technologies should be viewed as socio-technical arrangements that influence how physiological data is perceived and comprehended during interaction, in addition to being measuring tools.
+The development of a technical system for physiological data sensing is not the only goal of the study within this methodological framework. Rather, the study looks at how physiological signal capture, classification, and visualisation might reorganise the interpretative conditions of multiplayer gaming.
+\subsection{Research Creation as Design Inquiry}
+Design practice serves as an inquiry method in research production that allows theoretical ideas to be investigated through the construction of artefacts. As a result, the artefact functions not only as a technological prototype but also as a research tool that makes it possible to examine specific issues related to social interaction and technology mediation. 
+This methodological approach is consistent with human-computer interaction design research traditions that use artefacts as experimental systems to investigate different technology configurations and interaction paradigms. These methods enable researchers to investigate how new technology might change how people communicate, coordinate, and perceive in interactive settings.
+The artifact developed in this study is a multiplayer physiological interface that visualizes players' physiological conditions through transformations in avatar icons during gameplay. Rather than aiming to optimize emotional detection or gameplay performance, the artifact is designed to explore how physiological signals may function as socially interpretable cues within cooperative gameplay contexts. Through the development of this artifact, the research examines how physiological visibility may influence how players interpret the actions and conditions of their teammates.
+
+
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{Icon.jpg}
+  \caption{The icon design evolves through theoretical perspectives from Science and Technology Studies (STS), transforming an abstract sensing field into a human avatar surrounded by a dynamic halo. The final icon visualizes physiological signals as an ambiguous social cue, where halo brightness, pulse, density, and stability vary with heart rate (HR) and heart rate variability (HRV).}
+  \Description{}
+\end{figure*}
+
+\subsection{Speculative Interface Design}
+Speculative design methodologies, which employ conceptual artefacts to investigate alternative technology possibilities and challenge presumptions ingrained in current technological paradigms, also inform the project. According to \cite{wakkary_things_2021}, speculative design is a design approach that looks at how technologies might be structured differently from current technological trajectories. 
+Artefacts serve as probes in speculative design, enabling researchers to investigate how specific technical configurations might change how people interact with technology systems. Speculative design makes it possible to investigate the wider conceptual and social ramifications of new technologies rather than concentrating just on their immediate practical uses.
+The physiological interface proposed in this study therefore, functions as a speculative artifact that investigates how wearable biosensing technologies might become integrated into multiplayer game interfaces. Instead of assuming that physiological sensing should be used to infer emotional states or regulate gameplay performance, the design examines how physiological signals might operate as ambient and interpretable cues within collaborative play environments.
+\subsection{Literature Driven Design Synthesis}
+A synthesis of research from a number of pertinent fields, such as shared physiological interfaces, biofeedback game interaction, emotional computing, and Science and Technology Studies scholarship on measurement and categorisation, served as the basis for the conceptual creation of the artefact.
+Affective computing research has shown how parts of human emotional experience and cognitive engagement may be modelled using physiological signals like heart rate and heart rate variability\cite{picard_affective_1997}. The integration of these signals into gameplay systems to affect player experience and interaction dynamics has been investigated in subsequent work in physiological game interaction \cite{mandryk_fuzzy_2007,nacke_biofeedback_2011}. Further research on shared physiological interfaces has demonstrated that social awareness and interpersonal coordination can be impacted by the visibility of physiological signals between people \cite{slovak_understanding_2012}. 
+Scholarship in Science and Technology Studies offers a critical viewpoint on these advancements by highlighting the social and historical context of measurement techniques and classification schemes. According to\cite{bowker_sorting_2008}, classification schemes included in technical infrastructures influence how data is arranged and understood in social situations. In a similar vein, \cite{haraway_situated_1988}highlights that knowledge is not universally objective but rather local and incomplete. The design process purposefully avoided using explicit emotional labelling in the interface by drawing on these viewpoints. Instead of using rigid computational categories, physiological signals are viewed as contextual cues whose interpretation develops via interaction.
+\subsection{System Development Process}
+The artefact was developed through an iterative design process that was informed by both design exploration and theoretical thought. Finding ways to integrate physiological sensing technology into multiplayer interfaces without reducing physiological signals to explicit emotional classifications was the main goal of the early stages of development. In order to understand how physiological information may be portrayed in ways that maintain ambiguity while still enabling players to recognise changes in teammates' physiological status, alternative interface concepts were investigated.
+The integration of wearable physiological sensors into the multiplayer interface concept was the main emphasis of later stages of development. The system architecture was created to integrate physiological data from wearable technology into the game's visual interface. A visual language that allows physiological variation to be conveyed through changes in player avatar icon appearance was created through iterative refinement. 
+Decisions made throughout the design phase were assessed in light of the project's primary research goal, which is to investigate how physiological sensing technologies might alter the interpretive dynamics of cooperative gaming.
+Early exploratory sketches were produced to investigate alternative visual strategies for embedding physiological signals into player avatar icons. These sketches explored variations in ring structure, pulsing behaviour, and inner avatar representation before the final halo-based visualization was established Figure 3.
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{designprocess.png}
+  \caption{Early design sketches exploring the visual representation of physiological signals in the avatar icon interface. The sketches investigate multiple configurations for embedding heart rate (HR) and heart rate variability (HRV) into the avatar visualization, including inner shape deformation, pulsating rings, and layered halo structures.}
+  \Description{}
+\end{figure*}
+\subsection{Analytical Framework}
+This study's analytical approach is based on human–computer interaction research theories of situated interaction and embodied involvement.\cite{suchman_plans_1987}contends that contextual interaction, as opposed to carrying out preconceived goals, is how human activity develops. In a similar vein,\cite{dourish_where_2004}highlights how embodied interaction with technology settings creates meaning in interactive systems. 
+According to this viewpoint, whether or not physiological signals accurately reflect interior emotional states is not the main reason why physiological visualisation is important. Rather, its importance is seen in the way that physiological cues are integrated into the continuous processes of player interaction, coordination, and interpretation.
+Therefore, the physiological interface created in this study can be used as an artefact to study the social effects of physiological visibility. Through the incorporation of physiological signals into multiplayer gaming, the system establishes novel circumstances for players to understand each other and negotiate cooperative behaviour.
+\section{System Design}
+\subsection{System Overview}
+A multiplayer interface system that displays physiological signs from wearable devices during cooperative gaming is the artefact created in this study. By converting physiological measurements into visual cues that are incorporated into player avatar icons, the system enables players to notice changes in their colleagues' physiological states while engaging in gameplay. 
+There are three main parts to the system architecture. The first part is the collection of physiological data using wearable sensors. A data processing layer that converts physiological measures into interface states makes up the second part. The third element is a visual interface layer that modifies the appearance of player avatar icons in the multiplayer interface to depict these statuses.
+The technology communicates physiological variation through subtle visual modifications instead of using numerical displays or textual indications to present physiological information. Research indicates that ambient types of information visualisation can convey complicated data while maintaining the interpretative flexibility of the information being displayed, which is reflected in this design choice \cite{dourish_where_2004}.
+\subsection{Physiological Data Acquisition}
+Physiological data gathered from wearable technology, particularly the Apple Watch, is integrated into the system. The photoplethysmography sensors in the Apple Watch allow for continuous cardiovascular activity monitoring by detecting changes in blood volume beneath the skin. Applications can access physiological parameters, like as heart rate and heart rate variability, through the HealthKit framework.
+Heart rate is a measure of transient cardiovascular stimulation and is expressed as the number of heartbeats per minute. Heart rate variability, which is commonly employed as a measure of autonomic nervous system function, represents fluctuation in the intervals between subsequent heartbeats. HRV can reveal information about cognitive load, stress, and emotional arousal during interactive tasks, according to physiological computing research \cite{mandryk_fuzzy_2007}.
+In the proposed system, HR and HRV measurements are periodically retrieved from each player's wearable device and transmitted to the game environment. These measurements provide the physiological data upon which the interface visualization is based.
+\subsection{Physiological Signal Interpretation}
+The interface does not directly display raw physiological measurements. Rather, the system generates interface states that can be understood in the context of games by processing physiological data. 
+Rather than trying to deduce particular emotional states, the interpretation layer concentrates on relative changes in physiological measures. The idea that physiological data may be directly mapped to distinct emotional categories has been criticised in both physiological computing and Science and Technology Studies \cite{haraway_situated_1988,bowker_sorting_2008}. As a result, the system uses patterns of cardiovascular activation obtained from heart rate and heart rate variability to interpret physiological inputs. The present physiological interface state is determined by taking into account both fluctuations in HRV and changes in heart rate relative to previous baseline values.
+ This process produces a simplified representation of physiological dynamics suitable for visual communication within multiplayer interaction.
+\subsection{Avatar Icon Visualization}
+A dynamic icon system integrated into the multiplayer user interface is used to visualise physiological conditions. An avatar symbol appears in the gaming interface to represent each participant. Each icon is surrounded by a visual halo whose appearance varies in reaction to physiological cues. 
+By altering visual characteristics, including colour intensity, pulse rhythm, and structural stability, the visual halo functions as an ambient visualisation layer that conveys physiological diversity. The avatar's halo appears steady and gently lit when physiological parameters are largely stable. The halo may exhibit more noticeable pulsing or visual intensity as physiological stimulation rises. Sharper visual transitions or variations in the halo structure could result from more significant physiological variance.
+This approach avoids explicit numerical indicators or textual labels. Instead, the interface provides players with visual cues that must be interpreted in relation to ongoing gameplay events and interactions with teammates.
+\subsection{Interface Integration in Multiplayer Gameplay}
+The multiplayer game interface has a physiological icon system that allows players to monitor their teammates' physiological status while working together on cooperative activities. Throughout games, teammates' icons appear in the user interface, enabling players to sense physiological indicators in addition to other gameplay information. 
+The design is meant to facilitate situations where players have to interpret their teammates' behaviours and circumstances in the face of uncertainty. Players frequently have to ascertain whether a partner is having trouble, hesitating, or becoming more engaged during challenging cooperative gameplay situations. These judgements may be influenced by the additional layer of information introduced by the physiological icon system.
+Importantly, the system does not attempt to communicate definitive emotional states. Instead, physiological cues function as contextual signals that players may incorporate into their ongoing interpretations of team dynamics and gameplay events.
+\subsection{Design Rationale}
+The theoretical viewpoint that physiological signals shouldn't be regarded as objective depictions of internal emotional states is reflected in the physiological interface's architecture. Rather, physiological signals are viewed as contextual cues whose significance is revealed through interaction. 
+Technology systems actively influence how information takes on meaning in social situations, according to research in Science and Technology Studies\cite{nelson_meeting_1996,bowker_sorting_2008}. According to this viewpoint, physiological data visualisation in multiplayer interfaces is a type of infrastructural mediation that affects how players see one another while playing.
+The icon-based visualization, therefore, intentionally preserves ambiguity while still enabling players to perceive physiological variation. By avoiding explicit emotional labels and numerical representations, the interface encourages players to interpret physiological signals in relation to the unfolding dynamics of cooperative play.
+\section{Results and Design Outcomes}
+\subsection{Overview of the Artifact}
+The outcome of the research process is a speculative multiplayer interface system that integrates wearable physiological sensing into the visual language of cooperative gameplay. The artifact translates physiological signals obtained from wearable devices into visual cues embedded within player avatar icons. Through this interface, physiological measurements become perceptible to teammates during gameplay without being presented as numerical indicators or explicit emotional classifications.
+The system connects wearable physiological sensing with multiplayer interaction through a layered architecture consisting of physiological data acquisition, signal interpretation, and visual interface representation. Physiological signals collected from wearable devices are processed and translated into visual transformations that appear in the multiplayer interface. These transformations are applied to avatar icons representing individual players, enabling participants to observe physiological variation as part of the shared gameplay environment.
+The artifact, therefore, demonstrates how physiological sensing technologies can be incorporated into multiplayer game interfaces in ways that emphasize interpretive cues rather than explicit diagnostic feedback.
+\subsection{Physiological Interface States}
+Variations in cardiovascular readings from wearable devices are used by the artefact to generate a variety of interface states. The relative variations in heart rate and heart rate variability recorded during games serve as the basis for these states. The approach uses visual states that match patterns of cardiovascular activation to convey physiological variation rather than classifying physiological signals into emotional categories. 
+The avatar icon is encircled by a constant halo that preserves its structural form and brightness under physiologically stable settings. There is very little change in heart rate and heart rate variability in this visual condition.
+When cardiovascular activation increases relative to baseline measurements, the halo surrounding the icon begins to display rhythmic pulsing. This pulsing effect visually indicates changes in physiological activity while preserving the ambiguity of the underlying signal.
+Increased visual alterations in the halo structure are caused by more noticeable physiological fluctuation. Under these circumstances, the halo may exhibit rapid pulsation patterns or increased luminosity, which enhance the physiological signal's visibility within the interface. 
+The halo may exhibit unstable visual properties, such as irregular pulsing or visual distortion, when physiological signals show significant variations. While avoiding the presentation of overtly emotional interpretations, these changes convey important physiological variance.
+\subsection{Avatar Icon Visualization}
+Within the multiplayer interface, each player's avatar icon incorporates a visual halo that represents physiological data. The halo serves as an ambient visualisation layer that uses changes in visual characteristics, such as brightness, rhythm, and structural stability, to convey physiological changes. 
+This visualisation technique does not use textual indications or numerical values. Rather, the interface uses dynamic visual components that are integrated into the multiplayer interface's current visual framework to convey physiological indications. 
+Physiological signals become a part of the visual environment via which players perceive their colleagues' state because the halo is visible during games.
+Changes in the halo are continuously updated in response to incoming physiological measurements, allowing the interface to reflect ongoing physiological variation.
+
+\subsection{Integration Within Multiplayer Gameplay}
+Alongside other gameplay interface components, teammates' avatar icons can be seen within the game area. As physiological measures are updated, each icon's surrounding physiological halo dynamically changes. Players can concurrently focus on gameplay goals and surrounding events while simultaneously perceiving physiological cues thanks to this design. 
+In order to avoid taking over the visual interface, the physiological visualisation is purposefully unobtrusive. Rather, the halo functions as a peripheral indicator that players may observe and decipher when pertinent to the current gameplay scenario. 
+The artefact adds physiological sensing as an extra layer of information in cooperative gaming through this design. As a result, during cooperative activities, players use physiological cues as part of the interpretative environment to coordinate actions and decipher colleagues' behaviour.
+\subsection{Artifact Outcome}
+The main result of the research process is the creation of a conceptual physiological interface that shows how ambient visualisation techniques can be used to include wearable cardiovascular sensors into multiplayer game interfaces. Without explicitly showing physiological measures as emotional classifications, the artefact demonstrates how physiological data might be converted into visual signals that help players' interpretive awareness. 
+The interface incorporates physiological sensing into the visual language of online gaming by including physiological visualisation into avatar icons. This design result lays the groundwork for investigating how player interpretation, cooperation, and engagement in cooperative digital environments may be impacted by physiological visibility.
+\section{Discussion}
+\subsection{Physiological Visibility in Multiplayer Interaction}
+By converting cardiovascular signals into visual changes incorporated into player avatar icons, the artefact created in this study adds a type of physiological visibility to online gaming. During cooperative contact, teammates can perceive physiological parameters via wearable sensing devices thanks to this interface. The interface conveys physiological fluctuation using ambient visual cues incorporated into the gaming world, as opposed to displaying physiological data as numerical indicators or explicit emotional labelling. 
+Players frequently use incomplete and context-dependent information to interpret their colleagues' intents and actions during cooperative games. Players can deduce the circumstances and intentions of others by using communication channels like movement, time, and environmental interaction. In this interpretive environment, the physiological interface adds another layer of information.
+The technology offers cues that could affect how players perceive reluctance, risk-taking, or participation during cooperative gameplay by making physiological variation visible through avatar icons. 
+From the standpoint of embodied interaction, these cues are more significant in how they are integrated into ongoing engagement than in how accurately they represent internal emotional states. Instead of merely transmitting symbolic representations, meaning in interactive systems arises through situated involvement with technical surroundings \cite{dourish_where_2004}. According to this theory, players use the physiological visualisation as a contextual signal for interpreting what is happening in the game.
+\subsection{Measurement and the Mediation of Physiological Signals}
+The system also demonstrates how technology infrastructures have a mediation role in determining how physiological signals are interpreted in digital contexts. The interface does not receive physiological signals obtained via wearable technology as unprocessed biological data. Rather, they go through a series of sensing, processing, categorisation, and visualisation processes that decide how those signals appear in the interface. 
+Scholarship in Science and Technology Studies has highlighted how measurement tools contribute to the creation of the phenomena they seem to witness.
+Barad contends that rather than only disclosing preexisting characteristics of the environment, measurement tools actively contribute to the composition of the phenomena they measure \cite{nelson_meeting_1996}. Wearable sensors, data processing algorithms, and visual interface components work together to create the physiological interface created in this study, which makes cardiovascular activity visible in a multiplayer setting. 
+Therefore, it is not appropriate to interpret physiological signals provided by avatar symbols in this configuration as clear indicators of players' interior states. Rather, they serve as mediated signals whose meaning develops via the interplay of player interpretation, interface design, and sensing technology.
+\subsection{Classification and Interface Representation}
+Classifying physiological signals is a major design problem in physiological interface systems. Physiological signals are often mapped onto distinct emotional categories like stress, enthusiasm, or frustration by physiological computing systems. These methods frequently make the assumption that certain emotional states may be accurately correlated with physiological measures. 
+The interface created for this study purposefully steers clear of overt emotional classification. Rather, physiological inputs are converted into visual interface states that convey changes in cardiovascular activity without imposing predetermined emotional interpretations. Critical viewpoints on classification schemes created within Science and Technology Studies are reflected in this design choice.
+\cite{bowker_sorting_2008} demonstrates that classification systems embedded within technological infrastructures shape how information becomes organized and interpreted within social contexts\cite{bowker_sorting_2008}. Once implemented, classification categories can become naturalized as objective representations of the phenomena they describe. In the context of physiological sensing, rigid emotional classifications risk presenting physiological measurements as definitive indicators of subjective experience.
+By representing physiological variation through ambiguous visual transformations rather than explicit emotional labels, the interface allows the meaning of physiological signals to emerge through interaction with gameplay context.
+\subsection{Situated Interpretation of Physiological Data}
+The idea of contextual knowledge can also be used to comprehend the interpretive nature of physiological visualisation. According to \cite{haraway_situated_1988}, knowledge claims are never generated from universal or disembodied views, but rather from particular positions and situations \cite{haraway_situated_1988}. Similar to this, physiological signals are incorporated in the specific conditions of measurement and interpretation. 
+Similar physiological characteristics may be associated with different experiencing situations in gaming contexts. Depending on the actual context of play, increased cardiovascular activation may indicate focus, excitement, cognitive exertion, or uncertainty. This ambiguity is not addressed by the physiological interface created in this study. Rather, it sends signals that players have to decipher in light of current gameplay events and team relations.
+This approach acknowledges the contextual nature of physiological information and avoids presenting physiological sensing technologies as capable of producing definitive interpretations of internal experience.
+\subsection{Technological Visibility and Multiplayer Coordination}
+The way that technology systems influence player engagement is also affected by the incorporation of physiological sensors into multiplayer interfaces. By influencing how information is made accessible to participants, technological artefacts can affect patterns of perception, coordination, and accountability within social systems. 
+ \cite{winner_artifacts_1980} contends that by organising the distribution of information and actions inside technological systems, technical artefacts may represent certain configurations of power and authority. The choice to make physiological signals visible to teammates modifies the cooperative game's informative landscape in the interface suggested in this study. 
+During cooperative tasks, physiological visibility may affect how players assess risk, decipher hesitancy, or assign blame.
+The interface, therefore, participates in shaping the interpretive dynamics of multiplayer interaction by introducing a new form of physiological legibility within the game environment.
+\subsection{Implications for Physiological Game Interfaces}
+An alternate method of incorporating physiological sensing into video games is suggested by the artefact created in this study. The utilisation of physiological signals to improve gameplay performance, adjust game difficulty, or deduce player emotions has been the main focus of much of the current physiological computing research. The interface suggested here emphasises the social and interpretive aspects of physiological visibility, whereas these methods focus on the computational interpretation of physiological data. 
+The approach enables physiological data to serve as contextual signals in multiplayer interaction by using ambient visual cues to represent physiological signals instead of explicit emotional markers. By doing this, the interface changes the function of physiological sensing in cooperative gaming from an emotional detection mechanism to a medium of interpretive awareness.
+\section{Limitations}
+When analysing the suggested interface design, it is important to take into account the constraints that this study offers. The system is based on physiological signals that are collected from wearable sensors that detect heart rate and heart rate variability. These signals do not specifically correlate to particular emotional or cognitive states, even if they offer markers of circulatory activity. Numerous factors, such as stress, focus, or physical effort, can cause similar physiological responses. Cardiovascular signals by themselves are unable to definitively interpret subjective experience, according to research in physiological computing \cite{mandryk_fuzzy_2007}. Because of this, the interface depicts physiological variance through visual signals that are subject to interpretation within the context of gameplay rather than explicitly labelling emotions.
+Another limitation concerns the speculative nature of the artifact. The system was developed through a research creation methodology as a conceptual design intended to explore how wearable physiological sensing might be integrated into multiplayer interfaces. The study, therefore, emphasizes conceptual development and theoretical implications rather than empirical evaluation through large-scale user testing. Further research would be necessary to examine how players interpret and respond to physiological visualization during extended gameplay sessions.
+The system depends on physiological measurements obtained from wearable sensing devices such as the Apple Watch. Wearable photoplethysmography sensors are subject to limitations, including signal noise, motion artifacts, and sampling constraints that may affect measurement stability during gameplay. In addition, the visibility of physiological signals within multiplayer environments raises ethical and privacy considerations related to the sharing of personal biological data. Future implementations of physiological multiplayer interfaces would need to address issues of consent, data ownership, and control over the visibility of physiological information.
+\section{Conclusion}
+This work introduced a hypothetical multiplayer interface that visualises heart rate and heart rate variability inputs from wearable devices to incorporate physiological sensing into cooperative gaming. In order to enable teammates to notice physiological change during gameplay without depending on numerical displays or explicit emotional classification, the proposed system converts physiological measurements into ambient visual transformations integrated into player avatar icons. 
+The study looked at how physiological sensing technologies might be used as interface components that influence interpretation and coordination in multiplayer interaction, in addition to serving as instruments for gauging participant states. The research investigated how processes of sensing, categorisation, and visualisation affect how physiological information becomes meaningful inside digital settings, drawing on viewpoints from human-computer interaction and Science and Technology Studies.
+The interface highlights the interpretative and socially controlled character of physiological data by portraying physiological signals as contextual visual clues rather than conclusive markers of interior emotional states. As a result, the artefact illustrates a different strategy for incorporating physiological sensing into game interfaces, one that prioritises awareness, interpretation, and cooperative interaction above deterministic emotional detection. 
+The study adds to existing debates on the use of biometric sensing technologies in interactive systems in the fields of human-computer interaction, game design, and Science and Technology Studies. The impact of physiological visualisation on player coordination, perception, and communication in cooperative digital settings may be further studied in the future.
+\section{Acknowledgment of Peer Review Feedback}
+After receiving comments from peers during the course review process, this work was changed. The document was improved and numerous parts of the project were clarified thanks to the helpful feedback from Mr. Seyyed and Mrs. Wang. 
+Mr. Seyyed recommended that the article clarify the connection between the design of the physiological interface and the theoretical framework derived from Science and Technology Studies. In response to this criticism, the updated manuscript makes a stronger connection between the artefact and ideas of measurement, classification, and technological mediation that have been explored by academics like \cite{nelson_meeting_1996,bowker_sorting_2008}. The Discussion section was also revised to provide a clearer explanation of how these theoretical viewpoints are reflected in the interface design.
+Mrs. Wang suggested making the methodological explanation more understandable and giving a more thorough explanation of how physiological signals are converted into interface visual components. In response to this recommendation, the Methodology and System Design sections were enlarged to provide a more thorough explanation of the system architecture, the study creation methodology, and the procedure for integrating heart rate and heart rate variability data into the multiplayer interface.
+The final version of the paper, therefore, incorporates these comments by strengthening the connection between theory and design, clarifying the methodological approach, and improving the explanation of the proposed interface system.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Acknowledgment of AI Tools}
+An AI language model (ChatGPT) was utilised as a writing aid for language editing and text organising while this work was being prepared. The author created the initial textual content, conceptual framework, research idea, and artefact design. The text's early drafts, which were written by hand in a word processing program, have grammatical mistakes and an informal structure typical of a working draft. 
+The main purpose of the AI technique was to rearrange these draft paragraphs into more understandable academic jargon. In actuality, the author instructed the AI system to reorganise the content into a more formal academic style while maintaining the original meaning after writing preliminary text outlining the study concepts, methodology, and design process.
+A typical prompt used during this process was the following:
+“Please reorganize the following draft text into a clear academic paragraph suitable for a research paper. Maintain the original ideas but correct grammar, improve clarity, and structure the writing in a formal academic style. Do not add new arguments or change the meaning of the text.”
+Therefore, rather of being a source of research ideas or analysis, the AI technology was utilised as a language editing and structuring help. The author made all conceptual choices, interpretations, and final edits. Before adding any AI-assisted material to the final publication, the author made sure it was accurate and in line with the goals of the study.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\FloatBarrier  % stops earlier figures
+\clearpage     % flushes all previous floats
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{sample-base}
+
+
+\FloatBarrier  % stops earlier figures from floating here
+\clearpage     % flushes all previous floats
+
+
+\FloatBarrier  % stops earlier figures from floating here
+\clearpage     % flushes all previous floats
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\FloatBarrier  % stops earlier figures from floating here
+\clearpage     % flushes all previous floats
+
+
+
+
+% --- Figure 2 code ---
+
+
+
+\FloatBarrier  % stops earlier figures from floating here
+\clearpage     % flushes all previous floats
+
+
+
+
+\end{document}
+\endinput
+%%
+%% End of file `sample-sigconf-authordraft.tex'.
