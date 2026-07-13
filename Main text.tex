@@ -235,99 +235,41 @@ This paper contributes:
 \end{itemize}
 
 \section{Literature Review}
-\subsection{Physiological Sensing and the Emergence of Affective Interaction}
-Physiological sensing has grown in importance in human-computer interaction research during the last thirty years, especially in the fields of emotional computing and physiological user modelling. The now well-known idea that physiological signals, such as heart rate, electrodermal activity, breathing, and associated physiological processes, could function as computationally interpretable markers of human emotional states was first proposed in early work in affective computing. Such signals could be integrated into interactive systems that can identify and react to human affective circumstances, according to Picard's seminal account of affective computing \cite{picard_affective_1997}. In this concept, physiological signals were positioned as quantifiable proxies that might be used to make otherwise internal affective states computationally readable.
-This idea was expanded upon in later studies to include interactive media and digital gaming. \cite{mandryk_fuzzy_2007} created a physiological model that combines several physiological measures into a fuzzy inference framework to continually estimate emotional experience during games. In a similar vein, \cite{chanel_short-term_2009} investigated the categorisation of emotional states using peripheral physiological markers, proving that short-term affect detection during interactive activities is feasible. Physiological signals were generally seen in such work as diagnostic traces that might be used to deduce the player's experiencing condition and then integrated into system evaluation or adaptation.
-These methods evolved into a more comprehensive research tradition focused on biofeedback game interaction within game studies and HCI. Biofeedback systems incorporate physiological inputs into gaming as implicit impacts on system behaviour or as explicit control mechanisms. In their investigation of implicit and explicit biofeedback in first-person shooter settings, \cite{silberman_toward_2010} showed that physiological cues could influence gaming dynamics without the need for conscious player involvement. Subsequently,  \cite{nacke_biofeedback_2011} made a distinction between two types of physiological control: indirect physiological control, in which the game environment or difficulty characteristics are gently modulated, and direct physiological control, in which physiological signals function as explicit input channels.
-The persistence of this paradigm in interactive entertainment is confirmed by current surveys of physiological involvement. Heart rate and heart rate variability are among the physiological indications that are most commonly used in affect-driven gaming systems, according to reviews of biofeedback gaming systems \cite{navarro_biofeedback_2021}. In a similar vein, more comprehensive reviews of affective gaming studies note that physiological sensing is most frequently used to gauge player arousal, control difficulty, or customise gaming experiences \cite{robinson_lets_2020}. While this kind of study has made significant progress in the technical integration of physiological sensing into interactive systems, it has also tended to presume that physiological signals offer relatively transparent access to the player's emotional state.
 
+\subsection{Communication and Coordination in Distributed Play}
+Multiplayer games reward study less as game systems than as places where scattered groups organize themselves. Communication volume and structure separate skilled teams from weak ones across large player populations \cite{bisberg_communication_2025}, and a signal as spare as a positional ping alters who wins a competitive round \cite{leavitt_ping_2016}. The channels behind these findings are deliberate and symbolic: messages, calls, pings. The involuntary bodily signals that regulate teamwork in a shared room, the ones a partner registers before either speaks \cite{suchman_plans_1987, dourish_where_2004}, reach the game through no channel at all. This section traces how prior work has tried to carry the body across a network, and where each attempt stops short of the reading a teammate needs.
 
-\subsection{Shared Physiological Interfaces and Social Biofeedback}
-In tandem with these advancements, a corpus of study has investigated the interpersonal aspects of physiological sensing by looking at the potential sharing of physiological signals between people during mediated interaction. Social biofeedback research examines how the visibility of biological signals can influence interpersonal awareness, empathy, and coordination, while traditional biofeedback systems mainly concentrate on individual self-regulation or system adaptation. 
-\cite{slovak_understanding_2012} investigated the sharing of heart-rate signals between participants during co-present interaction in one of the first studies to clearly conceptualise physiological sharing as an interpersonal event. The concept of a "physiosocial space," which describes how physiological visualisation may serve as a communicative medium via which physiological processes become socially interpretable, was proposed by their study.
-In this context, physiological signals cease to function solely as internal measurements and instead become elements of interpersonal interaction.
-Measurable alignment of physiological rhythms may accompany coordinated action across individuals, according to research on physiological synchrony. During collaborative musical improvisation, \cite{muller_intra-_2013} showed that participants' physiological processes synchronised, suggesting that physiological coupling may develop alongside coordinated action. Similar brain synchrony was noted by \cite{dikker_brain--brain_2017} among participants in actual group interactions, indicating that quantifiable patterns of physiological alignment may be a sign of collective participation. These results have prompted academics to see physiological signals as relational phenomena rooted in social interaction as well as individual markers.
-The visualisation and sharing of physiological data in mediated environments has been the subject of more recent research in human-computer interaction. According to \cite{gan_human-computer_2022}comprehensive review of social biofeedback systems, shared physiological interfaces often seek to improve participants' social awareness, empathy, or cooperative involvement \cite{moge_shared_2022}. In these systems, physiological signals serve more as relationship cues that mediate awareness of the physical states of others than as diagnostic data.
+\subsection{Reading Physiology as Emotion}
+One tradition treats the body as a store of emotion to be recovered by computation. Affective computing set the agenda of sensing a signal and inferring the feeling behind it \cite{picard_affective_1997}, and play research applied it directly, mapping cardiac, muscular, and electrodermal activity onto models of a player's emotional state \cite{mandryk_fuzzy_2007, ravaja_phasic_2006} and adjusting game difficulty from those readings \cite{nacke_biofeedback_2011}. Surveys record both the reach of this approach and its persistent snag \cite{gan_human-computer_2022}: one elevated heart rate accompanies fear, exertion, and delight alike, so a system that prints a single emotion word onto it throws away the ambiguity the body genuinely carries. That interpretive move is the one our design declines.
 
-These possibilities are further demonstrated by experimental systems created in immersive environments. By making physiological rhythms visible in shared places, shared biofeedback visualisations in virtual reality have been demonstrated to enhance perceived social presence and interpersonal connection \cite{jarvela_augmented_2021}. According to \cite{hirsch_my_2023}, the visualisation of asynchronous cardiac activity amongst players in multiplayer virtual environments has also been linked to enhanced perceptions of social connectivity and co-presence. Physiological transparency may also affect empathy and supportive reactions in social settings, according to related research on shared stress displays\cite{jiang_intimasea_2023}.
-When considered collectively, these studies suggest that physiological signals can serve as relational media in digitally mediated contexts, allowing people to interact with one another. However, a large portion of this research is still focused on interpersonal connection, empathy, or emotional awareness, leaving the potential contribution of physiological visibility to coordination and accountability in online gaming environments largely unexplored.
-Measurement, Classification, and the Politics of Physiological Data
-Scholarship in Science and Technology Studies offers a critical lens through which the epistemological and political implications of such systems may be examined, whereas research in affective computing and social biofeedback has mostly concentrated on the experiential and technical aspects of physiological interfaces. 
-A particularly pertinent place to start is with \cite {nelson_meeting_1996} description of measurement devices. According to \cite {nelson_meeting_1996}, measurement techniques contribute to the creation of the phenomena they measure rather than just revealing pre-existing characteristics of the environment. According to this viewpoint, physiological sensing technologies are not neutral tools that merely capture physical states. How physiological signals are seen, deciphered, and visualised actively contributes to their significance as occurrences.
+\subsection{Sharing Physiology Between People}
+A second line sends the signal to another person rather than to a classifier. Heart rate has been shared to build social connection \cite{slovak_understanding_2012, moge_shared_2022}, folded into mobile chat to lift empathy and awareness \cite{hassib_heartchat_2017}, and visualized during remote collaboration, where it raised group cohesion and perceived warmth over voice alone \cite{tan_role_2014}. In play, coupled and visualized biosignals have deepened the bond between partners in cooperative and virtual settings \cite{jarvela_augmented_2021, hirsch_my_2023, jiang_intimasea_2023, muller_intra-_2013}, consistent with evidence that physiological alignment tracks social closeness \cite{dikker_brain--brain_2017}. This work shows convincingly that a shared bodily signal changes how people relate. It leaves two things untested. It seldom asks whether a viewer can name the state on show, as distinct from feeling closer to its owner, and it seldom removes the emotional framing to check that the representation still communicates. Legibility, the precondition for acting on a cue mid match, is rarely the outcome measured.
 
-\cite{bowker_sorting_2008}analysis of classification systems contains ideas that are closely related. By integrating standards and categories into technical systems, \cite{bowker_sorting_2008} shows how categorisation infrastructures are essential for structuring social knowledge and practice. After they are put into place, these classifications are accepted as essential elements of the infrastructure. This realisation emphasises the importance of the classificatory processes that convert physiological signals into categories, indicators, or interface states when applied to physiological interfaces. 
-Claims of objectivity in measurement methods are further complicated by Haraway's \cite{haraway_situated_1988}concept of situated knowledges. According to \cite{haraway_situated_1988}, rather than coming from disembodied vantage points of universal objectivity, all knowledge claims originate from specific positions and embodied views.
-This viewpoint emphasises the contextual and interpretive aspect of physiological signals in the context of physiological sensing: depending on the circumstances in which they emerge, identical physiological patterns may correlate to numerous experience states. 
-This study is further enhanced by Winner's seminal claim that technology artefacts may have political characteristics. According to \cite{winner_artifacts_1980}, technical systems frequently represent specific power and authority structures by organising the distribution of duties, information, and actions within social systems. When physiological signals become visible in interactive systems, participant accountability, perception, and coordination patterns may be influenced by the circumstances surrounding that visibility and the interpretations it prompts.
-Related work in media infrastructure studies reinforces the importance of examining the socio-technical arrangements through which knowledge becomes stabilized. Parks and \cite{parks_signal_2015} emphasize that infrastructures are not merely background technical systems but material and organizational formations that structure communication practices and forms of knowledge production. \cite{andersen_indigenous_2016} similarly demonstrates that quantitative measurement systems, including statistical frameworks, are historically and culturally situated rather than purely objective instruments. Together, these perspectives suggest that physiological interfaces should be understood not only as sensing technologies but also as infrastructures that organize how bodily knowledge becomes socially legible.
+\subsection{Situated Interpretation and a Science and Technology Studies Stance}
+Where the first tradition locates meaning in the signal and the second in the bond, a third locates it in the moment of use. Situated and embodied accounts hold that action is read against an unfolding context rather than decoded from a fixed symbol \cite{suchman_plans_1987, dourish_where_2004}, and design research treats an artifact as a way to pose that question rather than close it \cite{wakkary_things_2021}. Science and Technology Studies sharpens the stakes for anything that measures a body: instruments help produce the phenomena they seem only to record \cite{nelson_meeting_1996}, classifications carry consequences for those they sort \cite{bowker_sorting_2008, winner_artifacts_1980}, and no reading of a body is a view from nowhere \cite{haraway_situated_1988}. Together these commitments argue against an interface that resolves a teammate's heartbeat into a verdict, and for one that offers a graded, open cue to be interpreted in place.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{ Embodied Interaction and Research-Creation}
-The theories of situated action and embodied interaction in human-computer interaction research inform the current work's methodological approach. According to \cite {suchman_plans_1987}, contextual action analysis, human behaviour is not entirely dictated by pre-existing plans or representations, but rather develops dynamically within particular settings. In a similar vein, \cite {dourish_where_2004} defines embodied interaction as a method of engagement in which placed bodily movement within interactive contexts gives rise to meaning. 
-Research-creation has become a popular method in design research that combines scholarly inquiry with creative work. According to \cite {amos_kyriaki_2015}, research-creation is a type of inquiry where the creation of artefacts serves as a tool for theoretical investigation.
-Through speculative and posthuman design frameworks that aim to reevaluate the interactions between people, technologies, and environments, \cite {wakkary_things_2021}expands on this viewpoint. These methods offer a methodological foundation for considering designed artefacts as tools for investigating technological mediation issues rather than just as technological fixes.
-\begin{table*}[!t]
-  \caption{Summary of related work in physiological sensing, social biofeedback, and STS perspectives relevant to multiplayer physiological interfaces.}
-  \label{tab:relatedwork}
-  \centering
-  \normalsize
-  \renewcommand{\arraystretch}{0.97}
-  \setlength{\tabcolsep}{4pt}
-  \begin{tabular}{@{}p{3.3cm} p{3.1cm} p{3.1cm} p{4.4cm}@{}}
-    \toprule
-    \textbf{Study/System (Year)} &
-    \textbf{Feedback Type} &
-    \textbf{Interaction Style} &
-    \textbf{Limitation / Relevance} \\
-    \midrule
-
-    Picard (1997) &
-    Physiological affect detection &
-    Affective computing framework &
-    Treats physiological signals as indicators of emotional states \\
-
-    Mandryk \& Atkins (2007) &
-    HR, physiological signals &
-    Fuzzy inference emotional modelling &
-    Focus on emotion detection rather than social interpretation \\
-
-    Nacke et al. (2011) &
-    Biofeedback signals &
-    Direct and indirect physiological control in games &
-    Physiological data used primarily for gameplay control \\
-
-    Slov\'ak et al. (2012) &
-    Shared heart rate signals &
-    Physiosocial awareness interface &
-    Focus on empathy and awareness rather than gameplay coordination \\
-
-    M\"uller et al. (2013) &
-    Physiological synchrony &
-    Collaborative musical improvisation &
-    Demonstrates synchrony but not game interaction \\
-
-    Dikker et al. (2017) &
-    Brain synchrony &
-    Group interaction analysis &
-    Observes synchrony but does not design interactive systems \\
-
-    Moge, Wang, \& Cho (2022) &
-    Shared physiological interfaces &
-    Social biofeedback systems review &
-    Emphasizes empathy and awareness over coordination in games \\
-
-    \textbf{Physiological Legibility (This Work)} &
-    HR, HRV visualization &
-    Multiplayer avatar icon biofeedback &
-    Interpretable physiological cues for cooperative gameplay \\
-
-    \bottomrule
-  \end{tabular}
-\end{table*}
 \subsection{Positioning the Present Work}
-Thus, the current study shows that physiological sensing has established itself as a part of digital game research and interactive system design. Previous research has investigated shared biofeedback interfaces that promote empathy and interpersonal awareness, adaptive gameplay systems, and the utilisation of physiological signals for emotion recognition. Simultaneously, research in Science and Technology Studies has highlighted how infrastructure structures, classification schemes, and measurement technology actively influence how physical events are made socially understandable.
-The potential use of physiological sensing as an ambient interpretative resource in cooperative multiplayer gaming is yet largely unexplored, especially in scenarios involving uncertainty, failure, or coordination breakdown. The current work treats physiological visibility as a condition that reorganises how participants understand one another inside interactive contexts, as opposed to interpreting physiological signals as diagnostic indications of emotional state.
-As a result, the research suggests a multiplayer interface where wearable heart rate and heart rate variability data are converted into modest visual changes in player avatar icons. The suggested design portrays physiological signals as ambiguous visual cues that must be evaluated within the developing dynamics of cooperative play, in contrast to systems that explicitly classify or name emotional states. By doing this, the study places physiological sensing into larger STS discussions about measurement, classification, and technological mediation while also expanding on previous research on physiological interaction and social biofeedback.
+Two differences define this work against that background. Where shared physiology systems almost always transmit heart rate by itself, we add heart rate variability as a separate visual dimension, because the two indices carry different information: rate reflects momentary activation, while variability reflects the autonomic regulation underneath it \cite{thayer_model_2000, porges_polyvagal_2007}. And where earlier displays are judged by the connection they produce, we judge ours by the reading it supports, testing whether a label free representation is legible before asking what it does socially. Table~\ref{tab:related} sets the contrast out in full.
+
+\begin{table}[t]
+\footnotesize
+\caption{Systems that carry physiological data between people, and how the present work differs. \emph{Emotion labels} marks whether the display names a feeling (Named), shows a raw or connection oriented signal that implies one (Implicit), or names none (None). \emph{Reader legibility} marks whether the study tested that a viewer can identify the intended state from the display itself.}
+\label{tab:related}
+\begin{tabular}{@{}l p{2.4cm} p{3.2cm} p{1.3cm} p{1.6cm}@{}}
+\toprule
+Work & Signal and setting & Primary aim & Emotion labels & Reader legibility tested \\
+\midrule
+Picard \cite{picard_affective_1997} & Multiple signals, no shared display & Recognize and model affect by computation & Named & No \\
+Mandryk and Atkins \cite{mandryk_fuzzy_2007} & Cardiac, muscular, electrodermal in play & Infer a player's emotion from physiology & Named & No \\
+Slov\'ak et al. \cite{slovak_understanding_2012} & Heart rate, shared display & Support social connection & Implicit & No \\
+Hassib et al. \cite{hassib_heartchat_2017} & Heart rate, mobile chat & Raise empathy and awareness & Implicit & No \\
+Tan et al. \cite{tan_role_2014} & Physiological signals, remote collaboration & Restore awareness and cohesion at a distance & Implicit & Indirect \\
+Moge et al. \cite{moge_shared_2022} & Heart rate, cooperative game & Enrich shared play & Implicit & No \\
+Hirsch et al. \cite{hirsch_my_2023} & Heartbeat, avatar in a VR game & Increase social connectedness & Implicit & No \\
+\textbf{This work} & Heart rate and variability, peripheral avatar cue in distributed play & Make a teammate's state readable as a coordination cue & None & Yes \\
+\bottomrule
+\end{tabular}
+\end{table}
 \section{Methodology}
 \noindent
 \subsection{Research Methodological Orientation}
