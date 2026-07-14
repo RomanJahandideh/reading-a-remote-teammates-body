@@ -255,7 +255,7 @@ Where the first tradition locates meaning in the signal and the second in the bo
 \subsection{Positioning the Present Work}
 Two differences define this work against that background. Where shared physiology systems almost always transmit heart rate by itself, we add heart rate variability as a separate visual dimension, because the two indices carry different information: rate reflects momentary activation, while variability reflects the autonomic regulation underneath it \cite{thayer_model_2000, porges_polyvagal_2007}. And where earlier displays are judged by the connection they produce, we judge ours by the reading it supports, testing whether a label free representation is legible before asking what it does socially. Table~\ref{tab:related} sets the contrast out in full.
 
-\begin{table}[t]
+\begin{table*}[t]
 \footnotesize
 \caption{Systems that carry physiological data between people, and how the present work differs. \emph{Emotion labels} marks whether the display names a feeling (Named), shows a raw or connection oriented signal that implies one (Implicit), or names none (None). \emph{Reader legibility} marks whether the study tested that a viewer can identify the intended state from the display itself.}
 \label{tab:related}
@@ -273,7 +273,7 @@ Hirsch et al. \cite{hirsch_my_2023} & Heartbeat, avatar in a VR game & Increase 
 \textbf{This work} & Heart rate and variability, peripheral avatar cue in distributed play & Make a teammate's state readable as a coordination cue & None & Yes \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{table*}
 \section{Methodology}
 \noindent
 We used a research through design methodology with two phases. In the design phase, we derived the icon system from Science and Technology Studies. In the evaluation phase, we tested the resulting visual language for legibility and interpretation in a controlled online study. The subsections below state the research questions and hypotheses, then describe the design rationale, the icon system that stood as the study material, the study design, the participants, the apparatus, the procedure, the measures, and the analysis.
@@ -427,24 +427,24 @@ We compared identification accuracy for each channel against the 25 percent chan
 \section{Results}
 Thirty six participants produced 576 recognition trials in the structured phase and 144 free interpretations in the open phase. Each participant contributed one linear trend slope per outcome, and we tested each slope against zero with a two sided one sample t test, with Holm correction across the five planned tests. Figure~\ref{fig:procedure} summarises the procedure. We report legibility, then the intended perceptual mappings, then performance across the full grid, then usability and workload, then the qualitative findings.
 
-\begin{figure}[t]
+\begin{figure*}[t]
   \centering
-  \includegraphics[width=\columnwidth]{Figure_2_Experimental_Procedure_600dpi.png}
+  \includegraphics[width=\textwidth]{Figure_2_Experimental_Procedure_600dpi.png}
   \caption{The two-phase online procedure: an open phase presenting 4 unlabeled states per participant, followed by a structured phase presenting all 16 states in randomised order.}
   \Description{A diagram of the study procedure, showing consent and demographics, the open phase with four unlabeled states, the structured phase with all sixteen states, and a closing questionnaire.}
   \label{fig:procedure}
-\end{figure}
+\end{figure*}
 
 \subsection{Icon Legibility (H1)}
 Before any label was shown, participants' best-match interpretations of the four unaided anchor states in the open phase averaged 81.9 percent correct against the 20 percent chance level for the five-option match, indicating that the design read correctly even without prior exposure to the full state set. In the structured phase, participants identified the heart rate state on 84.2 percent of trials and the variability state on 80.6 percent, both far above the 25 percent expected from a choice among four options, supporting H1. Accuracy was even rather than carried by easy extremes. Participants recognised heart rate states at 84.7, 90.3, 82.6, and 79.2 percent from H1 to H4, and variability states at 79.2, 82.6, 79.2, and 81.2 percent from V1 to V4. Errors concentrated on neighbouring levels: H4 was read as H3 on 18 percent of its trials and V1 as V2 on 20 percent, while confusion between non adjacent states stayed at or below 1 percent. No state fell below 79 percent. Identifying both channels correctly on the same trial, a harder sixteen-way judgement, still reached 68 percent against a 6.25 percent chance level. Figure~\ref{fig:legibility} reports recognition per state against chance.
 
-\begin{figure}[t]
+\begin{figure*}[t]
   \centering
-  \includegraphics[width=\columnwidth]{Figure_3_Icon_Legibility_and_Recognition_600dpi.png}
+  \includegraphics[width=\textwidth]{Figure_3_Icon_Legibility_and_Recognition_600dpi.png}
   \caption{Identification accuracy for each heart rate state and each variability state in the structured phase, against the 25 percent chance level for a four-option choice.}
   \Description{A bar chart of recognition accuracy for the four heart rate states and four variability states, each well above the 25 percent chance line.}
   \label{fig:legibility}
-\end{figure}
+\end{figure*}
 
 \subsection{Perceived Activation and Urgency (H2)}
 The heart rate channel carried activation as intended. Each step up the heart rate state raised perceived urgency by 1.27 points on the seven point scale (95 percent CI 1.21 to 1.32), $t(35)=47.49$, $p<.001$, with condition means of 1.94, 3.15, 4.49, and 5.72 from H1 to H4. Rated arousal rose in step, by 1.35 points per level (95 percent CI 1.31 to 1.39), $t(35)=70.41$, $p<.001$, from 1.76 to 5.77. Both trends survived correction and support H2. Figure~\ref{fig:mappings}A shows the two curves with within participant confidence intervals.
@@ -576,49 +576,11 @@ The contribution is threefold: a wearable driven interaction technique that make
 ChatGPT was used for language editing and restructuring text drafted by the author. It was not used to generate the research idea, conceptual framework, study design, data, results, or citations. The author reviewed and takes responsibility for all content.
 
 % Identifying acknowledgments are omitted for blind review.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\FloatBarrier  % stops earlier figures
-\clearpage     % flushes all previous floats
+\FloatBarrier  % stops earlier figures from floating into the references
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{sample-base}
-
-
-\FloatBarrier  % stops earlier figures from floating here
-\clearpage     % flushes all previous floats
-
-
-\FloatBarrier  % stops earlier figures from floating here
-\clearpage     % flushes all previous floats
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\FloatBarrier  % stops earlier figures from floating here
-\clearpage     % flushes all previous floats
-
-
-
-
-% --- Figure 2 code ---
-
-
-
-\FloatBarrier  % stops earlier figures from floating here
-\clearpage     % flushes all previous floats
-
-
-
 
 \end{document}
 \endinput
