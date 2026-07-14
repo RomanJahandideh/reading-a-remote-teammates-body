@@ -107,6 +107,7 @@
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
 \usepackage{booktabs}
+\usepackage{tabularx}
 \usepackage{caption}
 \usepackage{xcolor}
 
@@ -315,7 +316,32 @@ The stimulus set was the icon system itself. Heart rate, an index of momentary c
 The study used a within participants design in which every participant viewed all 16 states, removing between person variation from the central comparisons. This format, in which each viewer judges every icon, matches recent within participants recognition tests of icon sets in HCI \cite{schafer_shape_2023}, and evaluating a heart rate driven display through a dedicated player facing study follows recent work on biofeedback games \cite{tu_biofeedback_2025}. It was administered online in two phases. The open phase presented 4 states per participant with all labels hidden, and the structured phase presented all 16 states in randomised order. Each participant therefore completed 20 rating trials, yielding 144 trials in the open phase and 576 in the structured phase across the sample, followed by one closing questionnaire per participant.
 
 \subsection{Participants}
-Thirty six adults completed the study. Twenty one were aged 18 to 24, twelve were aged 25 to 34, two were aged 35 to 44, and one was aged 45 to 54. Gaming background covered four reported levels: 15 regular players, 10 frequent players, 9 casual players, and 2 expert or competitive players. Familiarity with heart rate and variability was slight for 14 participants, moderate for 18, and high for 4. Prior use of wearable devices was reported as rare by 14 participants, sometimes by 7, often by 8, and very often by 2, and 5 did not report it. For visual accessibility, 31 reported no known issue, 3 reported motion sensitivity, and 2 reported a colour vision difficulty. Participants took part on a desktop or laptop (27), a phone (6), or a tablet (3). Gender was not collected.
+Thirty six adults completed the study. Twenty one were aged 18 to 24, twelve were aged 25 to 34, two were aged 35 to 44, and one was aged 45 to 54. Gaming background covered four reported levels: 15 regular players, 10 frequent players, 9 casual players, and 2 expert or competitive players. Familiarity with heart rate and variability was slight for 14 participants, moderate for 18, and high for 4. Prior use of wearable devices was reported as rare by 14 participants, sometimes by 7, often by 8, and very often by 2, and 5 did not report it. For visual accessibility, 31 reported no known issue, 3 reported motion sensitivity, and 2 reported a colour vision difficulty. Participants took part on a desktop or laptop (27), a phone (6), or a tablet (3). Gender was not collected. Table~\ref{tab:participant-demographics} summarises age and device use.
+
+\begin{table}[t]
+\centering
+\caption{Participant demographics and device use ($N=36$).}
+\label{tab:participant-demographics}
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\columnwidth}{@{}Xr@{}}
+\toprule
+Category & $n$ (\%) \\
+\midrule
+\multicolumn{2}{@{}l}{\textit{Age group}} \\
+18--24 & 21 (58.3\%) \\
+25--34 & 12 (33.3\%) \\
+35--44 & 2 (5.6\%) \\
+45--54 & 1 (2.8\%) \\
+\addlinespace
+\multicolumn{2}{@{}l}{\textit{Device used}} \\
+Desktop/laptop & 27 (75.0\%) \\
+Phone & 6 (16.7\%) \\
+Tablet & 3 (8.3\%) \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \subsection{Apparatus and Materials}
 The study ran in a standard web browser and generated each state with HTML, CSS, and JavaScript, presenting one avatar inside a simulated team status panel. The heart rate and variability states were synthetic and produced the same animation logic the deployed interface would use, which isolated the reading of the display from the demands of live play and gave every participant an identical stimulus set. Live capture was not required at this stage, since streaming a wearable's heart rate into a game engine is already established \cite{liang_harnessing_2024}.
@@ -327,7 +353,103 @@ Each session opened with consent and a short demographic form, then moved throug
 Legibility was measured as identification accuracy for the heart rate state and the variability state in the structured phase, each scored against the 25 percent expected from selecting among four options, following the forced choice recognition format used in recent icon studies \cite{schafer_shape_2023}. Affective interpretation used the Self-Assessment Manikin, a nonverbal pictorial scale for valence, arousal, and dominance that avoids emotion vocabulary \cite{bradley_measuring_1994}, administered on seven points. Workload used three items of the NASA Task Load Index, namely mental demand, effort, and frustration \cite{hart_development_1988}, on seven point scales. Five further seven point items captured the social reading of each state, including clarity, urgency, perceived stability, usefulness for coordination, and intention to offer support, and the open phase added a free text interpretation and a forced match to a plain description.
 
 \subsection{Analysis}
-Identification accuracy for each channel was compared against the 25 percent chance level. The ordering of interpretation against the underlying states was tested with Spearman rank correlation, examining whether urgency and arousal rose with activation and whether perceived stability fell, and intention to offer support rose, as ring coherence declined. Workload and the seven point rating items were summarised with descriptive statistics. The free text interpretations and the five open responses were analysed with reflexive thematic analysis \cite{braun_using_2006}, applied in line with current guidance on thematic analysis practice in HCI \cite{bowman_thematic_2023}, which produced the account of how participants read the states and the boundaries they placed on physiological visibility.
+Identification accuracy for each channel was compared against the 25 percent chance level. The intended perceptual mappings were tested with planned within participants linear trend analyses. For each outcome, every participant contributed a single linear trend slope across the ordered states, and the slopes were tested against zero with two sided one sample t tests, Holm corrected across the five planned tests. Workload and the seven point rating items were summarised with descriptive statistics. The free text interpretations and the five open responses were analysed with reflexive thematic analysis \cite{braun_using_2006}, applied in line with current guidance on thematic analysis practice in HCI \cite{bowman_thematic_2023}, which produced the account of how participants read the states and the boundaries they placed on physiological visibility.
+\section{Results}
+Thirty six participants produced 576 recognition trials in the structured phase and 144 free interpretations in the open phase. Each participant contributed one linear trend slope per outcome, and each slope was tested against zero with a two sided one sample t test, with Holm correction across the five planned tests. Figure~\ref{fig:procedure} summarises the procedure. We report legibility, then the intended perceptual mappings, then performance across the full grid, then usability and workload, then the qualitative findings.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\columnwidth]{Figure_2_Experimental_Procedure_600dpi.png}
+  \caption{The two-phase online procedure: an open phase presenting 4 unlabeled states per participant, followed by a structured phase presenting all 16 states in randomised order.}
+  \Description{A diagram of the study procedure, showing consent and demographics, the open phase with four unlabeled states, the structured phase with all sixteen states, and a closing questionnaire.}
+  \label{fig:procedure}
+\end{figure}
+
+\subsection{Icon Legibility (H1)}
+Participants identified the heart rate state on 84.2 percent of trials and the variability state on 80.6 percent, both far above the 25 percent expected from a choice among four options, supporting H1. Accuracy was even rather than carried by easy extremes. Heart rate states were recognised at 84.7, 90.3, 82.6, and 79.2 percent from H1 to H4, and variability states at 79.2, 82.6, 79.2, and 81.2 percent from V1 to V4. Errors concentrated on neighbouring levels: H4 was read as H3 on 18 percent of its trials and V1 as V2 on 20 percent, while confusion between non adjacent states stayed at or below 1 percent. No state fell below 79 percent. Figure~\ref{fig:legibility} reports recognition per state against chance.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\columnwidth]{Figure_3_Icon_Legibility_and_Recognition_600dpi.png}
+  \caption{Identification accuracy for each heart rate state and each variability state in the structured phase, against the 25 percent chance level for a four-option choice.}
+  \Description{A bar chart of recognition accuracy for the four heart rate states and four variability states, each well above the 25 percent chance line.}
+  \label{fig:legibility}
+\end{figure}
+
+\subsection{Perceived Activation and Urgency (H2)}
+The heart rate channel carried activation as intended. Each step up the heart rate state raised perceived urgency by 1.27 points on the seven point scale (95 percent CI 1.21 to 1.32), $t(35)=47.49$, $p<.001$, with condition means of 1.94, 3.15, 4.49, and 5.72 from H1 to H4. Rated arousal rose in step, by 1.35 points per level (95 percent CI 1.31 to 1.39), $t(35)=70.41$, $p<.001$, from 1.76 to 5.77. Both trends survived correction and support H2. Figure~\ref{fig:mappings}A shows the two curves with within participant confidence intervals.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{Figure_4_Validation_of_Perceptual_Mappings_600dpi.png}
+  \caption{Validation of the intended perceptual mappings. (A) Perceived urgency and SAM arousal rise monotonically with heart rate state. (B) Perceived stability falls and support intention rises as ring coherence declines across the variability states.}
+  \Description{Two line charts with within-participant confidence intervals: urgency and arousal rising across the four heart rate states, and stability falling while support intention rises across the four variability states.}
+  \label{fig:mappings}
+\end{figure*}
+
+\subsection{Perceived Stability and the Call for Support (H3 and H4)}
+The variability channel carried regulation as intended. Each step toward a more fragmented ring lowered perceived stability by 1.33 points (95 percent CI 1.29 to 1.37), $t(35)=70.50$, $p<.001$, with means of 6.78, 5.56, 4.12, and 2.82 from V1 to V4, supporting H3. Over the same states the intention to offer support rose by 0.72 points per level (95 percent CI 0.66 to 0.78), $t(35)=24.42$, $p<.001$, from 3.12 to 5.25, supporting H4. Rated control moved on the same axis, falling by 0.71 points per level (95 percent CI 0.66 to 0.76), $t(35)=29.74$, $p<.001$. Table~\ref{tab:trend-tests} lists all five trend tests, and Figure~\ref{fig:mappings}B plots the variability panel.
+
+\begin{table*}[t]
+\centering
+\caption{Planned within-subject linear-trend tests of the intended perceptual mappings. Effect is the mean rating change per one-level step, with direction noted. Holm-adjusted $p$ corrects for the five planned tests ($df=35$).}
+\label{tab:trend-tests}
+\small
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+Outcome & Predictor & Effect per level & 95\% CI & $t$ & Adjusted $p$ \\
+\midrule
+Perceived urgency (rises) & HR state & 1.27 & 1.21 to 1.32 & 47.49 & $<.001$ \\
+SAM arousal (rises) & HR state & 1.35 & 1.31 to 1.39 & 70.41 & $<.001$ \\
+Perceived stability (falls) & HRV fragmentation & 1.33 & 1.29 to 1.37 & 70.50 & $<.001$ \\
+SAM dominance (falls) & HRV fragmentation & 0.71 & 0.66 to 0.76 & 29.74 & $<.001$ \\
+Support intention (rises) & HRV fragmentation & 0.72 & 0.66 to 0.78 & 24.42 & $<.001$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Performance Across the Full Grid}
+Because the two channels were composed rather than assigned unrelated appearances, legibility could have collapsed where an active pulse met a fragmented ring. It did not. Recognition held across all 16 combinations, with no cell falling to chance and the hardest cells confined to adjacent middle states, which confirms that participants read the two channels independently rather than memorising whole icons. Figure~\ref{fig:conditions} shows performance for every combination.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{Figure_5_Condition_Level_Performance_600dpi.png}
+  \caption{Identification accuracy for all 16 heart rate by variability combinations. No combination fell to chance, and the hardest cells were confined to adjacent middle states.}
+  \Description{A heatmap of recognition accuracy across the four heart rate states by four variability states, with all cells well above chance and the lowest values concentrated among adjacent middle states.}
+  \label{fig:conditions}
+\end{figure*}
+
+\subsection{Usability and Workload (H5)}
+The display read clearly and cost little effort. Clarity averaged 5.97 of 7 and coordination usefulness 5.79, while the three Task Load Index items stayed low, with mental demand at 3.19, effort at 3.28, and frustration at 2.06. Overall confidence was 5.83 and visual comfort 5.86. These results support H5. Table~\ref{tab:usability-workload} reports each measure with its 95 percent confidence interval.
+
+\begin{table}[t]
+\centering
+\caption{Overall usability and workload ratings.}
+\label{tab:usability-workload}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\columnwidth}{@{}Xcc@{}}
+\toprule
+Measure & Mean & 95\% CI \\
+\midrule
+Clarity & 5.97/7 & 5.92--6.01 \\
+Coordination usefulness & 5.79/7 & 5.74--5.83 \\
+Mental demand & 3.19/7 & 2.98--3.41 \\
+Effort & 3.28/7 & 3.04--3.52 \\
+Frustration & 2.06/7 & 1.83--2.28 \\
+Overall confidence & 5.83/7 & 5.61--6.05 \\
+Visual comfort & 5.86/7 & 5.58--6.14 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{How Participants Read the States}
+The open responses explain the recognition scores. Participants reported reading the two channels separately, using pulse speed and glow for activation and the ring for stability, which is what the compositional design intended. The pulsing centre and the intact or broken ring were named repeatedly as the features that carried the most meaning. The states participants found hardest were adjacent middle combinations, and one recurring difficulty was telling an intentionally dotted ring from a lightly broken one, which matches the neighbour confusions in the recognition data.
+
+\subsection{Usefulness, Boundaries, and Willingness to Use}
+Participants judged the display useful for cooperative play, and several tied that judgement to its refusal to name a feeling, valuing that it showed a pattern rather than a verdict. The same responses set conditions. Participants asked for control over who can see their status, for the display to stay optional and mutable, and for the animation to remain subtle during normal play, and some described unrestricted visibility as potentially invasive. Willingness to adopt was expressed most often for cooperative modes where a teammate cannot pause to explain their state, and was framed as an added cue rather than proof of how someone feels.
+
 \section{System Design}
 \subsection{System Overview}
 A multiplayer interface system that displays physiological signs from wearable devices during cooperative gaming is the artefact created in this study. By converting physiological measurements into visual cues that are incorporated into player avatar icons, the system enables players to notice changes in their colleagues' physiological states while engaging in gameplay. 
