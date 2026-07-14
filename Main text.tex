@@ -108,10 +108,13 @@
 \usepackage{pgfplotstable}
 \usepackage{booktabs}
 \usepackage{tabularx}
+\usepackage{array}
 \usepackage{caption}
 \usepackage{xcolor}
 
 \usepackage{placeins}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
 \pgfplotsset{compat=1.18}
 \pgfplotsset{
@@ -297,6 +300,42 @@ Three commitments from Science and Technology Studies fixed the design decisions
 
 \subsection{Icon System and Stimuli}
 The stimulus set was the icon system itself. Heart rate, an index of momentary cardiovascular activation, controlled pulse speed, glow, and halo scale. Heart rate variability, a marker of autonomic regulation estimated from the interval between beats \cite{thayer_model_2000, porges_polyvagal_2007, shaffer_overview_2017}, controlled the coherence of a surrounding ring, from a smooth continuous halo to a broken and jittering one. Each channel held four states defined relative to baseline, producing 16 combinations through the crossing of four heart rate states and four variability states. We rendered each state as a looping animation of five to seven seconds around a single avatar. Because we composed the two channels rather than assigning unrelated appearances, a participant who had learned each channel could read a combination not seen before. No state carried an emotion word.
+
+We represented simulated heart-rate activity using four states defined relative to a participant's baseline. The states controlled the icon's pulse speed, glow intensity, and halo expansion. These categories were used as prototype design states rather than medical diagnoses or fixed emotional labels.
+
+\begin{table*}[t]
+\centering
+\caption{Heart-rate stimulus classification used in the prototype. Thresholds were defined relative to baseline and were used to structure the simulated visual states rather than to provide medical or emotional diagnoses.}
+\label{tab:hr-stimulus-classification}
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{@{}p{0.19\textwidth}YYY@{}}
+\toprule
+\textbf{HR state} &
+\textbf{Physiological meaning} &
+\textbf{Prototype threshold} &
+\textbf{Icon effect} \\
+\midrule
+\textbf{H1: Resting / Low Activation} &
+Calm or low cardiovascular activation &
+Baseline to $+5$ bpm, or $\leq 10\%$ above baseline &
+Slow halo pulse and soft glow \\
+\textbf{H2: Focused Activation} &
+Engaged, alert, and mildly activated &
+$+6$ to $+15$ bpm, or $11$--$25\%$ above baseline &
+Medium pulse and clearer glow \\
+\textbf{H3: High Activation} &
+Intense engagement, pressure, or effort &
+$+16$ to $+30$ bpm, or $26$--$45\%$ above baseline &
+Fast pulse and stronger glow \\
+\textbf{H4: Overdrive Activation} &
+Very high activation and possible overload &
+More than $+30$ bpm, or more than $45\%$ above baseline &
+Rapid pulse, sharp glow, and stronger expansion \\
+\bottomrule
+\end{tabularx}
+\end{table*}
 
 \begin{figure*}[t]
   \centering
