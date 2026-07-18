@@ -2,11 +2,11 @@
 
 ## Claude Code handoff: read before using this report
 
-### Source integrity blocker
+### Current source verification
 
-Do not revise the current **Main text.tex** as if it were the two-study ISS submission. On repository branch **main**, commit **8a287d5**, that file is titled *Physiological Legibility in Multiplayer Games* and describes a speculative research-creation project. It has no Study 1 or Study 2 and contains only two figure environments and one table environment. It does not match the requested manuscript, *Reading a Remote Teammate's Body: Heart Rate and Variability on the Avatar to Support Coordination*.
+Use the repository's current **Main text.tex** as the manuscript source. The source mismatch observed at the start of Stage 1 was resolved by later Overleaf commits before this report was published. At commit **cdaae22**, immediately before this report was added, **Main text.tex** has the intended title, *Reading a Remote Teammate's Body: Heart Rate and Variability on the Avatar to Support Coordination*, and contains both Study 1 and Study 2, including their methods, results, discussion, limitations, conclusion, figures, and tables.
 
-A possible newer source exists locally at **C:\Users\User\Desktop\IAT 803\Final paper\Final Draft.docx**, alongside Study 2 methodology/results PDFs and figures. Do not silently substitute or convert that Word file. First obtain the user's confirmation or the intended LaTeX source.
+The older local **C:\Users\User\Desktop\IAT 803\Final paper\Final Draft.docx** is not the editing authority. Do not silently replace or convert the current LaTeX source from that Word file. Because Overleaf is active on **main**, begin every revision pass by fetching the latest remote state and checking for concurrent changes.
 
 ### Required revision safeguards
 
