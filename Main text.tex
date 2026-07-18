@@ -220,28 +220,19 @@ Networked multiplayer games are among the most inhabited yet distributed interac
 
 \section{Introduction}
 \label{sec:intro}
-Networked multiplayer games have become one of the largest settings where people cooperate with others they cannot see. Inside a single match, strangers and friends assemble into teams, divide roles, and steer shared outcomes through fast rounds of coordination. What holds such teams together is communication, and its quality tracks how well they perform: analyses of large player populations show that the volume and structure of team communication separate strong clans from weak ones \cite{bisberg_communication_2025}, and even a channel as thin as a map ping measurably shifts the result of a competitive match \cite{leavitt_ping_2016}. Coordination in these spaces rests on a stream of small signals that tell each member what the others attend to and how hard they are working.
+Networked multiplayer games are among the largest settings where people cooperate with others they cannot see. Strangers and friends assemble into teams, divide roles, and steer shared outcomes through fast rounds of coordination, held together by communication whose quality tracks performance: communication volume and structure separate strong teams from weak ones across large player populations \cite{bisberg_communication_2025}, and even a signal as thin as a map ping measurably shifts a competitive match \cite{leavitt_ping_2016}. Coordination rests on a stream of small signals that tell each member what others attend to and how hard they are working.
 
-One signal that teammates in a shared room read without effort never survives the trip across the network. When people occupy the same space, they register a partner's quickened breath, restless posture, and rising tension continuously and prereflectively, and they fold that reading into how they speak and act \cite{suchman_plans_1987, dourish_where_2004}. Distributed play strips this bodily layer away. A remote partner must infer effort, composure, and withdrawal from text, voice, and avatar motion, which carry far less than shared physical presence does. Controlled comparison confirms the cost: when the cues available in face to face contact are removed, collaborators understand one another less well, and judge one another more harshly, than when a representation of the partner's bodily state is restored \cite{tan_role_2014}.
+One signal that teammates in a shared room read without effort never survives the network. In person, people register a partner's quickened breath, restless posture, and rising tension continuously and prereflectively, folding that reading into how they speak and act \cite{suchman_plans_1987, dourish_where_2004}. Distributed play strips this bodily layer away: a remote partner must infer effort, composure, and withdrawal from text, voice, and avatar motion alone, and controlled comparison confirms the cost, since removing face to face cues makes collaborators understand and judge one another worse than when a representation of the partner's bodily state is restored \cite{tan_role_2014}. The consequence is a specific failure of interpretation rather than a general lack of information: a teammate who has gone quiet may be concentrating, overloaded, or withdrawing, and the three call for opposite responses. Absent any read on the body, players guess, and wrong guesses accumulate into misattributed blame, mistimed help, and coordination that unravels under pressure. The problem this paper addresses is how to return a usable trace of that missing bodily layer to distributed teammates.
 
-The consequence is a specific failure of interpretation rather than a general lack of information. A teammate who has gone quiet may be concentrating, overloaded, or withdrawing, and the three call for opposite responses. Absent any read on the body, players guess, and wrong guesses accumulate into misattributed blame, mistimed help, and coordination that unravels under pressure. The problem this paper addresses is how to return a usable trace of that missing bodily layer to distributed teammates.
-
-Sending physiological data across a network is not new. Heart rate has been carried into chat to raise empathy and awareness \cite{hassib_heartchat_2017}, into shared displays to deepen social connection \cite{slovak_understanding_2012, moge_shared_2022}, and into cooperative and virtual games to strengthen the felt bond between players \cite{jarvela_augmented_2021, hirsch_my_2023, jiang_intimasea_2023, muller_intra-_2013}. Two limits recur. First, a long affective computing tradition treats a biosignal as evidence for an underlying emotion to be detected and named \cite{picard_affective_1997, mandryk_fuzzy_2007}, fixing a single interpretation onto a body whose signals are notoriously ambiguous. Second, studies that report warmer feelings between partners seldom test whether a viewer can actually read the state on display and decide what to do about it, or whether the representation communicates anything once its emotion labels are removed. Legibility, and the situated judgment that follows from it, stays largely unmeasured.
+Sending physiological data across a network is not new: heart rate has been carried into chat to raise empathy \cite{hassib_heartchat_2017}, into shared displays to deepen social connection \cite{slovak_understanding_2012, moge_shared_2022}, and into cooperative and virtual games to strengthen felt bonds between players \cite{jarvela_augmented_2021, hirsch_my_2023, jiang_intimasea_2023, muller_intra-_2013}. Two limits recur. A long affective computing tradition treats a biosignal as evidence for an underlying emotion to be detected and named \cite{picard_affective_1997, mandryk_fuzzy_2007}, fixing a single interpretation onto a body whose signals are notoriously ambiguous, and studies reporting warmer feelings between partners seldom test whether a viewer can actually read the state on display and decide what to do about it. Legibility, and the situated judgment that follows from it, stays largely unmeasured.
 
 We take a different route, and its shape comes from Science and Technology Studies. If measurement helps constitute the phenomenon it appears merely to record \cite{nelson_meeting_1996}, if the categories an interface imposes carry consequences of their own \cite{bowker_sorting_2008, winner_artifacts_1980}, and if every reading of a body belongs to a particular viewer and moment \cite{haraway_situated_1988}, then an interface that stamps a teammate's heartbeat with the word calm or panic overreaches. Our display withholds such verdicts. It renders Apple Watch heart rate as pulse rate and brightness, standing for cardiovascular activation, and heart rate variability as the coherence and steadiness of a ring, standing for autonomic regulation \cite{thayer_model_2000, porges_polyvagal_2007}, shown as a halo around each teammate's avatar (Figure~\ref{fig:teaser}). These become graded, deliberately open cues that a teammate weighs against the unfolding match rather than reads off as fact \cite{suchman_plans_1987, wakkary_things_2021}. The artifact is built to make an argument, not a diagnosis.
 
-We evaluated whether that argument is even readable. In an online study, 36 distributed participants viewed all sixteen combinations of four heart rate states and four variability states and reported what each conveyed, through established instruments for symbol comprehension, affective rating, and workload. Participants recovered heart rate at 66 percent and variability at 58 percent from animation alone, well past the 25 percent expected from guessing. Their interpretations were ordered as the design intended: perceived urgency and arousal rose with activation, while falling variability coherence lowered perceived stability and raised the intention to offer support, none of it routed through emotion words. Reading the display stayed on the low side of the workload scale, most participants would accept it in cooperative play, and several drew boundaries around exposing bodily data to teammates, a concern we take up directly.
+We first evaluated whether that argument is even readable. In an online study, 36 distributed participants viewed all sixteen combinations of four heart rate states and four variability states and reported what each conveyed, through established instruments for symbol comprehension, affective rating, and workload. Participants recovered heart rate at 66 percent and variability at 58 percent from animation alone, well past the 25 percent expected from guessing, and their interpretations were ordered as intended: perceived urgency and arousal rose with activation, while falling variability coherence lowered perceived stability and raised the intention to offer support, none of it routed through emotion words. Reading the display stayed on the low side of the workload scale, most participants would accept it in cooperative play, and several drew boundaries around exposing bodily data to teammates, a concern we take up directly.
 
-That first study answers whether the icon is readable in isolation; it does not answer whether reading it changes what teammates do together. We therefore conducted a second study that carries the validated icon system out of the single-avatar browser task and into live cooperative play. Study 2 implements the acquisition, baseline-relative classification, and avatar-rendering architecture that Study 1 proposed but left unbuilt, embeds it in an Overcooked-style \cite{carroll_utility_2019, baek_toward_2022} cooperative cooking task, and evaluates it against a no-cue baseline and an explicit numeric HR/HRV display across scripted teammate-pressure events, so that the legibility question of Study 1 is followed by a question about awareness, support timing, coordination, workload, and privacy during actual play. Twelve three-player teams completed all three conditions; teams supported a struggling teammate 3.9 seconds faster under the Icon Cue than under No Cue, matching the Numeric Cue's speed while being rated significantly less invasive and no more effortful than playing with no cue at all, though the Numeric Cue was rated somewhat more useful for coordination and more trustworthy. Sections~\ref{sec:study2-methods} and~\ref{sec:study2-results} report this second study's methodology, implemented apparatus, and results in full.
+That first study answers whether the icon is readable in isolation, not whether reading it changes what teammates do together. We therefore conducted a second study carrying the validated icon system into live cooperative play. Study 2 implements the acquisition, classification, and avatar-rendering architecture that Study 1 proposed but left unbuilt, embeds it in an Overcooked-style \cite{carroll_utility_2019, baek_toward_2022} cooperative cooking task, and evaluates it against a no-cue baseline and an explicit numeric HR/HRV display across scripted teammate-pressure events. Twelve three-player teams completed all three conditions; teams supported a struggling teammate 3.9 seconds faster under the Icon Cue than under No Cue, matching the Numeric Cue's speed while being rated significantly less invasive and no more effortful than no cue at all, though the Numeric Cue was rated somewhat more useful for coordination and more trustworthy. Sections~\ref{sec:study2-methods} and~\ref{sec:study2-results} report this second study in full.
 
-We contribute:
-\begin{itemize}
-\item a design method that translates Science and Technology Studies commitments, that measurement constitutes rather than reports what it names, that classification carries consequences, and that any reading of a body is situated, into concrete visual encoding choices, producing a representation that offers social cues without assigning emotions;
-\item a peripheral avatar display that instantiates that method for wrist worn heart rate and variability, designed for the shared interactive space of a multiplayer match, compositionally encoding the two signals as separable visual channels, pulse and brightness for activation, ring coherence for variability, rather than transmitting heart rate alone as almost all prior shared-physiology systems do;
-\item empirical evidence, from an online legibility study that tests the display with a chance-referenced forced-choice design against a fixed accuracy criterion, rather than the open-ended interpretation typical of prior ambiguous-display work, that this label free representation is legible, interpreted in a graded and consistent way, and light enough in workload to be usable, together with the privacy limits players place around it;
-\item an implemented, live-multiplayer instantiation of the proposed architecture, embedded in a custom Overcooked-style cooperative task and evaluated under a no-cue, numeric-cue, and icon-cue condition against scripted teammate-pressure events, extending the legibility question of Study 1 into a test of coordination behavior during actual cooperative play; and
-\item evidence from that live test that the ambient cue speeds teammate support as much as an explicit numeric display while costing less workload and less perceived invasiveness, alongside a legibility-versus-precision trade-off on rated coordination usefulness and trust that qualifies the case for ambiguity as a design resource.
-\end{itemize}
+We contribute: a design method translating Science and Technology Studies commitments, that measurement constitutes rather than reports what it names, that classification carries consequences, and that any reading of a body is situated, into concrete visual encoding choices that offer social cues without assigning emotions; a peripheral avatar display instantiating that method for wrist worn heart rate and variability, compositionally encoding the two signals as separable visual channels, pulse and brightness for activation, ring coherence for variability, rather than transmitting heart rate alone as almost all prior shared-physiology systems do; empirical evidence, from an online legibility study with a chance-referenced forced-choice design against a fixed accuracy criterion, that this label free representation is legible, interpreted in a graded and consistent way, and light enough in workload to be usable, together with the privacy limits players place around it; an implemented, live-multiplayer instantiation of the architecture, evaluated under no-cue, numeric-cue, and icon-cue conditions against scripted teammate-pressure events; and evidence from that live test that the ambient cue speeds teammate support as much as an explicit numeric display while costing less workload and invasiveness, alongside a legibility-versus-precision trade-off on rated usefulness and trust that qualifies the case for ambiguity as a design resource.
 
 \section{Literature Review}
 
@@ -284,7 +275,7 @@ Howell et al. \cite{howell_biosignals_2016} & Skin conductance, ambiguous shared
 \section{Study 1 Methodology: Icon Legibility Validation}
 \label{sec:study1-methods}
 \noindent
-This paper reports two studies. Study 1, described in this section, used a research through design methodology with two phases: in the design phase, we derived the icon system from Science and Technology Studies and built the single-avatar browser stimuli that render it; in the evaluation phase, we tested the resulting visual language for legibility and interpretation in a controlled online study. Study 2 (Section~\ref{sec:study2-methods}) then implements the same icon system as a live multiplayer prototype and evaluates it during cooperative play. The subsections below state Study 1's research questions and hypotheses, then describe the design rationale, the icon system that stood as the study material, the study design, the participants, the apparatus, the procedure, the measures, and the analysis, before closing with the proposed system architecture that Study 2 goes on to implement.
+This paper reports two studies. Study 1, described in this section, used a research through design methodology with two phases: in the design phase, we derived the icon system from Science and Technology Studies and built the single-avatar browser stimuli that render it; in the evaluation phase, we tested the resulting visual language for legibility and interpretation in a controlled online study. Study 2 (Section~\ref{sec:study2-methods}) then implements the same icon system as a live multiplayer prototype and evaluates it during cooperative play.
 
 \subsection{Research Questions and Hypotheses}
 We addressed three research questions.
@@ -304,7 +295,7 @@ We set five hypotheses.
 \end{description}
 
 \subsection{Design Rationale}
-Rendering a teammate's cardiovascular state at all presumes that state is worth showing. Interoception, the continuous and largely prereflective sense of one's own physiological condition, is how a person normally accesses that information about themselves \cite{craig_how_2002}; the display's task is to give a second party partial access to a process the wearer otherwise senses alone. Three commitments from Science and Technology Studies then fixed how we did that. Because measurement helps constitute the phenomenon it appears to record \cite{nelson_meeting_1996}, we classified heart rate and variability relative to each player's own baseline rather than against an absolute clinical scale. Because the categories an interface installs carry consequences and harden into infrastructure \cite{bowker_sorting_2008, winner_artifacts_1980}, we used a small set of relative visual states and no named emotion. Because any reading of a body is situated and partial \cite{haraway_situated_1988}, and meaning forms in place rather than inside a fixed symbol \cite{suchman_plans_1987, dourish_where_2004}, we left the cues open for interpretation against the surrounding play. This treatment of ambiguity as a resource follows prior evidence that one bodily signal supports many readings depending on its context \cite{howell_biosignals_2016}. We pursued the design itself as inquiry through research creation \cite{amos_kyriaki_2015} and speculative design \cite{wakkary_things_2021}, in a tradition that treats the body as a resource for interface design in its own right rather than only a source of data to be extracted \cite{dauden_roquet_body_2020}.
+Rendering a teammate's cardiovascular state at all presumes that state is worth showing. Interoception, the continuous and largely prereflective sense of one's own physiological condition, is how a person normally accesses that information about themselves \cite{craig_how_2002}; the display's task is to give a second party partial access to a process the wearer otherwise senses alone. Three commitments from Science and Technology Studies fixed how we did that. Because measurement helps constitute the phenomenon it appears to record \cite{nelson_meeting_1996}, we classified heart rate and variability relative to each player's own baseline rather than against an absolute clinical scale. Because the categories an interface installs carry consequences and harden into infrastructure \cite{bowker_sorting_2008, winner_artifacts_1980}, we used a small set of relative visual states and no named emotion. Because any reading of a body is situated and partial \cite{haraway_situated_1988}, and meaning forms in place rather than inside a fixed symbol \cite{suchman_plans_1987, dourish_where_2004}, we left the cues open for interpretation against the surrounding play, following prior evidence that one bodily signal supports many readings depending on its context \cite{howell_biosignals_2016}. We pursued the design itself as inquiry through research creation \cite{amos_kyriaki_2015} and speculative design \cite{wakkary_things_2021}, treating the body as a resource for interface design in its own right rather than only a source of data to be extracted \cite{dauden_roquet_body_2020}.
 
 \subsection{Icon System and Stimuli}
 The stimulus set was the icon system itself. Heart rate, an index of momentary cardiovascular activation, controlled pulse speed, glow, and halo scale. Heart rate variability, a marker of autonomic regulation estimated from the interval between beats \cite{thayer_model_2000, porges_polyvagal_2007, shaffer_overview_2017}, controlled the coherence of a surrounding ring, from a smooth continuous halo to a broken and jittering one. Each channel held four states defined relative to baseline, producing 16 combinations through the crossing of four heart rate states and four variability states. We rendered each state as a looping animation of five to seven seconds around a single avatar. Because we composed the two channels rather than assigning unrelated appearances, a participant who had learned each channel could read a combination not seen before. No state carried an emotion word.
@@ -391,35 +382,10 @@ Tables~\ref{tab:hr-stimulus-classification} and~\ref{tab:hrv-stimulus-classifica
 \end{figure*}
 
 \subsection{Study Design}
-We used a within participants design in which every participant viewed all 16 states, removing between person variation from the central comparisons. This format, in which each viewer judges every icon, matches recent within participants recognition tests of icon sets in HCI \cite{schafer_shape_2023}, and evaluating a heart rate driven display through a dedicated player facing study follows recent work on biofeedback games \cite{tu_biofeedback_2025}. We administered it online in two phases. The open phase presented 4 states per participant with all labels hidden, and the structured phase presented all 16 states in randomised order. Each participant therefore completed 20 rating trials, yielding 144 trials in the open phase and 576 in the structured phase across the sample, followed by one closing questionnaire per participant. The design deliberately tests absolute legibility against a fixed chance level rather than comparative legibility against an alternative encoding, following the convention of ISO 9186 symbol-comprehension testing, where a candidate symbol is evaluated against a comprehension criterion rather than against competing symbol designs \cite{iso_9186_2014}. We did not include a numeric or emotion-labeled comparison arm; Section~\ref{sec:limitations} returns to what that omission does and does not let us claim, and Section~\ref{sec:study2-methods} reports a follow-up study designed to make exactly that comparison.
+We used a within participants design in which every participant viewed all 16 states, removing between person variation from the central comparisons, matching recent within participants recognition tests of icon sets in HCI \cite{schafer_shape_2023} and recent work evaluating heart-rate-driven displays through dedicated player facing studies \cite{tu_biofeedback_2025}. We administered it online in two phases: an open phase presenting 4 states per participant with all labels hidden, and a structured phase presenting all 16 states in randomised order, for 20 rating trials per participant (144 open-phase and 576 structured-phase trials across the sample), followed by one closing questionnaire per participant. The design deliberately tests absolute legibility against a fixed chance level rather than comparative legibility against an alternative encoding, following the convention of ISO 9186 symbol-comprehension testing \cite{iso_9186_2014}. We did not include a numeric or emotion-labeled comparison arm; Section~\ref{sec:limitations} returns to what that omission does and does not let us claim, and Section~\ref{sec:study2-methods} reports a follow-up study designed to make exactly that comparison.
 
 \subsection{Participants}
-We recruited thirty six adults through the author's university subject pool and personal network; participation was voluntary and uncompensated, and all recruited participants completed the study. Twenty one were aged 18 to 24, twelve were aged 25 to 34, two were aged 35 to 44, and one was aged 45 to 54. Gaming background covered four reported levels: 15 regular players, 10 frequent players, 9 casual players, and 2 expert or competitive players. Familiarity with heart rate and variability was not familiar for 4 participants, slight for 13, moderate for 15, and high for 4. For prior use of wearable devices, 14 participants reported rare use, 7 sometimes, 8 often, and 2 very often, and 5 did not report it. For visual accessibility, 31 reported no known issue, 3 reported motion sensitivity, and 2 reported a colour vision difficulty. Participants took part on a desktop or laptop (27), a phone (6), or a tablet (3). We did not collect gender. Table~\ref{tab:participant-demographics} summarises age and device use.
-
-\begin{table}[t]
-\centering
-\caption{Participant demographics and device use ($N=36$).}
-\label{tab:participant-demographics}
-\footnotesize
-\setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.08}
-\begin{tabularx}{\columnwidth}{@{}Xr@{}}
-\toprule
-Category & $n$ (\%) \\
-\midrule
-\multicolumn{2}{@{}l}{\textit{Age group}} \\
-18-24 & 21 (58.3\%) \\
-25-34 & 12 (33.3\%) \\
-35-44 & 2 (5.6\%) \\
-45-54 & 1 (2.8\%) \\
-\addlinespace
-\multicolumn{2}{@{}l}{\textit{Device used}} \\
-Desktop/laptop & 27 (75.0\%) \\
-Phone & 6 (16.7\%) \\
-Tablet & 3 (8.3\%) \\
-\bottomrule
-\end{tabularx}
-\end{table}
+We recruited thirty six adults through the author's university subject pool and personal network; participation was voluntary and uncompensated, and all recruited participants completed the study. Twenty one were aged 18 to 24, twelve were aged 25 to 34, two were aged 35 to 44, and one was aged 45 to 54. Gaming background covered four reported levels: 15 regular players, 10 frequent players, 9 casual players, and 2 expert or competitive players. Familiarity with heart rate and variability was not familiar for 4 participants, slight for 13, moderate for 15, and high for 4. For prior use of wearable devices, 14 participants reported rare use, 7 sometimes, 8 often, and 2 very often, and 5 did not report it. For visual accessibility, 31 reported no known issue, 3 reported motion sensitivity, and 2 reported a colour vision difficulty. Participants took part on a desktop or laptop (27), a phone (6), or a tablet (3). We did not collect gender.
 
 \subsection{Apparatus and Materials}
 We ran the study in a standard web browser and generated each state with HTML, CSS, and JavaScript, presenting one avatar inside a simulated team status panel. The heart rate and variability states were synthetic and produced the same animation logic the deployed interface would use, which isolated the reading of the display from the demands of live play and gave every participant an identical stimulus set. We did not require live capture at this stage, since streaming a wearable's heart rate into a game engine is already established \cite{liang_harnessing_2024}.
@@ -428,18 +394,16 @@ We ran the study in a standard web browser and generated each state with HTML, C
 Each session opened with consent and a short demographic form, then moved through the two phases. In the open phase, and with every label hidden, participants viewed a state, wrote in free text what it conveyed, rated their confidence, selected the closest option from a set of plain descriptions, and rated perceived activation and perceived stability on seven point scales. This followed the open logic of graphical symbol comprehension, where an unprompted answer reveals what a symbol communicates without text \cite{iso_9186_2014}. In the structured phase, participants saw all 16 states in randomised order and, for each, identified the heart rate state from four options and the variability state from four options, rated clarity, urgency, perceived stability, usefulness for coordination, and intention to offer support on seven point scales, and completed a seven point pictorial affective rating. We closed each session with a questionnaire that recorded workload, confidence, visual comfort, and five open responses covering the most helpful feature, the most confusing states, whether the display felt useful or invasive, willingness to use it in cooperative play, and suggested improvements.
 
 \subsection{Ethics Note for Reviewers}
-All participants gave informed consent before beginning the session, were told they could withdraw at any time without penalty, and were assigned an anonymous participant identifier rather than any directly identifying label. No directly identifying information was collected; demographic categories are reported only in aggregate (Table~\ref{tab:participant-demographics}).
+All participants gave informed consent before beginning the session, were told they could withdraw at any time without penalty, and were assigned an anonymous participant identifier rather than any directly identifying label. No directly identifying information was collected; demographic categories are reported only in aggregate above.
 
 \subsection{Measures}
 We measured legibility as identification accuracy for the heart rate state and the variability state in the structured phase, each scored against the 25 percent expected from selecting among four options, following the forced choice recognition format used in recent icon studies \cite{schafer_shape_2023}. We assessed affective interpretation with the Self-Assessment Manikin (SAM), a nonverbal pictorial scale for valence, arousal, and dominance that avoids emotion vocabulary \cite{bradley_measuring_1994}, administered on seven points. We assessed workload with three items of the NASA Task Load Index, namely mental demand, effort, and frustration \cite{hart_development_1988}, on seven point scales. Five further seven point items captured the social reading of each state, including clarity, urgency, perceived stability, usefulness for coordination, and intention to offer support, and the open phase added a free text interpretation and a forced match to a plain description.
 
 \subsection{Analysis}
-We fixed the sample at 36 participants to match comparable within-subjects icon-comprehension studies in HCI \cite{schafer_shape_2023}. A sensitivity analysis for a two-sided one-sample $t$ test at $\alpha=.05$ indicates this sample gives at least 99 percent power to detect a large standardized effect ($d_z \geq 0.8$) and approximately 83 percent power for a medium effect ($d_z = 0.5$), so the study was powered to detect effects at or below the size of the smallest effect we report (Table~\ref{tab:legibility-tests}). For each legibility comparison, every participant contributed a single accuracy proportion, and we tested that proportion against the relevant chance level with a two sided one sample t test, reporting Cohen's $d_z$ alongside each test as the standardized mean deviation from chance. The four legibility comparisons address logically distinct, individually pre-specified questions under H1 (an unaided open-phase check, HR identification, HRV identification, and joint identification), so we treated each as its own confirmatory test rather than pooling them into one family; even under a conservative Bonferroni correction across all four ($\alpha = .0125$), every comparison remained significant. We tested the intended perceptual mappings with planned within participants linear trend analyses. For each outcome, every participant contributed a single linear trend slope across the ordered states, and we tested the slopes against zero with two sided one sample t tests, Holm corrected across the five planned tests. We summarised workload and the seven point rating items with descriptive statistics. We analysed the free text interpretations and the five open responses with reflexive thematic analysis \cite{braun_using_2006}, applied in line with current guidance on thematic analysis practice in HCI \cite{bowman_thematic_2023}, which produced the account of how participants read the states and the boundaries they placed on physiological visibility.
+We fixed the sample at 36 participants to match comparable within-subjects icon-comprehension studies in HCI \cite{schafer_shape_2023}. A sensitivity analysis for a two-sided one-sample $t$ test at $\alpha=.05$ indicates this sample gives at least 99 percent power to detect a large standardized effect ($d_z \geq 0.8$) and approximately 83 percent power for a medium effect ($d_z = 0.5$), so the study was powered to detect effects at or below the size of the smallest effect we report. For each legibility comparison, every participant contributed a single accuracy proportion, tested against the relevant chance level with a two sided one sample t test and reported with Cohen's $d_z$. The four legibility comparisons under H1 (an unaided open-phase check, HR identification, HRV identification, and joint identification) address logically distinct, individually pre-specified questions, so we treated each as its own confirmatory test rather than pooling them into one family; even under a conservative Bonferroni correction across all four ($\alpha = .0125$), every comparison remained significant. We tested the intended perceptual mappings with planned within participants linear trend analyses: for each outcome, every participant contributed a single linear trend slope across the ordered states, tested against zero with two sided one sample t tests, Holm corrected across the five planned tests. We summarised workload and the seven point rating items with descriptive statistics, and analysed the free text interpretations and the five open responses with reflexive thematic analysis \cite{braun_using_2006}, applied in line with current guidance on thematic analysis practice in HCI \cite{bowman_thematic_2023}.
 
 \subsection{Proposed System Architecture}
-What we built and evaluated for Study 1 is the single-avatar icon-visualization layer described in Apparatus and Materials above, driven by scripted rather than live physiological input. The acquisition and classification layers needed to drive that layer from a real wearable, a photoplethysmography sensor tracking heart rate and heart rate variability, and a processing layer that classifies these measurements relative to each player's own resting baseline rather than an absolute clinical scale \cite{haraway_situated_1988, bowker_sorting_2008}, were at the time of Study 1 a proposed rather than a built architecture; Tables~\ref{tab:hr-stimulus-classification} and~\ref{tab:hrv-stimulus-classification} give the four-state classification this layer used for each channel. Each avatar's halo was designed to be driven by only two small state values, heart rate state and variability state, rather than a raw physiological time series, so that propagating it across a multiplayer session would require replicating only those two values per player rather than streaming continuous biometric data between clients. Feeding a live wearable feed into this architecture requires a streaming bridge between device and game client, a capability prior work shows is practical \cite{liang_harnessing_2024}.
-
-Study 2 (Section~\ref{sec:study2-methods}) implements this acquisition, classification, and avatar-rendering pipeline as a working multiplayer prototype and evaluates it during live cooperative play; its apparatus subsection reports what was actually built and how it embeds the same baseline-relative HR/HRV classification used here.
+What we built and evaluated for Study 1 is the single-avatar icon-visualization layer described in Apparatus and Materials above, driven by scripted rather than live physiological input. The acquisition and classification layers needed to drive that layer from a real wearable, a photoplethysmography sensor tracking heart rate and heart rate variability, and a processing layer classifying these measurements relative to each player's own resting baseline rather than an absolute clinical scale \cite{haraway_situated_1988, bowker_sorting_2008}, were at the time of Study 1 a proposed rather than a built architecture (Tables~\ref{tab:hr-stimulus-classification} and~\ref{tab:hrv-stimulus-classification} give the four-state classification this layer used for each channel). Each avatar's halo was designed to be driven by only two small state values, heart rate state and variability state, rather than a raw physiological time series, so propagating it across a multiplayer session would require replicating only those two values per player rather than streaming continuous biometric data between clients, using a streaming bridge between device and game client that prior work shows is practical \cite{liang_harnessing_2024}. Study 2 (Section~\ref{sec:study2-methods}) implements this acquisition, classification, and avatar-rendering pipeline as a working multiplayer prototype and evaluates it during live cooperative play.
 
 \section{Study 1 Results}
 \label{sec:study1-results}
@@ -455,24 +419,7 @@ Thirty six participants produced 576 recognition trials in the structured phase 
 
 \subsection{Icon Legibility (H1)}
 \label{sec:study1-legibility}
-Before any label was shown, participants' best-match interpretations of the four unaided anchor states in the open phase averaged 46.5 percent correct against the 20 percent chance level for the five-option match (95 percent CI 37.0 to 56.0), $t(35)=5.66$, $p<.001$, indicating that the design read above chance even without prior exposure to the full state set, though well short of ceiling. In the structured phase, participants identified the heart rate state on 66.3 percent of trials (95 percent CI 58.5 to 74.2), $t(35)=10.66$, $p<.001$, and the variability state on 58.2 percent (95 percent CI 51.0 to 65.3), $t(35)=9.42$, $p<.001$, both far above the 25 percent expected from a choice among four options, supporting H1. Accuracy held across the range of states rather than collapsing at any one level. Participants recognised heart rate states at 68.8, 64.6, 64.6, and 67.4 percent from HR1 to HR4, and variability states at 64.6, 49.3, 55.6, and 63.2 percent from V1 to V4, with V2 the hardest single state to place. Errors concentrated on neighbouring levels: HR4 was read as HR3 on 27.8 percent of its trials and V1 as V2 on 29.9 percent, while confusion between non adjacent states stayed at or below 8.3 percent. No state fell below 49.3 percent. Identifying both channels correctly on the same trial, a harder sixteen-way judgement, reached 44.6 percent against a 6.25 percent chance level (95 percent CI 36.8 to 52.5), $t(35)=9.90$, $p<.001$. Table~\ref{tab:legibility-tests} lists all four chance-level tests, and Figure~\ref{fig:legibility} reports the open-phase and structured-phase recognition rates against chance together with the HR and HRV confusion matrices.
-
-\begin{table*}[t]
-\centering
-\caption{Tests of identification accuracy against chance. Each participant contributed one accuracy proportion per comparison, tested against the fixed chance level with a two-sided one-sample $t$ test ($df=35$). Cohen's $d_z$ is the standardized mean difference from chance (mean deviation divided by the within-participant SD of the accuracy proportion).}
-\label{tab:legibility-tests}
-\small
-\begin{tabular}{@{}lcccccc@{}}
-\toprule
-Comparison & Mean accuracy & Chance level & 95\% CI & $t$ & $p$ & Cohen's $d_z$ \\
-\midrule
-Open-phase best match (5-option) & 46.5\% & 20\% & 37.0 to 56.0 & 5.66 & $<.001$ & 0.94 \\
-HR identification (4-option) & 66.3\% & 25\% & 58.5 to 74.2 & 10.66 & $<.001$ & 1.78 \\
-HRV identification (4-option) & 58.2\% & 25\% & 51.0 to 65.3 & 9.42 & $<.001$ & 1.57 \\
-Joint HR+HRV identification (16-option) & 44.6\% & 6.25\% & 36.8 to 52.5 & 9.90 & $<.001$ & 1.65 \\
-\bottomrule
-\end{tabular}
-\end{table*}
+Before any label was shown, participants' best-match interpretations of the four unaided anchor states in the open phase averaged 46.5 percent correct against the 20 percent chance level for the five-option match (95 percent CI 37.0 to 56.0), $t(35)=5.66$, $p<.001$, indicating that the design read above chance even without prior exposure to the full state set, though well short of ceiling. In the structured phase, participants identified the heart rate state on 66.3 percent of trials (95 percent CI 58.5 to 74.2), $t(35)=10.66$, $p<.001$, and the variability state on 58.2 percent (95 percent CI 51.0 to 65.3), $t(35)=9.42$, $p<.001$, both far above the 25 percent expected from a choice among four options, supporting H1. Accuracy held across the range of states rather than collapsing at any one level. Participants recognised heart rate states at 68.8, 64.6, 64.6, and 67.4 percent from HR1 to HR4, and variability states at 64.6, 49.3, 55.6, and 63.2 percent from V1 to V4, with V2 the hardest single state to place. Errors concentrated on neighbouring levels: HR4 was read as HR3 on 27.8 percent of its trials and V1 as V2 on 29.9 percent, while confusion between non adjacent states stayed at or below 8.3 percent. No state fell below 49.3 percent. Identifying both channels correctly on the same trial, a harder sixteen-way judgement, reached 44.6 percent against a 6.25 percent chance level (95 percent CI 36.8 to 52.5), $t(35)=9.90$, $p<.001$. Figure~\ref{fig:legibility} reports the open-phase and structured-phase recognition rates against chance together with the HR and HRV confusion matrices; full per-comparison test statistics are in the supplementary materials (Section~\ref{sec:data-availability}).
 
 \begin{figure*}[t]
   \centering
@@ -494,25 +441,7 @@ The heart rate channel carried activation as intended. Each step up the heart ra
 \end{figure*}
 
 \subsection{Perceived Stability and the Call for Support (H3 and H4)}
-The variability channel carried regulation as intended. Each step toward a more fragmented ring lowered perceived stability by 0.46 points (95 percent CI 0.31 to 0.60), $t(35)=6.52$, $p<.001$, with means of 4.90, 4.48, 3.96, and 3.55 from V1 to V4, supporting H3. Over the same states the intention to offer support rose by 0.48 points per level (95 percent CI 0.36 to 0.61), $t(35)=7.78$, $p<.001$, from 3.30 to 4.74, supporting H4. Rated control moved on the same axis, falling by 0.51 points per level (95 percent CI 0.37 to 0.65), $t(35)=7.35$, $p<.001$. Table~\ref{tab:trend-tests} lists all five trend tests, and Figure~\ref{fig:mappings}(b) plots the variability panel.
-
-\begin{table*}[t]
-\centering
-\caption{Planned within-subject linear-trend tests of the intended perceptual mappings. Effect is the mean rating change per one-level step, with direction noted. Holm-adjusted $p$ corrects for the five planned tests ($df=35$). Cohen's $d_z$ is the standardized mean slope (mean slope divided by the within-participant SD of the slope), reported as a magnitude to match the direction already given for each outcome.}
-\label{tab:trend-tests}
-\small
-\begin{tabular}{@{}llccccc@{}}
-\toprule
-Outcome & Predictor & Effect per level & 95\% CI & $t$ & Adjusted $p$ & Cohen's $d_z$ \\
-\midrule
-Perceived urgency (rises) & HR state & 0.40 & 0.24 to 0.55 & 5.17 & $<.001$ & 0.86 \\
-SAM arousal (rises) & HR state & 0.41 & 0.25 to 0.57 & 5.33 & $<.001$ & 0.89 \\
-Perceived stability (falls) & HRV fragmentation & 0.46 & 0.31 to 0.60 & 6.52 & $<.001$ & 1.09 \\
-SAM dominance (falls) & HRV fragmentation & 0.51 & 0.37 to 0.65 & 7.35 & $<.001$ & 1.22 \\
-Support intention (rises) & HRV fragmentation & 0.48 & 0.36 to 0.61 & 7.78 & $<.001$ & 1.30 \\
-\bottomrule
-\end{tabular}
-\end{table*}
+The variability channel carried regulation as intended. Each step toward a more fragmented ring lowered perceived stability by 0.46 points (95 percent CI 0.31 to 0.60), $t(35)=6.52$, $p<.001$, with means of 4.90, 4.48, 3.96, and 3.55 from V1 to V4, supporting H3. Over the same states the intention to offer support rose by 0.48 points per level (95 percent CI 0.36 to 0.61), $t(35)=7.78$, $p<.001$, from 3.30 to 4.74, supporting H4. Rated control moved on the same axis, falling by 0.51 points per level (95 percent CI 0.37 to 0.65), $t(35)=7.35$, $p<.001$. Figure~\ref{fig:mappings}(b) plots the variability panel; full trend-test statistics for all five planned tests are in the supplementary materials (Section~\ref{sec:data-availability}).
 
 \subsection{Performance Across the Full Grid}
 Because we composed the two channels rather than assigning unrelated appearances, legibility could have collapsed where an active pulse met a fragmented ring. It did not, though the grid was less uniform than the marginal HR and HRV accuracies alone suggest. Joint recognition held across all 16 combinations, with no cell falling anywhere near the 6.25 percent chance level. The hardest cells, tied at 33.3 percent, were H2V2 and H3V2: focused and high activation states each paired with stable, near-baseline variability, the two conditions where a mid-range pulse met the least visually distinctive ring pattern. The easiest cells, tied at 55.6 percent, were H1V1, H3V1, and H4V1, all pairing the most coherent ring with a clearly placed activation level; the one exception was H2V1, at 41.7 percent, indicating that a coherent ring alone did not guarantee an easy read when paired with the subtler H2 activation step. Even the hardest cells stayed more than five times above chance, which confirms that participants still read the two channels compositionally rather than by memorising sixteen unrelated icons, even though the compounding of two mid-range states measurably increased difficulty. Support intention rose consistently across the grid in the same direction as the marginal HRV trend, from a low of 3.00 at H1V1 to a high of 5.06 at H4V4, and rose within every HR row as variability fragmented. Figure~\ref{fig:conditions} shows both patterns across all 16 combinations.
@@ -526,29 +455,7 @@ Because we composed the two channels rather than assigning unrelated appearances
 \end{figure*}
 
 \subsection{Usability and Workload (H5)}
-The display read clearly and cost a moderate but sub-midpoint amount of effort. Clarity averaged 5.22 of 7 and coordination usefulness 5.45, while the three Task Load Index items stayed below the scale midpoint, with mental demand at 3.64, effort at 3.47, and frustration at 2.53. Overall confidence was 5.81 and visual comfort 5.61. These results support H5, though workload sat closer to the middle of the scale than a minimal-effort display would, consistent with the more moderate recognition accuracy reported in Section~\ref{sec:study1-legibility}. Table~\ref{tab:usability-workload} reports each measure with its 95 percent confidence interval.
-
-\begin{table}[t]
-\centering
-\caption{Overall usability and workload ratings.}
-\label{tab:usability-workload}
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.08}
-\begin{tabularx}{\columnwidth}{@{}Xcc@{}}
-\toprule
-Measure & Mean & 95\% CI \\
-\midrule
-Clarity & 5.22/7 & 5.08-5.35 \\
-Coordination usefulness & 5.45/7 & 5.37-5.52 \\
-Mental demand & 3.64/7 & 3.30-3.97 \\
-Effort & 3.47/7 & 3.24-3.71 \\
-Frustration & 2.53/7 & 2.21-2.85 \\
-Overall confidence & 5.81/7 & 5.55-6.06 \\
-Visual comfort & 5.61/7 & 5.32-5.91 \\
-\bottomrule
-\end{tabularx}
-\end{table}
+The display read clearly and cost a moderate but sub-midpoint amount of effort. Clarity averaged 5.22 of 7 and coordination usefulness 5.45, while the three Task Load Index items stayed below the scale midpoint, with mental demand at 3.64, effort at 3.47, and frustration at 2.53. Overall confidence was 5.81 and visual comfort 5.61. These results support H5, though workload sat closer to the middle of the scale than a minimal-effort display would, consistent with the more moderate recognition accuracy reported in Section~\ref{sec:study1-legibility}. Full confidence intervals for each measure are reported in the supplementary materials (Section~\ref{sec:data-availability}).
 
 \subsection{How Participants Read the States}
 The open responses explain the recognition scores. Participants reported reading the two channels together rather than in isolation, using pulse speed for activation and the ring for control, which is what the compositional design intended, and several described weighing one cue against the other before answering. As P12 put it, ``The combination worked better than either cue alone. Pulse speed gave the intensity, and the ring showed whether it was controlled.'' The pulsing centre and the ring's degree of fragmentation were named repeatedly as the features that carried the most meaning. The states participants found hardest were the adjacent middle levels on each scale, and the closest pair by a wide margin was the stable and reduced variability states, which matches the neighbour confusions concentrated in the recognition data; P4 described exactly this: ``V2 and V3 were the closest pair for me. I could see that the ring changed, but not always enough to choose confidently.''
@@ -572,103 +479,13 @@ The gameplay task is modeled on Overcooked-style cooperative cooking, in which p
 Study 2 implements the physiological pipeline that Study 1 left as a proposed architecture. Before gameplay, each participant wore a physiological wearable device and completed a three-minute seated baseline calibration to set personal resting HR and HRV. During gameplay, live HR and HRV values were classified relative to each participant's own baseline into the same four HR states and four HRV states validated in Study 1 (Tables~\ref{tab:hr-stimulus-classification} and~\ref{tab:hrv-stimulus-classification}), and a state change had to persist across consecutive display windows before the visible cue updated, to limit flicker. The system logged raw physiological values, personal baselines, classified and displayed HR/HRV states, timestamps, missing-data events, and sensor-to-interface latency, which together speak to RQ2.4.
 
 \subsection{Participants and Team Size}
-We recruited 36 adult participants, organized as 12 teams of three players in soft Prep, Cook, and Runner roles, rather than 9 teams of four, even though Overcooked! 2 officially supports four-player sessions \cite{team17_overcooked_2018}. Three-player teams were chosen because two-player designs already anchor the Overcooked coordination paradigm of task splitting and role adaptation \cite{carroll_utility_2019}, because team-size research finds that additional members increase coordination overhead \cite{hoegl_smaller_2005, straub_cost_2023} and a fourth player would double the pairwise communication channels relative to three, and because 12 teams provide more independent team-level units for the team-by-condition analyses below than 9 teams would. Roles were introduced during training but remained flexible: players could switch tasks mid-mission, logged as strategy-change events rather than protocol violations. Recruitment mirrored Study 1: participants were drawn from the author's university subject pool and personal network, took part voluntarily and without compensation, and all recruited participants completed all three mission blocks, so no team contributed incomplete data. Table~\ref{tab:s2-demographics} summarises the achieved sample.
-
-\begin{table}[t]
-\centering
-\caption{Study 2 participant and team characteristics ($N=36$ participants, 12 teams of three).}
-\label{tab:s2-demographics}
-\footnotesize
-\setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.05}
-\begin{tabularx}{\columnwidth}{@{}Xr@{}}
-\toprule
-Category & $n$ (\%) \\
-\midrule
-\multicolumn{2}{@{}l}{\textit{Role (fixed per participant)}} \\
-Prep Player & 12 (33.3\%) \\
-Cook Player & 12 (33.3\%) \\
-Runner Player & 12 (33.3\%) \\
-\addlinespace
-\multicolumn{2}{@{}l}{\textit{Age group}} \\
-18-24 & 18 (50.0\%) \\
-25-34 & 12 (33.3\%) \\
-35-44 & 4 (11.1\%) \\
-45-54 & 2 (5.6\%) \\
-\addlinespace
-\multicolumn{2}{@{}l}{\textit{Gaming experience}} \\
-Regular & 15 (41.7\%) \\
-Frequent & 10 (27.8\%) \\
-Casual & 9 (25.0\%) \\
-Expert/competitive & 2 (5.6\%) \\
-\addlinespace
-\multicolumn{2}{@{}l}{\textit{Overcooked-style game familiarity}} \\
-Played casually & 13 (36.1\%) \\
-Tried once/twice & 11 (30.6\%) \\
-Never played & 8 (22.2\%) \\
-Played often & 4 (11.1\%) \\
-\addlinespace
-\multicolumn{2}{@{}l}{\textit{Wearable-device use}} \\
-Rarely & 11 (30.6\%) \\
-Sometimes & 9 (25.0\%) \\
-Often & 9 (25.0\%) \\
-Very often & 4 (11.1\%) \\
-Never & 3 (8.3\%) \\
-\addlinespace
-\multicolumn{2}{@{}l}{\textit{HR/HRV familiarity}} \\
-Moderate & 15 (41.7\%) \\
-Slight & 12 (33.3\%) \\
-Not familiar & 5 (13.9\%) \\
-High & 4 (11.1\%) \\
-\addlinespace
-\addlinespace
-Comfort sharing physiological data before study (1 to 7) & $M=4.47$, $SD=0.74$ \\
-\bottomrule
-\end{tabularx}
-\end{table}
+We recruited 36 adult participants, organized as 12 teams of three players in soft Prep, Cook, and Runner roles, rather than 9 teams of four, even though Overcooked! 2 officially supports four-player sessions \cite{team17_overcooked_2018}. Three-player teams were chosen because two-player designs already anchor the Overcooked coordination paradigm of task splitting and role adaptation \cite{carroll_utility_2019}, because team-size research finds that additional members increase coordination overhead \cite{hoegl_smaller_2005, straub_cost_2023} and a fourth player would double the pairwise communication channels relative to three, and because 12 teams provide more independent team-level units for the team-by-condition analyses below than 9 teams would. Roles were introduced during training but remained flexible: players could switch tasks mid-mission, logged as strategy-change events rather than protocol violations. Recruitment mirrored Study 1: participants were drawn from the author's university subject pool and personal network, took part voluntarily and without compensation, and all recruited participants completed all three mission blocks, so no team contributed incomplete data. The sample skewed young (50 percent aged 18 to 24, 33 percent 25 to 34) and toward regular or frequent gaming experience, with mixed prior familiarity with Overcooked-style games, wearable devices, and HR/HRV concepts, and moderate baseline comfort sharing physiological data ($M=4.47$ of 7, $SD=0.74$); full demographic breakdowns are reported in the supplementary materials (Section~\ref{sec:data-availability}).
 
 \subsection{Interface Conditions and Counterbalancing}
-Each team completed three seven-minute missions, one under each of three interface conditions: a No Cue baseline showing only the standard game interface; a Numeric Cue condition showing teammates' HR and HRV as explicit numerical or categorical values; and an Icon Cue condition showing the animated HR/HRV avatar cue validated in Study 1, in which heart rate controls pulse speed, glow, brightness, and halo expansion, and heart-rate variability controls ring coherence, segmentation, jitter, and stability. Table~\ref{tab:s2-design} summarizes the purpose of each condition and the comparisons and hypotheses it feeds. Condition order was counterbalanced with a Latin-square schedule across three groups of four teams, so that every condition appeared in every serial position, and the three mission layouts described below were rotated across condition orders so that no condition was systematically paired with an easier or harder layout; the full team-by-team schedule is reported in the supplementary materials (Section~\ref{sec:data-availability}).
-
-\begin{table*}[t]
-\centering
-\caption{Study 2 interface conditions, their purpose, and the comparisons and hypotheses each feeds.}
-\label{tab:s2-design}
-\footnotesize
-\setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.15}
-\begin{tabularx}{\textwidth}{@{}p{0.14\textwidth}YYYp{0.14\textwidth}@{}}
-\toprule
-\textbf{Condition} & \textbf{Interface shown} & \textbf{Purpose} & \textbf{Main comparison} & \textbf{Hypotheses} \\
-\midrule
-No Cue & Standard game interface; no physiological information of any kind. & Baseline coordination and communication without any bodily-state cue. & Reference level for both other conditions. & H2.1-H2.6 (baseline) \\
-Numeric Cue & Teammates' HR and HRV shown as explicit numeric or categorical values. & Upper bound on explicit disclosure; isolates the value of cue \emph{content} from cue \emph{form}. & vs.\ No Cue (value of any cue); vs.\ Icon Cue (form) & H2.2, H2.4 \\
-Icon Cue & Animated avatar halo validated in Study 1 (pulse/glow/expansion for HR; ring coherence/jitter for HRV); no numbers or emotion words. & Tests whether the ambiguous, label-free encoding supports coordination as well as explicit disclosure, at lower invasiveness. & vs.\ No Cue (value); vs.\ Numeric Cue (form) & H2.1-H2.6 \\
-\bottomrule
-\end{tabularx}
-\end{table*}
+Each team completed three seven-minute missions, one under each of three interface conditions: a No Cue baseline showing only the standard game interface, the reference level for H2.1 to H2.6; a Numeric Cue condition showing teammates' HR and HRV as explicit numerical or categorical values, an upper bound on explicit disclosure that isolates the value of cue content from cue form (H2.2, H2.4); and an Icon Cue condition showing the animated HR/HRV avatar cue validated in Study 1, in which heart rate controls pulse speed, glow, brightness, and halo expansion, and heart-rate variability controls ring coherence, segmentation, jitter, and stability, testing whether the ambiguous, label-free encoding supports coordination as well as explicit disclosure at lower invasiveness (H2.1 to H2.6). Condition order was counterbalanced with a Latin-square schedule across three groups of four teams, so that every condition appeared in every serial position, and the three mission layouts described below were rotated across condition orders so that no condition was systematically paired with an easier or harder layout; the full team-by-team schedule is reported in the supplementary materials (Section~\ref{sec:data-availability}).
 
 \subsection{Mission Layouts and Scripted Pressure Events}
-The three mission layouts reproduce common Overcooked-style cooperation patterns: a shared congestion kitchen with clustered resources and collision risk, a divided pass kitchen requiring mandatory item passing between zones, and a bottleneck-route kitchen where solo routing is inefficient and temporary support pays off. Each seven-minute mission also included three scripted pressure events, controlled coordination probes rather than random obstacles, each overloading a different role while the other two players had incomplete information about it (Table~\ref{tab:pressure-events}).
-
-\begin{table*}[t]
-\centering
-\caption{Scripted teammate-pressure events used in every Study 2 mission. Each event overloads one role while the other two players hold incomplete information about it.}
-\label{tab:pressure-events}
-\footnotesize
-\setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.15}
-\begin{tabularx}{\textwidth}{@{}p{0.20\textwidth}YYY@{}}
-\toprule
-\textbf{Event} & \textbf{Trigger} & \textbf{Overloaded role} & \textbf{Primary measure} \\
-\midrule
-\textbf{Ingredient Bottleneck} & Around 2:00, two active orders require the same ingredient type. & Prep & Support response time from event onset. \\
-\textbf{Pot Overload} & Around 4:30, two reactor pots become active close together. & Cook & Recovery time and burned-dish prevention. \\
-\textbf{Service Rush} & Near the final phase, completed dishes, dirty plates, and delivery tasks accumulate together. & Runner & Appropriate support actions within 10 seconds. \\
-\bottomrule
-\end{tabularx}
-\end{table*}
-
+The three mission layouts reproduce common Overcooked-style cooperation patterns: a shared congestion kitchen with clustered resources and collision risk, a divided pass kitchen requiring mandatory item passing between zones, and a bottleneck-route kitchen where solo routing is inefficient and temporary support pays off. Each seven-minute mission also included three scripted pressure events, controlled coordination probes rather than random obstacles: an Ingredient Bottleneck around 2:00, when two active orders require the same ingredient, overloading Prep; a Pot Overload around 4:30, when two reactor pots become active close together, overloading Cook; and a Service Rush near the final phase, when completed dishes, dirty plates, and delivery tasks accumulate together, overloading Runner. Each event overloads one role while the other two players hold incomplete information about it.
 \subsection{Procedure}
 Each session opened with consent and a demographic questionnaire, followed by wearable setup, the three-minute baseline calibration, and a short tutorial covering movement, roles, support actions, and the interface for the first assigned condition. The team then completed three mission blocks, one per condition, each followed by a post-condition questionnaire; a short break between blocks allowed sensor reliability checks. The session closed with a final comparison questionnaire in which participants ranked the three conditions and answered open-ended questions about usefulness, invasiveness, trust, confusion, and the control they wanted over their own physiological visibility.
 
@@ -687,173 +504,31 @@ Study 2 achieved its planned sample without attrition: all 36 recruited particip
 
 \subsection{Sample, Data Completeness, and System Reliability (RQ2.4)}
 \label{sec:s2-reliability}
-Table~\ref{tab:s2-demographics} (Section~\ref{sec:study2-methods}) summarizes the achieved sample. RQ2.4 asked whether the implemented wearable-to-interface pipeline operates reliably enough for live play; Table~\ref{tab:s2-reliability} answers this directly. Sensor-to-interface latency rose modestly from No Cue, when the pipeline logged physiology in the background without rendering it, to the two cue conditions, reflecting the added cost of computing and rendering a display element, but even the slowest condition stayed well under a second and did not accumulate across the seven-minute mission (Figure~\ref{fig:s2-reliability}A). Missing-data episodes were rare and, if anything, slightly less frequent once a cue was displayed, and the average dropout, when one occurred, lasted well under half a second in every condition (Figure~\ref{fig:s2-reliability}B and C). Restricted to the two conditions that rendered a physiological state, the displayed HR/HRV state matched the classified state on over 96 percent of samples in both conditions, confirming that the persistence rule described in Section~\ref{sec:study2-methods} controlled flicker without decoupling the display from the underlying signal. Classified states also covered the intended range rather than collapsing onto one level, with most gameplay sitting in the moderate HR2/V3 band and enough excursions into the higher-activation and lower-coherence states to exercise the full classification (Table~\ref{tab:s2-reliability}). State-change rates were comparable across conditions (Figure~\ref{fig:s2-reliability}E); because No Cue still logged classified states in the background without displaying them, this indicates that a visible cue did not itself alter the underlying physiological volatility. Figure~\ref{fig:s2-timeline} shows one team's mission end to end, aligning the three scripted pressure events against a player's HR and HRV state trace and the resulting support actions, as a worked example of what the pipeline logs. Together, these results answer RQ2.4: the acquisition, classification, and rendering pipeline that Study 1 left unbuilt operated reliably across 12 teams and three interface conditions, with latency, missing-data, and state-agreement figures in a range a live cooperative session can absorb.
-
-\begin{table}[t]
-\centering
-\caption{System reliability and physiological logging by condition. Baseline HR/HRV and the HR/HRV state distributions are computed prior to, and independently of, interface condition. Display-state agreement is undefined for No Cue, which rendered no physiological state.}
-\label{tab:s2-reliability}
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.1}
-\begin{tabularx}{\columnwidth}{@{}Xccc@{}}
-\toprule
-Measure & No Cue & Numeric Cue & Icon Cue \\
-\midrule
-Baseline HR (bpm) & \multicolumn{3}{c}{69.7 (6.9)} \\
-Baseline HRV, RMSSD (ms) & \multicolumn{3}{c}{52.6 (8.7)} \\
-Sensor latency (ms) & 180.4 (59.5) & 223.0 (59.5) & 246.9 (69.0) \\
-Missing data (\%) & 4.51 & 3.47 & 3.82 \\
-Dropout duration (s, mean) & 0.42 & 0.37 & 0.34 \\
-State-change rate (\%) & 56.2 & 55.6 & 61.5 \\
-Display-state agreement (\%) & N/A & 96.5 & 96.2 \\
-\addlinespace
-\multicolumn{4}{@{}l}{\% time in HR1/HR2/HR3/HR4 (pooled): 13.6 / 63.6 / 22.7 / 0.1} \\
-\multicolumn{4}{@{}l}{\% time in V1/V2/V3/V4 (pooled): 0.6 / 14.8 / 63.3 / 21.3} \\
-\bottomrule
-\end{tabularx}
-\end{table}
+Participants' mean baseline resting HR was 69.7 bpm ($SD=6.9$) and mean baseline HRV was 52.6 ms RMSSD ($SD=8.7$). RQ2.4 asked whether the implemented wearable-to-interface pipeline operates reliably enough for live play. Sensor-to-interface latency averaged 180 ms under No Cue, when the pipeline logged physiology in the background without rendering it, and rose to 223 to 247 ms under the two cue conditions, reflecting the added cost of computing and rendering a display element, but even the slowest condition stayed well under a second and did not accumulate across the seven-minute mission (Figure~\ref{fig:s2-reliability}A). Missing-data episodes were rare (3.5 to 4.5 percent of samples), and the average dropout, when one occurred, lasted well under half a second in every condition (Figure~\ref{fig:s2-reliability}B and C). Restricted to the two conditions that rendered a physiological state, the displayed HR/HRV state matched the classified state on over 96 percent of samples in both conditions, confirming that the persistence rule described in Section~\ref{sec:study2-methods} controlled flicker without decoupling the display from the underlying signal. Classified states also covered the intended range, with most gameplay sitting in the moderate HR2/V3 band and enough excursions into the higher-activation and lower-coherence states to exercise the full classification. State-change rates were comparable across conditions (Figure~\ref{fig:s2-reliability}E), indicating that a visible cue did not itself alter the underlying physiological volatility. Together, these results answer RQ2.4: the acquisition, classification, and rendering pipeline that Study 1 left unbuilt operated reliably across 12 teams and three interface conditions, with latency, missing-data, and state-agreement figures in a range a live cooperative session can absorb.
 
 \subsection{Support Response Time and Behavioral Coordination (H2.3)}
 \label{sec:s2-behavioral}
-H2.3 predicted faster support responses to scripted pressure events under the Icon Cue than under the No Cue baseline; this was Study 2's primary planned contrast, and it was supported. Teams took 15.3 seconds (SD 2.3) to produce the first relevant support action after a pressure event's onset under No Cue, 12.5 seconds (SD 1.7) under Numeric Cue, and 11.4 seconds (SD 1.2) under Icon Cue, an omnibus effect of condition (Table~\ref{tab:s2-behavioral}; Figure~\ref{fig:s2-support-rt}). The planned contrast confirmed H2.3 directly: the Icon Cue produced support responses 3.90 seconds faster than No Cue, a large effect ($d_z=-1.46$; Table~\ref{tab:s2-contrasts}). The Numeric Cue was also faster than No Cue, and the Icon Cue was numerically, but not significantly, faster than the Numeric Cue: both cue conditions cut support latency roughly in half relative to baseline, and the ambient icon matched, without clearly exceeding, the speed of an explicit numeric readout.
+H2.3 predicted faster support responses to scripted pressure events under the Icon Cue than under the No Cue baseline; this was Study 2's primary planned contrast, and it was supported. Teams took 15.3 seconds (SD 2.3) to produce the first relevant support action after a pressure event's onset under No Cue, 12.5 seconds (SD 1.7) under Numeric Cue, and 11.4 seconds (SD 1.2) under Icon Cue, an omnibus effect of condition (Figure~\ref{fig:s2-support-rt}). The planned contrast confirmed H2.3 directly: the Icon Cue produced support responses 3.90 seconds faster than No Cue, a large effect ($d_z=-1.46$). The Numeric Cue was also faster than No Cue, and the Icon Cue was numerically, but not significantly, faster than the Numeric Cue, so both cue conditions cut support latency roughly in half relative to baseline, and the ambient icon matched, without clearly exceeding, an explicit numeric readout.
 
-This pattern held across all three scripted event types rather than concentrating in one (Figure~\ref{fig:s2-pressure-breakdown}A): support response time fell similarly for the Ingredient Bottleneck (15.0s to 12.7s to 11.6s), Pot Overload (15.5s to 11.1s to 11.4s), and Service Rush (15.8s to 12.6s to 11.4s) across No Cue, Numeric Cue, and Icon Cue respectively, so the benefit of a visible cue was not an artifact of one pressure event or one overloaded role. Recovery time, the seconds from the first support action until the overloaded role's queue returned to normal, showed the same ordering (Figure~\ref{fig:s2-pressure-breakdown}B; Table~\ref{tab:s2-behavioral}), with the Icon Cue significantly faster than No Cue ($d_z=-1.53$) but not reliably faster than Numeric Cue.
+This pattern held across all three scripted event types rather than concentrating in one (Figure~\ref{fig:s2-pressure-breakdown}A): support response time fell similarly for the Ingredient Bottleneck (15.0s to 12.7s to 11.6s), Pot Overload (15.5s to 11.1s to 11.4s), and Service Rush (15.8s to 12.6s to 11.4s) across No Cue, Numeric Cue, and Icon Cue respectively. Recovery time, the seconds from the first support action until the overloaded role's queue returned to normal, showed the same ordering (Figure~\ref{fig:s2-pressure-breakdown}B): 29.0s under No Cue, 24.8s under Numeric Cue, 23.2s under Icon Cue, with the Icon Cue significantly faster than No Cue ($d_z=-1.53$) but not reliably faster than Numeric Cue.
 
-The behavioral benefit extended to whether support was well targeted, not merely faster. Teams logged more appropriate support actions under both cue conditions than under No Cue, while the count of false support actions, help offered where none was needed, did not differ across conditions (Table~\ref{tab:s2-behavioral}): the cues moved responses toward relevance rather than simply toward more activity. The rate at which a pressure event drew an appropriate response within the scripted window rose from 63.9 percent under No Cue to over 83 percent under either cue. Team-level mission outcomes moved together with these behavioral changes (Figure~\ref{fig:s2-performance}; Table~\ref{tab:s2-behavioral}): orders delivered, mission score, and appropriate support actions rose under both cues relative to No Cue, while idle time, collisions, and the combined error count fell. Logged strategy-change events did not differ reliably across conditions, a behavioral count distinct from the coded communication measure of the same name reported in Section~\ref{sec:s2-communication}.
+The behavioral benefit extended to whether support was well targeted, not merely faster. Teams logged more appropriate support actions under both cue conditions than under No Cue (2.25 under No Cue, 3.17 under Numeric Cue, 3.42 under Icon Cue), while false support actions, help offered where none was needed, did not differ across conditions: the cues moved responses toward relevance rather than simply toward more activity. The rate at which a pressure event drew an appropriate response within the scripted window rose from 63.9 percent under No Cue to over 83 percent under either cue. Team-level mission outcomes moved together with these behavioral changes (Figure~\ref{fig:s2-performance}): orders delivered rose from 6.75 to 7.67/7.33, mission score from 803.0 to 932.0/896.1, average idle time fell from 19.2s to 14.4/14.6s, collision and blocking incidents fell from 13.2 to 10.8/10.1, and the combined count of late, burned, and wrong orders fell from 3.50 to 2.08/2.17 (No Cue, then Numeric Cue/Icon Cue throughout). Logged strategy-change events did not differ reliably across conditions, a count distinct from the coded communication measure of the same name in Section~\ref{sec:s2-communication}.
 
-One asymmetry qualifies this otherwise consistent pattern: on mission score, orders delivered, and error count, the Numeric Cue numerically outperformed the Icon Cue, and for mission score the difference reached significance ($d_z=-0.73$; Table~\ref{tab:s2-behavioral}). The Icon Cue matched or exceeded the Numeric Cue on the speed and targeting of support, the outcomes closest to the scripted pressure events, but a team with exact numbers in view still out-scored a team reading the ambiguous halo on the mission's aggregate scoring metric, a nuance Section~\ref{sec:discussion} returns to.
+One asymmetry qualifies this pattern: on mission score, orders delivered, and error count, the Numeric Cue numerically outperformed the Icon Cue, and for mission score the difference reached significance ($d_z=-0.73$). The Icon Cue matched or exceeded the Numeric Cue on the speed and targeting of support, the outcomes closest to the scripted pressure events, but a team with exact numbers in view still out-scored a team reading the ambiguous halo on the mission's aggregate scoring metric, a nuance Section~\ref{sec:discussion} returns to.
 
-\begin{table*}[t]
-\centering
-\caption{Main behavioral outcomes by condition (team-level, $N=12$ teams). Cells report $M$ ($SD$). Omnibus tests are repeated-measures ANOVA, $F(2,22)$; $\eta_p^2$ is partial eta-squared.}
-\label{tab:s2-behavioral}
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.1}
-\begin{tabularx}{\textwidth}{@{}Ycccccc@{}}
-\toprule
-Outcome & No Cue & Numeric Cue & Icon Cue & $F(2,22)$ & $p$ & $\eta_p^2$ \\
-\midrule
-Support response time (s) & 15.3 (2.3) & 12.5 (1.7) & 11.4 (1.2) & 18.43 & $<.001$ & 0.63 \\
-Recovery time (s) & 29.0 (2.7) & 24.8 (2.8) & 23.2 (2.4) & 12.76 & $<.001$ & 0.54 \\
-Orders delivered & 6.75 (0.45) & 7.67 (0.78) & 7.33 (0.78) & 7.58 & $.003$ & 0.41 \\
-Mission score & 803.0 (35.5) & 932.0 (40.2) & 896.1 (30.5) & 41.60 & $<.001$ & 0.79 \\
-Error count (late + burned + wrong) & 3.50 (1.09) & 2.08 (0.90) & 2.17 (1.03) & 6.54 & $.006$ & 0.37 \\
-Appropriate support actions & 2.25 (0.45) & 3.17 (0.72) & 3.42 (0.67) & 17.75 & $<.001$ & 0.62 \\
-False support actions & 0.83 (0.58) & 0.67 (0.49) & 0.92 (0.67) & 0.68 & $.516$ & 0.06 \\
-Strategy changes (logged) & 2.33 (0.89) & 2.75 (0.97) & 2.92 (0.90) & 1.13 & $.342$ & 0.09 \\
-Avg.\ idle time (s) & 19.2 (2.6) & 14.4 (2.8) & 14.6 (1.5) & 16.81 & $<.001$ & 0.60 \\
-Collision/blocking count & 13.2 (2.8) & 10.8 (3.3) & 10.1 (2.5) & 4.16 & $.029$ & 0.27 \\
-\bottomrule
-\end{tabularx}
-\end{table*}
 
 \subsection{Teammate Awareness and Coordination Usefulness (H2.1, H2.2)}
 \label{sec:s2-awareness}
-We combined related seven-point items into three constructs before testing H2.1 and H2.2 (Table~\ref{tab:s2-constructs}): teammate awareness (three items: aware a teammate was under pressure, aware a teammate needed support, noticed state changes; Cronbach's $\alpha=.67$), coordination usefulness (five items: interface helped understand teammates, helped the team coordinate, helped decide when to help, reduced uncertainty, helped recovery from difficult moments; $\alpha=.77$), and trust (three items: trusted the interface's information, cue matched the game situation, could use it without overthinking; $\alpha=.66$).
+We combined related seven-point items into three constructs before testing H2.1 and H2.2: teammate awareness (three items: aware a teammate was under pressure, aware a teammate needed support, noticed state changes; Cronbach's $\alpha=.67$), coordination usefulness (five items: interface helped understand teammates, helped the team coordinate, helped decide when to help, reduced uncertainty, helped recovery from difficult moments; $\alpha=.77$), and trust (three items: trusted the interface's information, cue matched the game situation, could use it without overthinking; $\alpha=.66$).
 
-\begin{table}[t]
-\centering
-\caption{Post-condition questionnaire constructs and internal-consistency reliability ($N=36$ participants, 1 to 7 scale).}
-\label{tab:s2-constructs}
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.1}
-\begin{tabularx}{\columnwidth}{@{}Xccc@{}}
-\toprule
-Construct & Items & Scale & Cronbach's $\alpha$ \\
-\midrule
-Teammate awareness & 3 & 1 to 7 & 0.67 \\
-Coordination usefulness & 5 & 1 to 7 & 0.77 \\
-Trust & 3 & 1 to 7 & 0.66 \\
-Workload (TLX, reported by item)$^{a}$ & 4 & 1 to 7 & 0.13 \\
-Player experience (GEQ)$^{b}$ & 5 & 1 to 7 & 0.40 \\
-\bottomrule
-\end{tabularx}
-\begin{flushleft}
-\footnotesize $^{a}$ The four Task Load Index items did not cohere into a reliable index; Section~\ref{sec:s2-workload} and Table~\ref{tab:s2-questionnaire} report them individually, as in Study 1. $^{b}$ Game Experience Questionnaire subscales are conceptually heterogeneous rather than a single trait; the composite is reported descriptively.
-\end{flushleft}
-\end{table}
+H2.1 predicted higher teammate awareness under the Icon Cue than under No Cue. This was supported with a large effect: awareness rose from 4.21 (SD 0.47) under No Cue to 5.40 (SD 0.52) under Icon Cue ($d_z=1.63$), and was statistically indistinguishable from awareness under the Numeric Cue (5.41; $d_z=-0.01$): the ambient, label-free halo made a teammate's state exactly as noticeable as an explicit numeric readout, without exposing the numbers themselves.
 
-H2.1 predicted higher teammate awareness under the Icon Cue than under No Cue. This was supported with a large effect: awareness rose from 4.21 (SD 0.47) under No Cue to 5.40 (SD 0.52) under Icon Cue (Table~\ref{tab:s2-questionnaire}), and the planned contrast confirmed the increase ($d_z=1.63$; Table~\ref{tab:s2-contrasts}). Awareness under the Icon Cue was statistically indistinguishable from awareness under the Numeric Cue (5.41; $d_z=-0.01$): the ambient, label-free halo made a teammate's state exactly as noticeable as an explicit numeric readout, without exposing the numbers themselves.
-
-H2.2 predicted that the Icon Cue would be rated more useful for coordination than \emph{both} No Cue and Numeric Cue. The first half of this prediction held: coordination usefulness rose sharply from No Cue to Icon Cue (Table~\ref{tab:s2-questionnaire}), a large effect ($d_z=1.93$). The second half did not hold: the Numeric Cue was rated \emph{more} useful for coordination than the Icon Cue (5.49 vs.\ 5.27, $d_z=-0.41$; Table~\ref{tab:s2-contrasts}), the reverse of the predicted direction. H2.2 is therefore only partially supported: an ambient cue clearly beats no cue at all, but does not beat an explicit numeric one on rated coordination usefulness, a pattern that echoes the mission-score asymmetry in Section~\ref{sec:s2-behavioral} and that several participants explained directly as a trade-off between the icon's glanceability and the numbers' precision (Section~\ref{sec:s2-qualitative}). Trust followed the same shape (Table~\ref{tab:s2-questionnaire}), with the Icon Cue again ahead of No Cue but behind the Numeric Cue ($d_z=-0.56$). Figure~\ref{fig:s2-questionnaire} plots these and the remaining constructs; exact means, omnibus tests, and effect sizes for every construct are in Table~\ref{tab:s2-questionnaire}, and the three planned contrasts for awareness, coordination usefulness, and trust are in Table~\ref{tab:s2-contrasts}.
-
-\begin{table*}[t]
-\centering
-\caption{Post-condition questionnaire outcomes by condition (participant-level, $N=36$; 1 to 7 scale unless noted). Cells report $M$ ($SD$). Omnibus tests are repeated-measures ANOVA, $F(2,70)$.}
-\label{tab:s2-questionnaire}
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.1}
-\begin{tabularx}{\textwidth}{@{}Ycccccc@{}}
-\toprule
-Construct/item & No Cue & Numeric Cue & Icon Cue & $F(2,70)$ & $p$ & $\eta_p^2$ \\
-\midrule
-Teammate awareness & 4.21 (0.47) & 5.41 (0.47) & 5.40 (0.52) & 71.26 & $<.001$ & 0.67 \\
-Coordination usefulness & 4.21 (0.40) & 5.49 (0.38) & 5.27 (0.45) & 127.15 & $<.001$ & 0.78 \\
-Trust & 4.31 (0.48) & 5.55 (0.33) & 5.24 (0.40) & 94.33 & $<.001$ & 0.73 \\
-Workload, mental demand & 3.64 (0.76) & 4.06 (0.71) & 3.72 (0.81) & 3.36 & $.041$ & 0.09 \\
-Workload, temporal demand & 3.53 (0.74) & 4.22 (0.72) & 3.92 (0.81) & 6.20 & $.003$ & 0.15 \\
-Workload, effort & 3.47 (0.51) & 4.06 (0.63) & 3.72 (0.85) & 6.64 & $.002$ & 0.16 \\
-Workload, frustration & 2.94 (0.79) & 3.08 (0.69) & 2.83 (0.65) & 1.25 & $.292$ & 0.03 \\
-Workload, 4-item descriptive mean & 3.40 (0.33) & 3.85 (0.32) & 3.55 (0.39) & 14.65 & $<.001$ & 0.30 \\
-Invasiveness (single item) & 2.11 (0.85) & 4.39 (0.73) & 3.19 (0.62) & 86.38 & $<.001$ & 0.71 \\
-Player experience (GEQ) & 4.56 (0.33) & 5.08 (0.34) & 5.12 (0.36) & 28.89 & $<.001$ & 0.45 \\
-SAM valence & 4.33 (0.83) & 4.86 (0.68) & 5.06 (0.71) & 8.13 & $<.001$ & 0.19 \\
-SAM arousal & 4.17 (0.56) & 4.58 (0.69) & 4.58 (0.69) & 4.31 & $.017$ & 0.11 \\
-SAM dominance/control & 4.28 (0.66) & 5.25 (0.60) & 4.83 (0.65) & 20.77 & $<.001$ & 0.37 \\
-Comfort sharing physiological data & 5.83 (0.70) & 4.33 (0.76) & 4.81 (0.75) & 38.03 & $<.001$ & 0.52 \\
-Wanted visibility control & 4.75 (0.65) & 5.89 (0.67) & 5.83 (0.61) & 38.51 & $<.001$ & 0.52 \\
-Wanted an immediate off switch & 4.17 (0.56) & 5.36 (0.72) & 5.42 (0.73) & 39.99 & $<.001$ & 0.53 \\
-Felt useful without feeling diagnostic & 3.19 (0.58) & 4.94 (0.58) & 5.11 (0.62) & 98.53 & $<.001$ & 0.74 \\
-\bottomrule
-\end{tabularx}
-\end{table*}
-
-\begin{table*}[t]
-\centering
-\caption{Planned pairwise contrasts for the six outcomes named in H2.1-H2.5, Holm-adjusted within each outcome across its three contrasts. $d_z$ is the standardized mean difference (paired).}
-\label{tab:s2-contrasts}
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.1}
-\begin{tabularx}{\textwidth}{@{}Y l c c c c@{}}
-\toprule
-Outcome & Contrast & Mean diff.\ & 95\% CI & $p_{\text{Holm}}$ & $d_z$ \\
-\midrule
-Support response time (s) & Icon Cue vs.\ No Cue & $-3.90$ & $[-5.60, -2.20]$ & $.001$ & $-1.46$ \\
- & Icon Cue vs.\ Numeric Cue & $-1.03$ & $[-2.29, 0.22]$ & $.098$ & $-0.52$ \\
- & Numeric Cue vs.\ No Cue & $-2.87$ & $[-4.27, -1.46]$ & $.002$ & $-1.30$ \\
-\addlinespace
-Teammate awareness & Icon Cue vs.\ No Cue & $1.19$ & $[0.94, 1.43]$ & $<.001$ & $1.63$ \\
- & Icon Cue vs.\ Numeric Cue & $-0.01$ & $[-0.26, 0.24]$ & $.941$ & $-0.01$ \\
- & Numeric Cue vs.\ No Cue & $1.19$ & $[1.00, 1.39]$ & $<.001$ & $2.05$ \\
-\addlinespace
-Coordination usefulness & Icon Cue vs.\ No Cue & $1.07$ & $[0.88, 1.25]$ & $<.001$ & $1.93$ \\
- & Icon Cue vs.\ Numeric Cue & $-0.22$ & $[-0.39, -0.04]$ & $.018$ & $-0.41$ \\
- & Numeric Cue vs.\ No Cue & $1.28$ & $[1.12, 1.44]$ & $<.001$ & $2.71$ \\
-\addlinespace
-Workload (4-item mean) & Icon Cue vs.\ No Cue & $0.15$ & $[-0.02, 0.33]$ & $.090$ & $0.29$ \\
- & Icon Cue vs.\ Numeric Cue & $-0.31$ & $[-0.51, -0.10]$ & $.008$ & $-0.51$ \\
- & Numeric Cue vs.\ No Cue & $0.46$ & $[0.32, 0.60]$ & $<.001$ & $1.11$ \\
-\addlinespace
-Invasiveness & Icon Cue vs.\ No Cue & $1.08$ & $[0.73, 1.44]$ & $<.001$ & $1.03$ \\
- & Icon Cue vs.\ Numeric Cue & $-1.19$ & $[-1.53, -0.86]$ & $<.001$ & $-1.22$ \\
- & Numeric Cue vs.\ No Cue & $2.28$ & $[1.91, 2.64]$ & $<.001$ & $2.10$ \\
-\addlinespace
-Trust & Icon Cue vs.\ No Cue & $0.93$ & $[0.72, 1.13]$ & $<.001$ & $1.54$ \\
- & Icon Cue vs.\ Numeric Cue & $-0.31$ & $[-0.49, -0.12]$ & $.002$ & $-0.56$ \\
- & Numeric Cue vs.\ No Cue & $1.23$ & $[1.05, 1.41]$ & $<.001$ & $2.33$ \\
-\bottomrule
-\end{tabularx}
-\end{table*}
+H2.2 predicted that the Icon Cue would be rated more useful for coordination than \emph{both} No Cue and Numeric Cue. The first half held: coordination usefulness rose sharply from No Cue to Icon Cue, a large effect ($d_z=1.93$). The second half did not: the Numeric Cue was rated \emph{more} useful for coordination than the Icon Cue (5.49 vs.\ 5.27, $d_z=-0.41$), the reverse of the predicted direction. H2.2 is therefore only partially supported, a pattern that echoes the mission-score asymmetry in Section~\ref{sec:s2-behavioral} and that several participants explained directly as a trade-off between the icon's glanceability and the numbers' precision (Section~\ref{sec:s2-qualitative}). Trust followed the same shape, with the Icon Cue again ahead of No Cue but behind the Numeric Cue ($d_z=-0.56$). Figure~\ref{fig:s2-questionnaire} plots these and the remaining constructs.
 
 \begin{figure*}[t]
   \centering
   \includegraphics[width=0.85\textwidth]{Figure_4_Support_Response_Time.png}
-  \caption{Support response time by interface condition (team-level means $\pm$ 95\% CI; light lines show individual teams). Lower values indicate faster teammate support. Exact values and inferential tests are in Tables~\ref{tab:s2-behavioral} and~\ref{tab:s2-contrasts}.}
+  \caption{Support response time by interface condition (team-level means $\pm$ 95\% CI; light lines show individual teams). Lower values indicate faster teammate support. Exact values and inferential tests are reported in the text and supplementary materials.}
   \Description{A connected-dot plot showing team-level support response time falling from 15.4 seconds under No Cue to 12.1 seconds under Numeric Cue and 11.5 seconds under Icon Cue, with individual team trajectories shown as light lines behind the condition means.}
   \label{fig:s2-support-rt}
 \end{figure*}
@@ -876,50 +551,27 @@ Trust & Icon Cue vs.\ No Cue & $0.93$ & $[0.72, 1.13]$ & $<.001$ & $1.54$ \\
 
 \subsection{Workload and Affective Response (H2.5)}
 \label{sec:s2-workload}
-H2.5 predicted that the Icon Cue would not raise workload above the Numeric Cue and would stay at or below the midpoint of the workload scale. The four NASA-TLX items we collected (mental demand, temporal demand, effort, frustration) did not cohere into a single reliable index (Cronbach's $\alpha=.13$; Table~\ref{tab:s2-constructs}), so, following Study 1's practice, we report and test them individually, alongside a purely descriptive four-item mean (Table~\ref{tab:s2-questionnaire}; Figure~\ref{fig:s2-questionnaire}). On every item, the Icon Cue's mean stayed at or below the 4.0 midpoint of the seven-point scale and did not differ significantly from the No Cue baseline (all Holm-adjusted $p>.09$). The Numeric Cue, by contrast, significantly raised mental demand, temporal demand, and effort relative to No Cue; frustration did not differ across any pair of conditions. The four-item descriptive mean makes the same point at a glance (Table~\ref{tab:s2-questionnaire}), with the Icon Cue significantly lower than the Numeric Cue ($d_z=-0.51$; Table~\ref{tab:s2-contrasts}) and not reliably different from No Cue. H2.5 is supported: reading the ambiguous halo cost measurably less deliberate effort than reading exact numbers, and did not measurably exceed the cost of playing with no physiological display at all.
+H2.5 predicted that the Icon Cue would not raise workload above the Numeric Cue and would stay at or below the midpoint of the workload scale. The four NASA-TLX items we collected (mental demand, temporal demand, effort, frustration) did not cohere into a single reliable index (Cronbach's $\alpha=.13$), so, following Study 1's practice, we report and test them individually, alongside a purely descriptive four-item mean (Figure~\ref{fig:s2-questionnaire}). On every item, the Icon Cue's mean stayed at or below the 4.0 midpoint of the seven-point scale and did not differ significantly from the No Cue baseline (all Holm-adjusted $p>.09$). The Numeric Cue, by contrast, significantly raised mental demand, temporal demand, and effort relative to No Cue; frustration did not differ across any pair of conditions. The four-item descriptive mean makes the same point, with the Icon Cue significantly lower than the Numeric Cue ($d_z=-0.51$) and not reliably different from No Cue. H2.5 is supported: reading the ambiguous halo cost measurably less deliberate effort than reading exact numbers, without exceeding the cost of playing with no physiological display at all.
 
-Affective ratings on the Self-Assessment Manikin, collected as in Study 1, moved with the constructs above (Table~\ref{tab:s2-questionnaire}): valence and dominance/control both rose from No Cue, with the Numeric Cue again rated as giving players a stronger sense of control than the Icon Cue ($d_z=-0.46$), consistent with the coordination-usefulness asymmetry in Section~\ref{sec:s2-awareness}. Arousal rose modestly and identically under both cue conditions relative to No Cue and did not distinguish Numeric from Icon at all. The Game Experience Questionnaire composite (competence, flow, challenge, enjoyment, social connectedness; $\alpha=.40$, reported descriptively given that GEQ subscales are conceptually heterogeneous rather than a single trait) rose from No Cue to both cue conditions and did not differ between them: whichever form the cue took, players reported a more positive play experience than with no cue at all.
+Affective ratings on the Self-Assessment Manikin, collected as in Study 1, moved with the constructs above: valence and dominance/control both rose from No Cue, with the Numeric Cue again rated as giving players a stronger sense of control than the Icon Cue ($d_z=-0.46$), consistent with Section~\ref{sec:s2-awareness}. Arousal rose modestly and identically under both cue conditions relative to No Cue. The Game Experience Questionnaire composite (competence, flow, challenge, enjoyment, social connectedness; $\alpha=.40$, reported descriptively given that GEQ subscales are conceptually heterogeneous) rose from No Cue to both cue conditions and did not differ between them.
 
 \subsection{Privacy and Invasiveness (H2.4)}
 \label{sec:s2-privacy}
-H2.4 predicted that the Numeric Cue would be rated more invasive than the Icon Cue. This was strongly supported. On the single-item invasiveness rating, ratings rose sharply from No Cue to Numeric Cue, with the Icon Cue in between (Table~\ref{tab:s2-questionnaire}; Figure~\ref{fig:s2-questionnaire}). The planned contrast confirmed H2.4 directly: the Icon Cue was rated significantly less invasive than the Numeric Cue ($d_z=-1.22$; Table~\ref{tab:s2-contrasts}), even though it was also rated more invasive than showing no physiological information at all ($d_z=1.03$): withholding numbers and emotion words did not make the icon invisible as a privacy concern, but it roughly halved the perceived cost of the Numeric Cue's exact disclosure. Comfort sharing physiological data showed the mirror-image pattern, with participants significantly more comfortable under the Icon Cue than the Numeric Cue ($d_z=0.44$). The desire for visibility control and for an immediate off switch rose sharply once any physiological data was shown, regardless of its form, and did not distinguish the Numeric from the Icon Cue: players wanted control over \emph{any} bodily disclosure, not only the more precise one. Finally, participants rated the Icon Cue as feeling useful without feeling diagnostic more strongly than either alternative, though the Icon-versus-Numeric difference on this item did not reach significance.
+H2.4 predicted that the Numeric Cue would be rated more invasive than the Icon Cue. This was strongly supported. On the single-item invasiveness rating, ratings rose sharply from No Cue to Numeric Cue, with the Icon Cue in between (Figure~\ref{fig:s2-questionnaire}). The planned contrast confirmed H2.4 directly: the Icon Cue was rated significantly less invasive than the Numeric Cue ($d_z=-1.22$), even though it was also rated more invasive than showing no physiological information at all ($d_z=1.03$): withholding numbers and emotion words did not make the icon invisible as a privacy concern, but roughly halved the perceived cost of the Numeric Cue's exact disclosure. Comfort sharing physiological data showed the mirror-image pattern, with participants significantly more comfortable under the Icon Cue than the Numeric Cue ($d_z=0.44$). The desire for visibility control and for an immediate off switch rose sharply once any physiological data was shown, regardless of its form, and did not distinguish the Numeric from the Icon Cue: players wanted control over \emph{any} bodily disclosure, not only the more precise one. Participants rated the Icon Cue as feeling useful without feeling diagnostic more strongly than either alternative, though the Icon-versus-Numeric difference on this item did not reach significance.
 
 \begin{figure*}[t]
   \centering
   \includegraphics[width=\textwidth]{Figure_7_Post_Condition_Questionnaire_Outcomes.png}
-  \caption{Post-condition questionnaire outcomes by interface condition (participant-level means $\pm$ 95\% CI; light lines show individual participants). Panels C through F (trust, workload, invasiveness, player experience) illustrate the patterns reported in Sections~\ref{sec:s2-workload} and~\ref{sec:s2-privacy}; exact means and inferential tests for all constructs, including teammate awareness and coordination usefulness, are in Table~\ref{tab:s2-questionnaire}.}
+  \caption{Post-condition questionnaire outcomes by interface condition (participant-level means $\pm$ 95\% CI; light lines show individual participants). Panels C through F (trust, workload, invasiveness, player experience) illustrate the patterns reported in Sections~\ref{sec:s2-workload} and~\ref{sec:s2-privacy}; exact means and inferential tests for all constructs, including teammate awareness and coordination usefulness, are reported in the text and supplementary materials.}
   \Description{A six-panel figure of post-condition questionnaire ratings by interface condition, covering teammate awareness, coordination usefulness, trust, workload, invasiveness, and player experience; trust, player experience, and awareness rise under both cue conditions relative to No Cue, invasiveness rises most under Numeric Cue, and workload rises only under Numeric Cue.}
   \label{fig:s2-questionnaire}
 \end{figure*}
 
 \subsection{Communication Behavior (H2.6)}
 \label{sec:s2-communication}
-H2.6 predicted that the Icon Cue would reduce general uncertainty and status-check communication while increasing targeted support behavior, relative to No Cue. Coders classified 488 utterances across the 36 team-missions into eight categories (Table~\ref{tab:s2-communication}; Figure~\ref{fig:s2-communication}). Uncertainty statements and help requests fell sharply once any cue was present ($F(2,22)=95.86$ and $66.00$ respectively, both $p<.001$), but the Icon Cue did not reduce uncertainty statements further than the Numeric Cue did ($p_{\text{Holm}}=.339$): both cues, not the icon specifically, cut general uncertainty talk. Status-check utterances, by contrast, did not differ reliably across conditions ($F(2,22)=1.37$, $p=.274$): naming a teammate's state ambiently did not measurably reduce how often players still asked each other directly how they were doing.
+H2.6 predicted that the Icon Cue would reduce general uncertainty and status-check communication while increasing targeted support behavior, relative to No Cue. Coders classified 488 utterances across the 36 team-missions into eight categories (Figure~\ref{fig:s2-communication}). Uncertainty statements and help requests fell sharply once any cue was present ($F(2,22)=95.86$ and $66.00$ respectively, both $p<.001$), but the Icon Cue did not reduce uncertainty statements further than the Numeric Cue did ($p_{\text{Holm}}=.339$), so both cues, not the icon specifically, cut general uncertainty talk. Status-check utterances did not differ reliably across conditions ($F(2,22)=1.37$, $p=.274$).
 
-Support offers, the communication category closest to the study's primary behavioral outcome, rose specifically under the Icon Cue (Table~\ref{tab:s2-communication}), $F(2,22)=31.00$, $p<.001$, significantly ahead of both No Cue ($d_z=2.14$, $p_{\text{Holm}}<.001$) and, notably, the Numeric Cue as well ($d_z=2.35$, $p_{\text{Holm}}<.001$), which did not differ from No Cue. Strategy-change utterances followed the same icon-specific pattern ($F(2,22)=33.00$, $p<.001$). References to the displayed cue were, as expected, condition-locked: physiological-state references occurred only under the Icon Cue and numeric-value references only under the Numeric Cue, confirming that players talked about whichever representation they could see. Task-instruction utterances, the most frequent code overall, fell steadily as ambient awareness increased, consistent with less need to narrate the team's situation aloud once it was partly visible. H2.6 is therefore partially supported: both cues reduced general uncertainty and help-seeking relative to no cue, but only the Icon Cue specifically increased targeted support offers and strategy-change talk beyond what the Numeric Cue produced, the clearest communication-level signature of the ambient design.
-
-\begin{table}[t]
-\centering
-\caption{Coded communication rate (utterances per team-mission, $n=12$ team-missions per condition) by interface condition.}
-\label{tab:s2-communication}
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.1}
-\begin{tabularx}{\columnwidth}{@{}Xccc@{}}
-\toprule
-Communication code & No Cue & Numeric Cue & Icon Cue \\
-\midrule
-Task instruction & 4.58 & 3.83 & 3.08 \\
-Help request & 2.00 & 1.00 & 1.00 \\
-Support offer & 2.17 & 2.00 & 3.00 \\
-Status check & 1.92 & 2.08 & 1.92 \\
-Physiological reference & 0.00 & 0.00 & 2.08 \\
-Numeric reference & 0.00 & 2.00 & 0.00 \\
-Uncertainty statement & 2.08 & 0.92 & 1.00 \\
-Strategy change (coded) & 1.00 & 1.00 & 2.00 \\
-\bottomrule
-\end{tabularx}
-\end{table}
+Support offers, the category closest to the study's primary behavioral outcome, rose specifically under the Icon Cue, $F(2,22)=31.00$, $p<.001$, significantly ahead of both No Cue ($d_z=2.14$, $p_{\text{Holm}}<.001$) and the Numeric Cue ($d_z=2.35$, $p_{\text{Holm}}<.001$), which did not differ from No Cue. Strategy-change utterances followed the same icon-specific pattern ($F(2,22)=33.00$, $p<.001$). References to the displayed cue were condition-locked: physiological-state references occurred only under the Icon Cue and numeric-value references only under the Numeric Cue. Task-instruction utterances, the most frequent code overall, fell steadily as ambient awareness increased. H2.6 is therefore partially supported: both cues reduced general uncertainty and help-seeking relative to no cue, but only the Icon Cue specifically increased targeted support offers and strategy-change talk beyond what the Numeric Cue produced, the clearest communication-level signature of the ambient design.
 
 \begin{figure*}[t]
   \centering
@@ -932,22 +584,14 @@ Strategy change (coded) & 1.00 & 1.00 & 2.00 \\
 \begin{figure*}[t]
   \centering
   \includegraphics[width=\textwidth]{Figure_9_System_Reliability_Clean.png}
-  \caption{System reliability across the three interface conditions: sensor-latency distribution (A), missing-data percentage (B), dropout duration (C), and HR/HRV state-change counts (E). Table~\ref{tab:s2-reliability} reports these alongside display-state agreement and baseline HR/HRV.}
+  \caption{System reliability across the three interface conditions: sensor-latency distribution (A), missing-data percentage (B), dropout duration (C), and HR/HRV state-change counts (E). Display-state agreement and baseline HR/HRV are reported in the text.}
   \Description{A multi-panel figure of system reliability measures, showing sensor latency rising slightly under the two cue conditions relative to No Cue, missing-data percentage and dropout duration low and similar across conditions, and HR/HRV state-change counts comparable across conditions.}
   \label{fig:s2-reliability}
 \end{figure*}
 
-\begin{figure*}[t]
-  \centering
-  \includegraphics[width=\textwidth]{Figure_11_Example_Physiological_Timeline_Final.png}
-  \caption{Example physiological timeline for one team's mission under the Numeric Cue condition, aligning the three scripted pressure events and the resulting support actions (A) against the player's logged HR state (B) and HRV state (C), with data-quality markers (D). Shown as a worked example of the pipeline's logging, not as primary evidence.}
-  \Description{A four-panel timeline for one player across a seven-minute mission, showing three pressure events each followed within seconds by a support action, an HR state trace that rises briefly after the first event, an HRV state trace that dips after the third event, and a data-quality panel showing no missing samples.}
-  \label{fig:s2-timeline}
-\end{figure*}
-
 \subsection{Final Preferences and Qualitative Findings}
 \label{sec:s2-qualitative}
-At the end of each session, participants ranked the three conditions on five criteria (Figure~\ref{fig:s2-preference}). The Icon Cue was named most useful for coordination by 50 percent of participants (Numeric Cue 39 percent, No Cue 11 percent) and preferred for real cooperative play by 53 percent (Numeric Cue 33 percent, No Cue 14 percent). The Numeric Cue was named easiest to understand slightly more often than the Icon Cue (47 percent vs.\ 36 percent, No Cue 17 percent) and most trustworthy slightly more often as well (47 percent vs.\ 39 percent, No Cue 14 percent), mirroring the coordination-usefulness and trust asymmetries reported in Section~\ref{sec:s2-awareness}. The No Cue condition was named least invasive by a wide majority (78 percent), with the Icon Cue a distant second (19 percent) and the Numeric Cue almost never chosen as least invasive, consistent with the invasiveness ratings in Section~\ref{sec:s2-privacy}.
+At the end of each session, participants ranked the three conditions on five criteria (Figure~\ref{fig:s2-preference}). The Icon Cue was named most useful for coordination by 50 percent of participants (Numeric Cue 39 percent, No Cue 11 percent) and preferred for real cooperative play by 53 percent (Numeric Cue 33 percent, No Cue 14 percent). The Numeric Cue was named easiest to understand slightly more often than the Icon Cue (47 percent vs.\ 36 percent, No Cue 17 percent) and most trustworthy slightly more often as well (47 percent vs.\ 39 percent, No Cue 14 percent), mirroring Section~\ref{sec:s2-awareness}. The No Cue condition was named least invasive by a wide majority (78 percent), with the Icon Cue a distant second (19 percent), consistent with Section~\ref{sec:s2-privacy}.
 
 \begin{figure*}[t]
   \centering
@@ -957,31 +601,7 @@ At the end of each session, participants ranked the three conditions on five cri
   \label{fig:s2-preference}
 \end{figure*}
 
-We coded the nine open-ended closing-interview questions using the theme labels applied during data collection (Table~\ref{tab:s2-qualitative}); each question was answered by all 36 participants. Participants frequently framed the Icon Cue and Numeric Cue as offering different things rather than one simply beating the other, a trade-off between glanceability and precision: ``The icon felt more like part of the game; the numbers felt like a measurement tool. The trade-off was speed versus precision'' (P042); ``They pointed in the same direction, but they did not feel interchangeable. I was more comfortable glancing at the icon'' (P012). Several participants described the cue changing how they interpreted a quiet teammate specifically, the scenario the design was built to address, and named timing as central, helping most in the brief window before a request would otherwise have been made and distracting most when read while moving through a busy screen (Table~\ref{tab:s2-qualitative}, Awareness and Workload/confusion rows), an account consistent with the workload pattern in Section~\ref{sec:s2-workload}. Privacy surfaced unprompted and consistently, with participants asking for sharing to be opt-in per match, an immediate off switch, and, in several cases, separate visibility permissions for the icon and the exact numeric values (Table~\ref{tab:s2-qualitative}, Privacy control row). These qualitative accounts converge with the quantitative results above: an ambient, label-free cue that a teammate reads as part of the game, rather than measures like a diagnostic panel, delivered most of the coordination benefit of explicit disclosure while asking less of players' attention and less of their privacy.
-
-\begin{table*}[t]
-\centering
-\caption{Qualitative themes from the closing interview ($N=36$ participants per question). Percentages for the coordination, legibility, and acceptance themes are first-choice condition selections; the remaining themes were open-ended and are summarized descriptively.}
-\label{tab:s2-qualitative}
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth}Yp{0.30\textwidth}p{0.14\textwidth}l@{}}
-\toprule
-\textbf{Theme} & \textbf{Description} & \textbf{Example quote} & \textbf{Condition most associated} & \textbf{Addresses} \\
-\midrule
-Coordination & Which condition helped the team coordinate best, and why. & ``The icon worked best for our team. I felt less uncertain about when to offer help.'' (P012) & Icon (50\%), Numeric (39\%) & H2.2 \\
-Legibility & Which condition felt easiest to understand. & ``The numbers was the easiest for me to understand. It matched the way I already scan game information.'' (P012) & Numeric (47\%), Icon (36\%) & H2.1 \\
-Privacy & Which condition felt most invasive. & ``The numbers felt the most invasive. I would be careful about using it with strangers.'' (P011) & Numeric (97\%) & H2.4 \\
-Awareness & Whether the cue changed interpretation of teammates. & ``Not dramatically, but it changed how quickly I checked in. It helped most when someone became quiet.'' (P013) & Both cue conditions & H2.1 \\
-Precision vs.\ glanceability & Whether the icon felt different from the numeric display. & ``The icon gave an impression and the panel gave evidence. I trusted the numbers when I had time to check them.'' (P013) & Comparative (Icon vs.\ Numeric) & H2.2, RQ2.3 \\
-Support timing & When the cue helped most. & ``It helped most just before someone asked for help at the cooking station.'' (P012) & Both cue conditions & H2.3 \\
-Workload/confusion & When the cue distracted or confused. & ``I got confused when the state changed but the task problem was not clear when the main route was blocked.'' (P013) & Numeric Cue (denser display) & H2.5 \\
-Privacy control & What visibility control participants wanted. & ``I want a clear switch for the icon and a separate one for exact values. Opponents and spectators should not have access.'' (P073) & Both cue conditions & H2.4 \\
-Acceptance & Preferred condition for real cooperative play. & ``I would choose the icon for real cooperative play. That choice fits how I normally communicate in games.'' (P012) & Icon (53\%), Numeric (33\%), No Cue (14\%) & H2.2, RQ2.3 \\
-\bottomrule
-\end{tabularx}
-\end{table*}
+We coded the nine open-ended closing-interview questions using the theme labels applied during data collection; each question was answered by all 36 participants, and the full theme-by-theme breakdown with example quotes is reported in the supplementary materials (Section~\ref{sec:data-availability}). Participants frequently framed the Icon Cue and Numeric Cue as offering different things rather than one simply beating the other, a trade-off between glanceability and precision: ``The icon felt more like part of the game; the numbers felt like a measurement tool. The trade-off was speed versus precision'' (P042). Several participants described the cue changing how they interpreted a quiet teammate specifically, the scenario the design was built to address, and named timing as central, helping most in the brief window before a request would otherwise have been made and distracting most when read while moving through a busy screen, consistent with the workload pattern in Section~\ref{sec:s2-workload}. Privacy surfaced unprompted and consistently, with participants asking for sharing to be opt-in per match, an immediate off switch, and, in several cases, separate visibility permissions for the icon and the exact numeric values. These qualitative accounts converge with the quantitative results above: an ambient, label-free cue that a teammate reads as part of the game, rather than measures like a diagnostic panel, delivered most of the coordination benefit of explicit disclosure while asking less of players' attention and less of their privacy.
 
 \FloatBarrier
 
@@ -1003,25 +623,25 @@ A display meant for coordination has to do more than convey a state; it has to m
 Four implications follow for physiological interfaces in shared settings. Encoding relative to a personal baseline, rather than an absolute scale, kept states legible without asserting a clinical reading, a defensible default for social displays. Separable visual variables let a single icon carry two bodily signals, suggesting headroom for richer physiological communication than a single heart rate channel. Withholding emotion labels still produced a legible display and gained user acceptance, indicating that graded, open cues are a viable alternative to categorical affect display. Most consequential, control over visibility is a precondition rather than a refinement: participants accepted the display only when it remained optional, mutable, and subtle, and Study 2 confirmed why. Making a bodily signal visible changes the informational terms of play, and with them how blame, hesitation, and effort are read among teammates, precisely the redistribution of accountability that a politics of artifacts anticipates \cite{winner_artifacts_1980}. Participants in both studies asked for consent over who can see their status and for the ability to withdraw it, recasting privacy from an afterthought into part of the interface's core logic; a deployed version would need to treat the right to be illegible as seriously as the capacity to be read.
 
 \subsection{From Legibility to Coordination}
-Every claim above concerns whether the icon communicates, not whether communicating it changes what a team does together; Study 2 closed that gap by testing the Icon Cue against a No Cue baseline and an explicit Numeric Cue across scripted teammate-pressure events in live play. Teams supported a struggling teammate significantly faster under the Icon Cue than under No Cue, a large effect that held across all three pressure-event types, and logged more appropriate support actions without more false ones (Table~\ref{tab:s2-behavioral}): the graded legibility documented in Study 1 carries over into faster, better-targeted coordination, not only into correctly naming a state when asked.
+Every claim above concerns whether the icon communicates, not whether communicating it changes what a team does together; Study 2 closed that gap by testing the Icon Cue against a No Cue baseline and an explicit Numeric Cue across scripted teammate-pressure events in live play. Teams supported a struggling teammate significantly faster under the Icon Cue than under No Cue, a large effect that held across all three pressure-event types, and logged more appropriate support actions without more false ones: the graded legibility documented in Study 1 carries over into faster, better-targeted coordination, not only into correctly naming a state when asked.
 
-The three-condition design also answered a comparison Study 1's single-arm design could not make: whether withholding numeric values costs or gains anything relative to explicit disclosure. The answer is not a clean win for ambiguity. On support response time, teammate awareness, and workload, the Icon Cue matched the Numeric Cue while costing significantly less in perceived invasiveness, the strongest form the ambiguity argument could take. But on coordination usefulness, trust, and mission score, the Numeric Cue was rated, and performed, significantly better (Table~\ref{tab:s2-contrasts}), a trade-off between glanceability and precision that participants named directly (Section~\ref{sec:s2-qualitative}): the icon was read faster and with less friction, but exact numbers gave players something concrete to plan around. A design wanting the numeric condition's edge on planning and trust without its privacy cost would need to combine the two, for instance keeping the ambient halo as the default and surfacing exact values on request, an implication Section~\ref{sec:limitations} returns to.
+The three-condition design also answered a comparison Study 1's single-arm design could not make: whether withholding numeric values costs or gains anything relative to explicit disclosure. The answer is not a clean win for ambiguity. On support response time, teammate awareness, and workload, the Icon Cue matched the Numeric Cue while costing significantly less in perceived invasiveness, the strongest form the ambiguity argument could take. But on coordination usefulness, trust, and mission score, the Numeric Cue was rated, and performed, significantly better, a trade-off between glanceability and precision that participants named directly (Section~\ref{sec:s2-qualitative}): the icon was read faster and with less friction, but exact numbers gave players something concrete to plan around. A design wanting the numeric condition's edge on planning and trust without its privacy cost would need to combine the two, for instance keeping the ambient halo as the default and surfacing exact values on request, an implication Section~\ref{sec:limitations} returns to.
 
 \section{Limitations}
 \label{sec:limitations}
 
-Study 1 alone had no comparison condition and simulated cardiovascular states rather than a live wearable feed, so it could not establish that the label free design outperforms a simpler alternative or that a real wearable produces equally clean states under motion and noise. Study 2's three-condition design and live wearable pipeline (Table~\ref{tab:s2-reliability}) closed both gaps directly, and the comparison is mixed rather than a clean win for ambiguity, as Section~\ref{sec:discussion} details: readers should not treat Study 2 as settling the question in the icon's favor, only as showing it is competitive on the outcomes closest to the pressure events tested and behind on others. What remains open from Study 1 is accuracy: recognition was well above chance on every comparison but moderate rather than near ceiling, with the middle states on each channel reliably harder to separate than the endpoints (Table~\ref{tab:legibility-tests}), so a deployed system should budget for a comparable error rate, and Study 2 still relied on one vendor's sensing stack, so the baseline-relative classification's behavior on other consumer sensors, whose photoplethysmography accuracy and HRV estimation vary by device, remains untested; a deployed version also needs a fallback for players without a supported wearable, most simply a neutral, unanimated avatar.
+Study 1 alone had no comparison condition and simulated cardiovascular states rather than a live wearable feed, so it could not establish that the label free design outperforms a simpler alternative or that a real wearable produces equally clean states under motion and noise. Study 2's three-condition design and live wearable pipeline closed both gaps directly, and the comparison is mixed rather than a clean win for ambiguity, as Section~\ref{sec:discussion} details: readers should not treat Study 2 as settling the question in the icon's favor, only as showing it is competitive on the outcomes closest to the pressure events tested and behind on others. What remains open from Study 1 is accuracy: recognition was well above chance on every comparison but moderate rather than near ceiling, with the middle states on each channel reliably harder to separate than the endpoints, so a deployed system should budget for a comparable error rate, and Study 2 still relied on one vendor's sensing stack, so the baseline-relative classification's behavior on other consumer sensors, whose photoplethysmography accuracy and HRV estimation vary by device, remains untested; a deployed version also needs a fallback for players without a supported wearable, most simply a neutral, unanimated avatar.
 
 Several limitations are specific to Study 2 or remain after it. Its scripted pressure events, while modeled on organic Overcooked-style bottlenecks, were researcher-triggered on a fixed schedule rather than emergent, so support response time measures reaction to a controlled probe rather than the full variety of overload moments a longer, unscripted session would produce; each team played each condition once, for seven minutes, which rules out unequal practice through counterbalancing but cannot speak to habituation, whether the icon's benefit holds, grows, or fades across dozens of sessions, or whether the Numeric Cue's edge on trust and coordination usefulness would persist as players learned to read the icon as fluently as they read numbers. Coded communication relied on a single primary coder per utterance rather than an independently double-coded reliability sample, so those results should be read as one systematic coding pass rather than inter-rater-validated categories. Both studies drew convenience samples from the author's university subject pool and personal network, voluntarily and without compensation, limiting generalization to a broader or more diverse population of remote cooperative-game players; both relied on self report, without a physiological ground truth for the viewer; and the bespoke BioTerrarium-themed task, built to avoid copyrighted commercial levels, leaves open whether the same pattern would hold in a shipped title with its own pacing and stakes. Finally, the privacy concerns Study 1 surfaced qualitatively, Study 2 confirmed quantitatively (Section~\ref{sec:s2-privacy}): a real deployment would still need to resolve consent, data ownership, and control over visibility, including the separate icon/numeric permissions several participants requested, before these findings could be carried into practice.
 \section{Conclusion}
-Distributed play removes the body from social interaction: teammates who would read one another's effort and strain at a glance in a shared room are left, across a network, inferring those states from text, voice, and avatar motion, and the resulting misreadings seed misplaced blame and broken coordination. This paper asked whether the missing bodily layer could be returned as a readable cue without collapsing it into a named emotion, and answered in two stages.
+Distributed play removes the body from social interaction: teammates who would read one another's effort and strain at a glance in a shared room are left inferring those states from text, voice, and avatar motion, and the resulting misreadings seed misplaced blame and broken coordination. This paper asked whether that missing bodily layer could be returned as a readable cue without collapsing it into a named emotion, and answered in two stages.
 
-Study 1 showed that a label free display communicates: participants recovered heart rate and variability state from animation alone at 66.3 and 58.2 percent, well above chance, with readings ordered as designed across five trend tests and workload on the low side of the scale. Study 2 (Sections~\ref{sec:study2-methods} and~\ref{sec:study2-results}) carried that validated icon system into live cooperative play, testing it in 12 three-player teams against a no-cue baseline and an explicit numeric display. The graded legibility documented in Study 1 carried over into behavior: teams supported a struggling teammate 3.9 seconds faster under the Icon Cue than under No Cue, matching the Numeric Cue on speed and awareness while costing less in workload and invasiveness. The comparison was not a uniform win for ambiguity, however: the Numeric Cue was rated more useful for coordination and more trustworthy, and produced a higher mission score, a trade-off participants named directly in their own words and that qualifies, without overturning, the case for withholding numbers as a design default.
+Study 1 showed that a label free display communicates: participants recovered heart rate and variability state from animation alone at 66.3 and 58.2 percent, well above chance, with readings ordered as designed and workload on the low side of the scale. Study 2 carried that validated icon system into live cooperative play across 12 three-player teams: teams supported a struggling teammate 3.9 seconds faster under the Icon Cue than under No Cue, matching the Numeric Cue on speed and awareness while costing less workload and invasiveness, though the Numeric Cue was rated more useful for coordination, more trustworthy, and produced a higher mission score, a trade-off participants named directly in their own words.
 
-The contributions outlined in Section~\ref{sec:intro} stand as stated there. What Study 2 adds to them is a demonstration that a wearable driven, label free cue moves teammates to notice and support one another faster, not only to name a state correctly when asked, at a real but bounded cost in precision and trust relative to explicit disclosure. The boundaries participants placed on physiological visibility in Study 1 anticipated what Study 2 then measured directly: players in live cooperative play wanted the same consent, an immediate off switch, and, in several cases, separate visibility permissions for the icon and the exact numbers. Building that control into the interface's core, so that the right to be illegible is held as firmly as the capacity to be read, is the design priority a deployed version of this system would need to meet before the coordination benefit documented here could be carried into practice.
+The contributions outlined in Section~\ref{sec:intro} stand as stated there. What Study 2 adds is a demonstration that a wearable driven, label free cue moves teammates to notice and support one another faster, at a real but bounded cost in precision and trust relative to explicit disclosure. Building the visibility controls players asked for, an immediate off switch and separate permissions for the icon and the exact numbers, into the interface's core is the design priority a deployed version would need to meet before this coordination benefit could be carried into practice.
 \section{Data and Materials Availability}
 \label{sec:data-availability}
-The anonymized trial-level dataset from Study 1 (participant demographics, Phase A and Phase B responses, and closing-questionnaire ratings), the stimulus animations, and the analysis scripts used to produce the statistics and figures in this paper will be deposited in a public repository upon publication. Study 2's materials, including the full post-condition questionnaire item bank, the communication-coding scheme, and the behavioral and physiological data-logging schema, together with its anonymized behavioral, physiological-logging, questionnaire, and communication-coding datasets and the analysis scripts used to produce the statistics, tables, and figures in Section~\ref{sec:study2-results}, will be deposited alongside them upon publication.
+The anonymized trial-level dataset from Study 1 (participant demographics, Phase A and Phase B responses, and closing-questionnaire ratings), the stimulus animations, and the analysis scripts used to produce the statistics and figures in this paper will be deposited in a public repository upon publication, along with full supplementary tables for the results this paper reports only in prose: the chance-level and trend-test statistics underlying Sections~\ref{sec:study1-legibility} and~\ref{sec:study1-results}, and participant demographics and device use. Study 2's materials, including the full post-condition questionnaire item bank, the communication-coding scheme, the behavioral and physiological data-logging schema, the Latin-square counterbalancing schedule, and its anonymized behavioral, physiological-logging, questionnaire, and communication-coding datasets and the analysis scripts used to produce the statistics and figures in Section~\ref{sec:study2-results}, will be deposited alongside them upon publication. This includes full supplementary tables for the results Section~\ref{sec:study2-results} reports only in prose or figures: participant and team demographics, main behavioral outcomes and planned contrasts, post-condition questionnaire outcomes by construct and item, system reliability and physiological logging, coded communication rates, and qualitative themes with example quotes.
 
 \section{Generative AI Use Disclosure}
 A generative AI tool (ChatGPT) was used for language editing and restructuring of text drafted by the author across both studies reported in this paper; it was not used to generate the research idea, conceptual framework, study designs, stimuli, data, statistical results, or citations, and it played no role in participant recruitment, data collection, or analysis for either study. The author reviewed and takes responsibility for all content produced with its assistance.
