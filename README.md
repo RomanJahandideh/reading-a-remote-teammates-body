@@ -1,4 +1,4 @@
-# Reading a Remote Teammate's Body: Heart Rate and Variability on the Avatar to Support Coordination
+# Reading a Remote Teammate's Body: Heart Rate and Variability Cues for Coordination and Understanding in Multiplayer Cooperative Play
 
 LaTeX source for a paper prepared for ACM ISS 2026 / PACM HCI, submitted in the
 `acmart` `manuscript,review,anonymous` format.
