@@ -1,4 +1,4 @@
-# Reading a Remote Teammate's Body: Heart Rate and Variability Cues for Coordination and Understanding in Multiplayer Cooperative Play
+# Reading a Remote Teammate's Body: A Body-Worn Sensing Interface for Group Coordination in a Distributed Interactive Space
 
 LaTeX source for a paper prepared for ACM ISS 2026 / PACM HCI, submitted in the
 `acmart` `manuscript,review,anonymous` format.
