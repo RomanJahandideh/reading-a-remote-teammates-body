@@ -110,6 +110,7 @@
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{caption}
+\usepackage{subcaption}
 \usepackage{xcolor}
 
 \usepackage{placeins}
@@ -202,9 +203,26 @@ Networked multiplayer games are among the most inhabited yet distributed interac
 %% information and the body of the document, and typically spans the
 %% page.
 \begin{teaserfigure}
-  \includegraphics[width=\textwidth]{new interface.png}
-  \caption{The prototype visualizes players' physiological signals through dynamic halos around avatar icons. HR and HRV are communicated as ambient visual cues supporting coordination during cooperative play.}
-  \Description{A multiplayer game interface with player avatar icons surrounded by dynamic visual halos. The halos vary in pulse, density, brightness, and stability to communicate heart rate and heart-rate variability as ambient coordination cues.}
+  \centering
+  \begin{subfigure}[b]{0.325\textwidth}
+    \includegraphics[width=\textwidth]{Figure_1_Teaser_NoCue.png}
+    \caption{No Cue}
+    \label{fig:teaser-nocue}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.325\textwidth}
+    \includegraphics[width=\textwidth]{Figure_1_Teaser_NumericCue.png}
+    \caption{Numeric Cue}
+    \label{fig:teaser-numeric}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.325\textwidth}
+    \includegraphics[width=\textwidth]{Figure_1_Teaser_IconCue.png}
+    \caption{Icon Cue}
+    \label{fig:teaser-icon}
+  \end{subfigure}
+  \caption{The three Study 2 interface conditions, captured in the custom Unity cooperative-cooking prototype used for live multiplayer testing. (a) No Cue: the standard game interface, with no physiological information for any teammate. (b) Numeric Cue: an explicit readout of each teammate's current HR (bpm) and HRV (ms) beneath their role label, an upper bound on precise disclosure. (c) Icon Cue: the same three teammates rendered instead as a pulsing, glowing halo around each role icon, encoding HR as pulse and glow and HRV as ring coherence, with no numbers or emotion words shown. All three conditions ran the same cooperative cooking task, with players filling the Prep, Cook, and Runner roles shown at the bottom of the screen.}
+  \Description{Three side-by-side screenshots of the same Overcooked-style cooperative cooking game, viewed from a top-down angle with a kitchen on the right and a dining area on the left. The first screenshot shows a plain interface with no physiological display. The second shows a status bar naming the Prep, Cook, and Runner players with explicit heart rate in beats per minute and heart rate variability in milliseconds listed under each. The third replaces those numbers with glowing circular halos around each player's role icon, varying in brightness and pulse without any numeric or text labels.}
   \label{fig:teaser}
 \end{teaserfigure}
 
